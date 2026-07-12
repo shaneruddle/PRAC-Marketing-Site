@@ -231,6 +231,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             if (!res.ok) throw new Error('Server returned ' + res.status);
 
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', { form_name: payload.enquiryType || 'enquiry', event_category: 'lead' });
+            }
+
             resultEl.className = resultEl.dataset.theme === 'dark'
                 ? 'mt-5 rounded-2xl p-5 bg-white/10 text-green-300 font-medium text-sm'
                 : 'mt-5 rounded-2xl p-5 bg-green-500/10 text-green-700 font-medium text-sm';

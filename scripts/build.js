@@ -680,6 +680,17 @@ async function build() {
                     }
                 }, tPath('pre-drive-checklist/index.html'));
 
+                // Blog search index (title + excerpt, all posts) for client-side search
+                const blogSearchIndex = blogPosts.map(p => ({
+                	title: p.title || '',
+                	excerpt: p.excerpt || '',
+                	slug: p.slug || '',
+                	coverImage: p.coverImage || '',
+                	category: p.category || '',
+                	publishedAt: p.publishedAt || '',
+                }));
+                await fs.outputFile(path.join(distDir, 'blog/search-index.json'), JSON.stringify(blogSearchIndex));
+                
                 // Blog index (paginated, 12 per page)
                 const POSTS_PER_PAGE = 12;
                 const totalPages = Math.max(1, Math.ceil(blogPosts.length / POSTS_PER_PAGE));

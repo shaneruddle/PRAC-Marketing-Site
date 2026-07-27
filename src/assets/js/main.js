@@ -27,6 +27,83 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Blog Search (client-side, all posts via /blog/search-index.json)
+    const blogSearchInput = document.getElementById('blog-search-input');
+    if (blogSearchInput) {
+    const grid = document.getElementById('blog-post-grid');
+    const pagination = document.getElementById('blog-pagination');
+    const emptyMsg = document.getElementById('blog-search-empty');
+    const originalGridHTML = grid ? grid.innerHTML : '';
+    let searchIndexPromise = null;
+    
+    const escapeHtml = (str) => String(str || '').replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+    
+    const formatBlogDate = (iso) => {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return '';
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    };
+    
+    const blogCardHTML = (post) => {
+    const img = post.coverImage
+    ? `<img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(post.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />`
+    : '';
+    const category = post.category
+    ? `<span class="text-[10px] font-black uppercase tracking-widest text-primary mb-2">${escapeHtml(post.category)}</span>`
+    : '';
+    return `<a href="/blog/${escapeHtml(post.slug)}/" class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:-translate-y-1 transition-all">
+    <div class="aspect-[16/9] bg-gray-200 overflow-hidden">${img}</div>
+    <div class="p-6 flex flex-col flex-1">
+    ${category}
+    <h2 class="text-lg font-bold text-ink mb-2 group-hover:text-primary transition-colors leading-snug">${escapeHtml(post.title)}</h2>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">${escapeHtml(post.excerpt)}</p>
+    <span class="text-[10px] font-black uppercase tracking-widest text-gray-400">${formatBlogDate(post.publishedAt)}</span>
+    </div>
+    </a>`;
+    };
+    
+    const loadBlogSearchIndex = () => {
+    if (!searchIndexPromise) {
+    searchIndexPromise = fetch('/blog/search-index.json')
+    .then(r => r.ok ? r.json() : [])
+    .then(data => Array.isArray(data) ? data : [])
+    .catch(() => []);
+    }
+    return searchIndexPromise;
+    };
+    
+    const runBlogSearch = (query) => {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+    if (grid) { grid.innerHTML = originalGridHTML; grid.classList.remove('hidden'); }
+    if (pagination) pagination.classList.remove('hidden');
+    if (emptyMsg) emptyMsg.classList.add('hidden');
+    return;
+    }
+    if (pagination) pagination.classList.add('hidden');
+    loadBlogSearchIndex().then(index => {
+    const matches = index.filter(p =>
+    (p.title || '').toLowerCase().includes(q) ||
+    (p.excerpt || '').toLowerCase().includes(q)
+    );
+    if (grid) {
+    grid.classList.remove('hidden');
+    grid.innerHTML = matches.map(blogCardHTML).join('');
+    }
+    if (emptyMsg) emptyMsg.classList.toggle('hidden', matches.length > 0);
+    });
+    };
+    
+    let blogSearchDebounce;
+    blogSearchInput.addEventListener('input', (e) => {
+    clearTimeout(blogSearchDebounce);
+    const value = e.target.value;
+    blogSearchDebounce = setTimeout(() => runBlogSearch(value), 150);
+    });
+    }
+
     // Booking Form Logic + Date Range Picker
     const bookingForm = document.getElementById('booking-form');
     if (bookingForm) {

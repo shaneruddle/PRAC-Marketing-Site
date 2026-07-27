@@ -71,7 +71,7 @@ async function fetchPublishedHotels(db) {
 }
 async function fetchPublishedBlogPosts(db) {
     const snap = await db.collection('blog_posts')
-        .where('status', '==', 'Published')
+        .where('status', 'in', ['Published', 'published'])
         .get();
     const posts = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     posts.sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''));

@@ -74,10 +74,18 @@ async function fetchPublishedBlogPosts(db) {
         .where('status', 'in', ['Published', 'published'])
         .get();
     const posts = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-    posts.sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''));
+    const toIso = (v) => {
+    	if (!v) return '';
+    	if (typeof v === 'string') return v;
+    	if (typeof v.toDate === 'function') return v.toDate().toISOString();
+    	return '';
+    };
     posts.forEach(p => {
-        if (p.coverImage && p.coverImage.startsWith('//')) p.coverImage = 'https:' + p.coverImage;
+    	p.publishedAt = toIso(p.publishedAt);
+    	if (p.updatedAt) p.updatedAt = toIso(p.updatedAt);
+    	if (p.coverImage && p.coverImage.startsWith('//')) p.coverImage = 'https:' + p.coverImage;
     });
+    posts.sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''));
     return posts;
 }
 

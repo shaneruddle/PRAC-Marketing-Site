@@ -18,6 +18,316 @@
         "source": "/motorbike-rental",
         "destination": "https://pattayarentabike.com/",
         "type": 301
+      },
+      {
+        "source": "/all_cars",
+        "destination": "/cars/",
+        "type": 301
+      },
+      {
+        "source": "/blog/10-требований-к-аренде-мотоцикла-в-паттайе",
+        "destination": "/blog/10-requirements-to-rent-a-motorbike-in-pattaya/",
+        "type": 301
+      },
+      {
+        "source": "/blog/car-rental-pattaya---renting-over-buying",
+        "destination": "/blog/car-rental-pattaya-renting-over-buying/",
+        "type": 301
+      },
+      {
+        "source": "/blog/electric-bike-rentals-in-pattaya-thailand-what-you-need-to-know/1000",
+        "destination": "/blog/electric-bike-rentals-in-pattaya-thailand-what-you-need-to-know/",
+        "type": 301
+      },
+      {
+        "source": "/blog/how-can-i-get-flour--water-off-my-car-paint-job",
+        "destination": "/blog/how-can-i-get-flour-water-off-my-car-paint-job/",
+        "type": 301
+      },
+      {
+        "source": "/blog/koh-chang-car-rental-",
+        "destination": "/blog/koh-chang-car-rental/",
+        "type": 301
+      },
+      {
+        "source": "/blog/minibus-hire-in-pattaya",
+        "destination": "/blog/minibus-hire-in-pattaya-exploring-thailand-in-a-group/",
+        "type": 301
+      },
+      {
+        "source": "/blog/motorbike-rental-pattaya",
+        "destination": "/blog/motorbike-rental-pattaya-why-experience-and-insurance-matter/",
+        "type": 301
+      },
+      {
+        "source": "/blog/pattaya-is-doomed-",
+        "destination": "/blog/pattaya-is-doomed/",
+        "type": 301
+      },
+      {
+        "source": "/blog/red-number-plates-cars",
+        "destination": "/blog/red-number-plates-in-thailand-what-you-need-to-know/",
+        "type": 301
+      },
+      {
+        "source": "/blog/roads-in-thailand",
+        "destination": "/blog/roads-in-thailand-is-it-time-for-the-government-to-look-inward/",
+        "type": 301
+      },
+      {
+        "source": "/blog/the-complete-guide-to-buying-a-car-in-pattaya-updated-2022",
+        "destination": "/blog/the-complete-guide-to-buying-a-car-in-pattaya-updated-2026/",
+        "type": 301
+      },
+      {
+        "source": "/blog/the-truth-about-bike-insurance-in-thailand//1000",
+        "destination": "/blog/the-truth-about-bike-insurance-in-thailand/",
+        "type": 301
+      },
+      {
+        "source": "/blog/the-truth-about-bike-insurance-in-thailand/1000",
+        "destination": "/blog/the-truth-about-bike-insurance-in-thailand/",
+        "type": 301
+      },
+      {
+        "source": "/blog/the-truth-about-bike-insurance-in-thailand/pattaya-rent-a-bike-3",
+        "destination": "/blog/the-truth-about-bike-insurance-in-thailand/",
+        "type": 301
+      },
+      {
+        "source": "/blog/u-tapao-international-airport-a-review-and-guide",
+        "destination": "/blog/car-rental-utapao-rayong-airport/",
+        "type": 301
+      },
+      {
+        "source": "/blog/yahama-nmax-",
+        "destination": "/blog/yahama-nmax-review-pattaya/",
+        "type": 301
+      },
+      {
+        "source": "/blog/аренда-автомобиля-на-джомтьене",
+        "destination": "/blog/car-rental-jomtien-thailand-ru/",
+        "type": 301
+      },
+      {
+        "source": "/blog/полное-руководство-по-покупке-автомобиля-в-паттайе",
+        "destination": "/blog/buying-a-car-pattaya-guide-ru/",
+        "type": 301
+      },
+      {
+        "source": "/blog/правда-о-велосипедном-страховании-в-таиланде",
+        "destination": "/blog/bicycle-insurance-thailand-truth-ru/",
+        "type": 301
+      },
+      {
+        "source": "/blog/การเช่ารถมอเตอร์ไซด์ในประเทศไทยมีค่าใช้จ่ายเท่าไร",
+        "destination": "/blog/motorbike-rental-cost-thailand-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/การเช่ารถในศรีราชา",
+        "destination": "/blog/car-rental-si-racha-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/ข้อกำหนดการเช่า",
+        "destination": "/blog/rental-requirements-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/ความจริงเกี่ยวกับประกันภัยจักรยานในประเทศไทย",
+        "destination": "/blog/bicycle-insurance-thailand-truth-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/จักรยานให้เช่าพัทยา",
+        "destination": "/blog/bicycle-rental-pattaya-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/รถกระบะ-รถบรรทุก-เช่า-พัทยา",
+        "destination": "/blog/pickup-trucks-pattaya-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/รถเช่าพัทยา-การเช่ากับการซื้อ",
+        "destination": "/blog/pattaya-car-rental-vs-buying-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/วิธีการเช่ามอเตอร์ไซค์ในจอมเทียน-",
+        "destination": "/blog/rent-motorbike-jomtien-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/วิธีการเช่ารถในพัทยา",
+        "destination": "/blog/how-to-rent-a-car-pattaya-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/วิธีการเดินทางจาก-พัทยา-ไป-เกาะช้าง",
+        "destination": "/blog/pattaya-to-koh-chang-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/สนามบินอู่ตะเภา-ระยอง",
+        "destination": "/blog/utapao-rayong-airport-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/อุบัติเหตุทางรถยนต์พัทยา",
+        "destination": "/blog/car-accident-pattaya-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blog/เช่ารถมอเตอร์ไซด์พัทยา",
+        "destination": "/blog/motorbike-rental-requirements-pattaya-thai/",
+        "type": 301
+      },
+      {
+        "source": "/blogs",
+        "destination": "/blog/",
+        "type": 301
+      },
+      {
+        "source": "/car_buying_service",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/carl-rental/getting-a-thai-driving-licence",
+        "destination": "/blog/driving-license-in-thailand/",
+        "type": 301
+      },
+      {
+        "source": "/cars_for_sale",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/help",
+        "destination": "/faq/",
+        "type": 301
+      },
+      {
+        "source": "/long_term_hire",
+        "destination": "/long-term-rental/",
+        "type": 301
+      },
+      {
+        "source": "/pattayarentabike",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/rent-a-bike",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/rent-a-car",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/rent_to_own",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/results",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/thank-you/",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-ford-everest-next-gen",
+        "destination": "/cars/ford-everest/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-honda-city",
+        "destination": "/blog/honda-city/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-honda-jazz",
+        "destination": "/blog/honda-jazz/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-nissan-navara",
+        "destination": "/blog/nissan-navara-older-model/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-suzuki-swift",
+        "destination": "/cars/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-toyota-fortuner",
+        "destination": "/cars/new-toyota-fortuner/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/cars-for-rent-toyota-revo",
+        "destination": "/cars/toyota-revo/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/motorbikes-for-rent-honda-click",
+        "destination": "/cars/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/motorbikes-for-rent-honda-pcx",
+        "destination": "/blog/honda-pcx/",
+        "type": 301
+      },
+      {
+        "source": "/vehicles/motorbikes-for-rent-yahama-aerox",
+        "destination": "/cars/",
+        "type": 301
+      },
+      {
+        "source": "/de//:rest*",
+        "destination": "/de/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/th//:rest*",
+        "destination": "/th/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/ru//:rest*",
+        "destination": "/ru/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/zh//:rest*",
+        "destination": "/zh/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/ko//:rest*",
+        "destination": "/ko/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/fr//:rest*",
+        "destination": "/:rest*",
+        "type": 301
+      },
+      {
+        "source": "/fr/",
+        "destination": "/",
+        "type": 301
       }
     ],
     "headers": [

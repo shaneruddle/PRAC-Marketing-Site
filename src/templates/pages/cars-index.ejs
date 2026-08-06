@@ -1,10 +1,16 @@
 <section class="bg-paper pt-32 pb-24 border-b border-gray-100">
     <div class="container mx-auto px-6">
         <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-primary rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
-            Pattaya Fleet
+            <%= (t.fleet && t.fleet.badge) || 'Pattaya Fleet' %>
         </div>
-        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">Our <span class="font-black italic text-primary">Fleet</span></h1>
-        <p class="text-xl text-gray-500 max-w-2xl font-medium">Quality vehicles maintained to the highest standards. Insurance and road assistance included in every rental. View our <a href="/cheap-car-rental-pattaya/" class="text-primary font-semibold hover:underline">cheap car rental Pattaya</a> page for our lowest-priced vehicles and daily rate breakdown.</p>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink"><%= (t.fleet && t.fleet.heading) || 'Our' %> <span class="font-black italic text-primary"><%= (t.fleet && t.fleet.headingAccent) || 'Fleet' %></span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">
+        <% if (lang === 'th') { %>
+            รถทุกคันได้รับการดูแลตามมาตรฐานสูงสุด พร้อมประกันภัยและบริการช่วยเหลือฉุกเฉินรวมอยู่ในทุกการเช่า ดู<a href="<%= langPrefix %>/cheap-car-rental-pattaya/" class="text-primary font-semibold hover:underline">รถเช่าราคาประหยัดในพัทยา</a>สำหรับรถราคาถูกที่สุดและอัตราค่าเช่ารายวัน
+        <% } else { %>
+            Quality vehicles maintained to the highest standards. Insurance and road assistance included in every rental. View our <a href="/cheap-car-rental-pattaya/" class="text-primary font-semibold hover:underline">cheap car rental Pattaya</a> page for our lowest-priced vehicles and daily rate breakdown.
+        <% } %>
+        </p>
     </div>
 </section>
 
@@ -17,7 +23,7 @@
                         <% if (guide.heroImage) { %>
                             <img src="<%= guide.heroImage %>" alt="<%= guide.title %>" class="absolute inset-0 w-full h-full object-cover">
                         <% } else { %>
-                            <div class="absolute inset-0 flex items-center justify-center text-gray-300 font-black uppercase tracking-widest text-[10px]">No Image</div>
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-300 font-black uppercase tracking-widest text-[10px]"><%= (t.fleet && t.fleet.noImage) || 'No Image' %></div>
                         <% } %>
                         <div class="absolute top-4 left-4">
                             <span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest text-ink shadow-sm border border-gray-100"><%= guide.category %></span>
@@ -30,7 +36,7 @@
                                 <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-gray-400 font-black uppercase tracking-[0.1em] mt-2">
                                     <span><%= guide.transmission %></span>
                                     <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
-                                    <span><%= guide.seats %> Seats</span>
+                                    <span><%= guide.seats %> <%= (t.fleet && t.fleet.seatsLabel) || 'Seats' %></span>
                                     <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
                                     <span><%= guide.fuelType %></span>
                                 </div>
@@ -40,11 +46,11 @@
                             <%= guide.intro %>
                         </p>
                         <div class="mt-auto flex flex-col gap-3">
-                            <a href="/cars/<%= guide.slug %>" class="btn-primary w-full text-xs py-3 group">
-                                Select Vehicle
+                            <a href="<%= langPrefix %>/cars/<%= guide.slug %>" class="btn-primary w-full text-xs py-3 group">
+                                <%= (t.fleet && t.fleet.selectVehicle) || 'Select Vehicle' %>
                                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                             </a>
-                            <a href="/cars/<%= guide.slug %>" class="text-center py-3 rounded-2xl border border-gray-100 text-[10px] font-black uppercase tracking-widest text-ink/40 hover:text-primary hover:border-primary transition-all">View Specifications</a>
+                            <a href="<%= langPrefix %>/cars/<%= guide.slug %>" class="text-center py-3 rounded-2xl border border-gray-100 text-[10px] font-black uppercase tracking-widest text-ink/40 hover:text-primary hover:border-primary transition-all"><%= (t.fleet && t.fleet.viewSpecs) || 'View Specifications' %></a>
                         </div>
                     </div>
                 </div>
@@ -52,3 +58,15 @@
         </div>
     </div>
 </section>
+
+<!-- SEO: Keyword body section -->
+<% if (lang === 'th') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">รถเช่าพัทยาทุกรุ่น</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">พัทยาเรนท์อะคาร์มีรถเช่าให้เลือกกว่า 100 คัน ครอบคลุมทุกความต้องการ ตั้งแต่รถอีโคคาร์ประหยัดน้ำมัน รถเก๋งขนาดกลาง รถกระบะ รถ MPV สำหรับครอบครัว ไปจนถึง SUV ขนาดใหญ่สำหรับเดินทางเป็นกลุ่ม</p>
+        <p class="text-ink/70 leading-relaxed mb-4">รถเช่าทุกคันมีประกันภัยครบวงจร ไม่มีค่าใช้จ่ายแอบแฝง พร้อมบริการส่งรถฟรีถึงโรงแรมทั่วพัทยา จอมเทียน หาดนาเกลือ วงศ์อมาตย์ และพระตำหนัก เริ่มต้นเพียง &#x0E3F;590 ต่อวัน</p>
+        <p class="text-ink/70 leading-relaxed">ต้องการเช่ารถระยะยาว? ดู<a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">รถเช่ารายเดือนในพัทยา</a>เริ่มต้น &#x0E3F;10,000 ต่อเดือน หรือ<a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">ตรวจสอบพื้นที่ให้บริการส่งรถ</a>ทั้งหมดของเรา</p>
+    </div>
+</section>
+<% } %>

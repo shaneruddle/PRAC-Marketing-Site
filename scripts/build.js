@@ -315,7 +315,7 @@ async function build() {
                 const lang    = langObj.code;
         const _en = i18n['en'] || {};
         const _lx = i18n[lang] || {};
-        const t = { nav: {...(_en.nav||{}), ...(_lx.nav||{})}, meta: {...(_en.meta||{}), ...(_lx.meta||{})}, home: {...(_en.home||{}), ...(_lx.home||{})}, longTerm: {...(_en.longTerm||{}), ...(_lx.longTerm||{})} };
+        const t = { nav: {...(_en.nav||{}), ...(_lx.nav||{})}, meta: {...(_en.meta||{}), ...(_lx.meta||{})}, home: {...(_en.home||{}), ...(_lx.home||{})}, longTerm: {...(_en.longTerm||{}), ...(_lx.longTerm||{})}, fleet: {...(_en.fleet||{}), ...(_lx.fleet||{})} };
         const langPrefix = lang === 'en' ? '' : '/' + lang;
                 const baseDir = lang === 'en' ? './' : './' + lang + '/';
                 const tPath   = (p) => baseDir + p;

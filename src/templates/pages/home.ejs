@@ -177,6 +177,17 @@ const _defWhy=[{title:'Free Cancellation',desc:'Up to 24 hours before your picku
 </a>
 
 <!-- SEO: Keyword body section -->
+<% if (lang === 'th') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">เช่ารถพัทยา — Car Rental Pattaya</h2>
+<p class="text-ink/70 leading-relaxed mb-4">พัทยาเรนท์อะคาร์เป็นผู้ให้บริการเช่ารถในพัทยาที่ได้รับความไว้วางใจมากว่า <%= site.trust.years %> ปี ด้วยรถกว่า 100 คัน ตั้งแต่รถอีโคคาร์ประหยัดน้ำมันและรถเกียร์ออโต้ ไปจนถึง SUV 7 ที่นั่งและรถกระบะ พร้อมให้บริการทั้งเช่าระยะสั้นและระยะยาว ครอบคลุมพัทยา จอมเทียน หาดนาเกลือ วงศ์อมาตย์ พระตำหนัก บางเสร่ และหนองปรือ</p>
+<p class="text-ink/70 leading-relaxed mb-4">รถเช่าทุกคันมีประกันภัยครบวงจร บริการส่งรถถึงโรงแรมฟรี และซัพพอร์ต 24 ชั่วโมงผ่าน WhatsApp ไม่ต้องใช้บัตรเครดิตในการเลือกดูรถ ชำระเงินตอนรับรถได้เลย ด้วยคะแนน <%= site.trust.googleRating %> ดาว จากรีวิว Google กว่า <%= site.trust.googleReviews %> รีวิว เราคือหนึ่งในบริการเช่ารถพัทยาที่ได้คะแนนสูงสุด</p>
+<p class="text-ink/70 leading-relaxed">กำลังมองหารถเช่าพัทยาสำหรับวันเดียว หนึ่งสัปดาห์ หรือหนึ่งเดือน? <a href="<%= langPrefix %>/cars/" class="text-primary font-semibold hover:underline">ดูรถทั้งหมดของเรา</a> หรือ <a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">ค้นหาพื้นที่ให้บริการส่งรถ</a> บริการเช่ารถพัทยาครบครัน ส่งฟรีถึงโรงแรม ประกันภัยครบ</p>
+<p class="text-ink/70 leading-relaxed mt-2">งบจำกัด? รถเช่าราคาประหยัดเริ่มต้นเพียง &#x0E3F;590 ต่อวัน ไม่มีค่าใช้จ่ายแอบแฝง</p>
+</div>
+</section>
+<% } else { %>
 <section class="py-16 bg-paper border-t border-ink/10">
 <div class="max-w-4xl mx-auto px-6">
 <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">Car Rental Pattaya — เช่ารถพัทยา</h2>
@@ -187,6 +198,7 @@ const _defWhy=[{title:'Free Cancellation',desc:'Up to 24 hours before your picku
 <p class="text-ink/70 leading-relaxed mt-2">Visiting from the UK or Australia? Our <a href="/pattaya-car-hire/" class="text-primary font-semibold hover:underline">Pattaya car hire</a> page covers everything you need to know about hiring a car in Pattaya.</p>
 </div>
 </section>
+<% } %>
 </div>
 </div>
 </section>

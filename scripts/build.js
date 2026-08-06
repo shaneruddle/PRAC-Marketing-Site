@@ -382,8 +382,8 @@ async function build() {
             await renderPage('cars-index', {
                             lang, t, langPrefix,
                             guides: flatGuides,
-                            title: 'Car Rental Fleet Pattaya | Economy, SUV, Pickup and MPV',
-                            description: 'Browse our full fleet of rental cars in Pattaya. Economy cars, SUVs, pickup trucks, and MPVs. Free hotel delivery on every booking.',
+                            title: (t.meta && t.meta.fleet && t.meta.fleet.title) || 'Car Rental Fleet Pattaya | Economy, SUV, Pickup and MPV',
+                            description: (t.meta && t.meta.fleet && t.meta.fleet.description) || 'Browse our full fleet of rental cars in Pattaya. Economy cars, SUVs, pickup trucks, and MPVs. Free hotel delivery on every booking.',
                             schema: {}
             }, tPath('cars/index.html'));
 
@@ -421,8 +421,8 @@ async function build() {
             await renderPage('locations-index', {
                             lang, t, langPrefix,
                             locations: flatLocations,
-                            title: 'Car Rental Delivery Locations in Pattaya | All Areas Covered',
-                            description: 'Pattaya Rent a Car delivers to every area in Pattaya - Jomtien, Naklua, Wongamat, Pratumnak, Central, and more. Free hotel delivery included.',
+                            title: (t.meta && t.meta.locations && t.meta.locations.title) || 'Car Rental Delivery Locations in Pattaya | All Areas Covered',
+                            description: (t.meta && t.meta.locations && t.meta.locations.description) || 'Pattaya Rent a Car delivers to every area in Pattaya - Jomtien, Naklua, Wongamat, Pratumnak, Central, and more. Free hotel delivery included.',
                             schema: {}
             }, tPath('locations/index.html'));
 
@@ -631,8 +631,8 @@ async function build() {
                 await renderPage('faq', {
                             lang, t, langPrefix,
                             faqs: faqs,
-                            title: 'Frequently Asked Questions',
-                            description: 'Everything you need to know about renting a car in Pattaya - payments, insurance, delivery, requirements and more.',
+                            title: (t.meta && t.meta.faq && t.meta.faq.title) || 'Frequently Asked Questions',
+                            description: (t.meta && t.meta.faq && t.meta.faq.description) || 'Everything you need to know about renting a car in Pattaya - payments, insurance, delivery, requirements and more.',
                             schema: {
                                                 '@context': 'https://schema.org',
                                                 '@type': 'FAQPage',

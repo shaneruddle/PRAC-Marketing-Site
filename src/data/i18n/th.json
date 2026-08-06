@@ -149,5 +149,30 @@
     "freeDeliveryPrefix": "บริการส่งฟรีใน",
     "deliveryText": "เรานำรถไปส่งถึงโรงแรม คอนโด หรือวิลล่าของคุณ พร้อมให้บริการช่วยเหลือตลอด 24 ชั่วโมง",
     "contactUs": "ติดต่อเรา"
+  },
+  "guideDetail": {
+    "home": "",
+    "cars": "",
+    "noImageAvailable": "",
+    "interior": "",
+    "bootSpace": "",
+    "dashboard": "",
+    "seats": "",
+    "gearbox": "",
+    "fuel": "",
+    "luggage": "",
+    "modelYear": "",
+    "typicalPrice": "",
+    "perDay": "/ ",
+    "rentalNotePrefix": "",
+    "rentalNoteSuffix": "  ",
+    "availableNow": "",
+    "instantConfirmation": "",
+    "fullInsurance": "",
+    "roadAssistance": " 24/7",
+    "bookThisInstead": "",
+    "featuredCarsSubtext": "",
+    "noImage": "",
+    "checkAvailability": ""
   }
 }

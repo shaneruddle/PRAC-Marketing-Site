@@ -1,7 +1,7 @@
 <section class="bg-gray-100 pt-32 pb-24">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Service Area</span>
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"><%= (t.locationDetail && t.locationDetail.serviceArea) || 'Service Area' %></span>
             <h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-[0.9] mb-6"><%= loc.h1 || ('Car Rental in ' + loc.name + ', Pattaya') %></h1>
             <% if (loc.intro) { %>
             <p class="text-xl text-gray-500 leading-relaxed"><%= loc.intro %></p>
@@ -32,7 +32,7 @@
                 <!-- FAQs -->
                 <% if (loc.faqs && loc.faqs.length > 0) { %>
                 <div class="mt-16">
-                    <h2 class="text-2xl font-bold text-ink mb-6">Frequently Asked Questions</h2>
+                    <h2 class="text-2xl font-bold text-ink mb-6"><%= (t.locationDetail && t.locationDetail.faqHeading) || 'Frequently Asked Questions' %></h2>
                     <div class="space-y-4">
                         <% loc.faqs.forEach(faq => { %>
                         <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
@@ -52,28 +52,28 @@
             <div class="space-y-8">
                 <div class="bg-gray-900 text-white p-10 rounded-3xl shadow-2xl overflow-hidden relative">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500 rounded-bl-full opacity-20"></div>
-                    <h3 class="text-2xl font-bold mb-6">Popular Cars in <%= loc.name %></h3>
+                    <h3 class="text-2xl font-bold mb-6"><%= (t.locationDetail && t.locationDetail.popularCarsPrefix) || 'Popular Cars in' %> <%= loc.name %></h3>
                     <div class="space-y-4">
                         <% if (loc.featuredCars && loc.featuredCars.length > 0) { loc.featuredCars.forEach(car => { %>
-                            <a href="/cars/<%= car.slug || '' %>" class="flex items-center gap-4 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all group">
+                            <a href="<%= langPrefix %>/cars/<%= car.slug || '' %>" class="flex items-center gap-4 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all group">
                                 <div class="w-20 h-14 bg-gray-800 rounded-lg overflow-hidden shrink-0">
                                     <% if (car.mainImage || car.heroImage) { %>
                                         <img src="<%= car.mainImage || car.heroImage %>" alt="<%= car.name %>" class="w-full h-full object-cover">
                                     <% } else { %>
-                                        <div class="w-full h-full flex items-center justify-center text-[10px] text-gray-500 uppercase font-bold tracking-widest">No img</div>
+                                        <div class="w-full h-full flex items-center justify-center text-[10px] text-gray-500 uppercase font-bold tracking-widest"><%= (t.locationDetail && t.locationDetail.noImg) || 'No img' %></div>
                                     <% } %>
                                 </div>
                                 <div class="flex-1">
                                     <h4 class="font-bold group-hover:text-orange-400 transition-colors"><%= car.name %></h4>
-                                    <span class="text-xs text-gray-400">Check Availability</span>
+                                    <span class="text-xs text-gray-400"><%= (t.locationDetail && t.locationDetail.checkAvailability) || 'Check Availability' %></span>
                                 </div>
                                 <svg class="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                             </a>
                         <% }) } else { %>
-                            <p class="text-sm text-gray-400 italic">Browse our full fleet — all vehicles available in <%= loc.name %>.</p>
+                            <p class="text-sm text-gray-400 italic"><%= (t.locationDetail && t.locationDetail.browseFleetPrefix) || 'Browse our full fleet — all vehicles available in' %> <%= loc.name %>.</p>
                         <% } %>
                     </div>
-                    <a href="/cars" class="block text-center mt-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold transition-all">View All Available Cars</a>
+                    <a href="<%= langPrefix %>/cars" class="block text-center mt-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold transition-all"><%= (t.locationDetail && t.locationDetail.viewAllCars) || 'View All Available Cars' %></a>
                 </div>
 
                 <% if (loc.mapEmbedUrl) { %>
@@ -83,9 +83,9 @@
                 <% } %>
 
                 <div class="p-8 rounded-3xl border-2 border-dashed border-gray-200 text-center">
-                    <h4 class="font-bold text-ink mb-2">Free Delivery in <%= loc.name %></h4>
-                    <p class="text-sm text-gray-500 mb-6">We bring the car to your hotel, condo, or villa. Open 24/7 for support.</p>
-                    <a href="/contact" class="text-orange-600 font-bold text-sm hover:underline">Contact Us</a>
+                    <h4 class="font-bold text-ink mb-2"><%= (t.locationDetail && t.locationDetail.freeDeliveryPrefix) || 'Free Delivery in' %> <%= loc.name %></h4>
+                    <p class="text-sm text-gray-500 mb-6"><%= (t.locationDetail && t.locationDetail.deliveryText) || 'We bring the car to your hotel, condo, or villa. Open 24/7 for support.' %></p>
+                    <a href="<%= langPrefix %>/contact" class="text-orange-600 font-bold text-sm hover:underline"><%= (t.locationDetail && t.locationDetail.contactUs) || 'Contact Us' %></a>
                 </div>
             </div>
         </div>

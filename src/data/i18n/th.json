@@ -137,5 +137,17 @@
     "seatsLabel": "ที่นั่ง",
     "selectVehicle": "เลือกรถคันนี้",
     "viewSpecs": "ดูข้อมูลจำเพาะ"
+  },
+  "locationDetail": {
+    "serviceArea": "พื้นที่ให้บริการ",
+    "faqHeading": "คำถามที่พบบ่อย",
+    "popularCarsPrefix": "รถยอดนิยมใน",
+    "noImg": "ไม่มีรูป",
+    "checkAvailability": "เช็ครถว่าง",
+    "browseFleetPrefix": "เลือกชมรถทั้งหมดของเรา — รถทุกคันพร้อมให้บริการใน",
+    "viewAllCars": "ดูรถทั้งหมดที่มีให้บริการ",
+    "freeDeliveryPrefix": "บริการส่งฟรีใน",
+    "deliveryText": "เรานำรถไปส่งถึงโรงแรม คอนโด หรือวิลล่าของคุณ พร้อมให้บริการช่วยเหลือตลอด 24 ชั่วโมง",
+    "contactUs": "ติดต่อเรา"
   }
 }

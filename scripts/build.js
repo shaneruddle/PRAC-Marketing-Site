@@ -412,6 +412,13 @@ async function build() {
                 'description': 'Typical daily rate for a 7-day rental. Prices vary by season and availability.',
                 'url': 'https://' + site.domain + '/cars/' + flatGuide.slug + '/'
               }
+            } : {}),
+            ...(site.trust.googleRating ? {
+            	'aggregateRating': {
+            		'@type': 'AggregateRating',
+            		'ratingValue': site.trust.googleRating,
+            		'reviewCount': site.trust.googleReviews
+            	}
             } : {})
                                                 }
                             }, tPath('cars/' + flatGuide.slug + '/index.html'));

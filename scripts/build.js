@@ -91,7 +91,12 @@ async function fetchPublishedBlogPosts(db) {
 
 async function fetchFaqs(db) {
         const snap = await db.collection('faqs').get();
-        const faqs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        // Docs with no `published` field are treated as published (existing FAQs default to public).
+        // Unpublished FAQs are still used by the booking engine's AI-suggested email replies -
+        // they're just excluded from this public marketing site build.
+        const faqs = snap.docs
+                .map(d => ({ id: d.id, ...d.data() }))
+                .filter(f => f.published !== false);
         faqs.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
         return faqs;
 }

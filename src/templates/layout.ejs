@@ -31,9 +31,9 @@
     <link rel="alternate" hreflang="x-default" href="https://<%= site.domain %><%= url.replace(/^\/[a-z]{2}\//,'/') %>">
     <% } %>
 
-    <!-- Noindex non-launch locales (ru/zh/de/ko fall back to English content) -->
+    <!-- Noindex non-launch locales (ru/zh/de/ko fall back to English content), or a page explicitly flagged noIndex via CMS -->
     <% const noindexLangs = ["ru", "zh", "de", "ko"]; %>
-    <% if (noindexLangs.includes(lang)) { %>
+    <% if (noindexLangs.includes(lang) || (typeof noIndex !== 'undefined' && noIndex)) { %>
         <meta name="robots" content="noindex, follow">
     <% } %>
 

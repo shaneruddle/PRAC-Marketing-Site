@@ -13,6 +13,7 @@
 // - vehicle_guides (status ASC, displayOrder ASC)
 // - locations (status ASC, displayOrder ASC)
 // TODO Phase 7: codify these in firestore.indexes.json for reproducibility
+// Manual redeploy trigger 26 Aug 2026: CMS auto-deploy is currently failing (Firestore permission-denied on the deploy trigger); this comment forces a fresh build/deploy so already-saved Firestore content changes go live. Safe to remove.
 // -----------------------------------------------------------------------------
 
 import ejs from 'ejs';

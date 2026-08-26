@@ -725,6 +725,7 @@ async function build() {
                     await renderPage('blog-post', {
                         lang, t, langPrefix,
                         post: flatPost,
+                        noIndex: flatPost.seo?.noIndex === true,
                         title: flatPost.title,
                         description: flatPost.excerpt || flatPost.title,
                         schema: {

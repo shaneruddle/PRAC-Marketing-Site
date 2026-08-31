@@ -804,6 +804,12 @@ try {
     .map(([cls, p]) => `- ${cls}: from ฿${p.perDay.toLocaleString()}/day (typical ${p.days}-day rental ฿${p.totalPrice.toLocaleString()} total)`)
     .join('\n');
 
+  // llms.txt is always English regardless of site language, so flatten guides/locations
+  // against 'en' here rather than reusing the per-language flatGuides/flatLocations,
+  // which are scoped inside the language loop above and already out of scope by this point.
+  const flatGuidesEn = guides.map(g => flattenGuide(g, 'en'));
+  const flatLocationsEn = locations.map(l => flattenLocation(l, 'en'));
+
   const llmsTxt = [
     `# ${site.name}`,
     `> ${site.domain}`,
@@ -819,10 +825,10 @@ try {
     priceLines || '- Visit site for current pricing',
     '',
     '## Fleet',
-    ...guides.map(g => `- ${g.title}: ${g.seats || ''} seats, ${g.transmission || ''}, ${g.fuelType || ''}`),
+    ...flatGuidesEn.map(g => `- ${g.title}: ${g.seats || ''} seats, ${g.transmission || ''}, ${g.fuelType || ''}`),
     '',
     '## Areas Served',
-    ...locations.map(l => `- ${l.name}: ${l.description || ''}`),
+    ...flatLocationsEn.map(l => `- ${l.name}: ${l.description || ''}`),
     '',
     '## Rental Policy',
     '- No upfront payment — pay on vehicle collection',

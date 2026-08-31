@@ -330,6 +330,15 @@
         "type": 301
       }
     ],
+    "rewrites": [
+      {
+        "source": "/api/public/**",
+        "run": {
+          "serviceId": "pattaya-rent-a-car-rebuild",
+          "region": "us-west1"
+        }
+      }
+    ],
     "headers": [
       {
         "source": "**/*.@(jpg|jpeg|gif|png|webp|svg|ico|css|js)",

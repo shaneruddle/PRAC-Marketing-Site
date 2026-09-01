@@ -1,23 +1,18 @@
 {
-  "name": "Pattaya Rent A Car",
+  "_comment": "Fallback values only — Firestore app_settings overrides these at build time (scripts/build.js). Keep them accurate: anything wrong here publishes verbatim if a Firestore field is missing or the fetch fails. 'address' must stay a flat string; templates and schema render it directly.",
+  "name": "Pattaya Rent a Car",
   "domain": "pattayarentacar.com",
   "tagline": "Easiest booking. Best service in Pattaya.",
   "companyName": "Pattaya Rent A Car Co., Ltd.",
   "contact": {
-    "phone": "+66 38 123 4567",
-    "whatsapp": "+66 89 123 4567",
+    "phone": "+66 83 077 6928",
+    "whatsapp": "+66830776928",
     "line": "@pattayarentacar",
     "email": "info@pattayarentacar.com"
   },
-  "address": {
-    "street": "123 Beach Road",
-    "area": "Central Pattaya",
-    "city": "Chonburi",
-    "zip": "20150",
-    "country": "Thailand"
-  },
+  "address": "359/119 Moo 12 Nongprue, Pattaya City, Bang Lamung District, Chon Buri 20150",
   "social": {
-    "facebook": "https://facebook.com/pattayarentacar",
+    "facebook": "https://www.facebook.com/pattayarentacar",
     "instagram": "https://instagram.com/pattayarentacar"
   },
   "trust": {

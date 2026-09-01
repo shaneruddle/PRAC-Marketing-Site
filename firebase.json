@@ -293,41 +293,6 @@
         "source": "/vehicles/motorbikes-for-rent-yahama-aerox",
         "destination": "/cars/",
         "type": 301
-      },
-      {
-        "source": "/de//:rest*",
-        "destination": "/de/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/th//:rest*",
-        "destination": "/th/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/ru//:rest*",
-        "destination": "/ru/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/zh//:rest*",
-        "destination": "/zh/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/ko//:rest*",
-        "destination": "/ko/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/ja//:rest*",
-        "destination": "/ja/:rest*",
-        "type": 301
-      },
-      {
-        "source": "/fr//:rest*",
-        "destination": "/fr/:rest*",
-        "type": 301
       }
     ],
     "rewrites": [

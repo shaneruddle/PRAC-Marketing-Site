@@ -1,0 +1,198 @@
+<!-- Hero -->
+<section class="bg-paper pt-32 pb-24 border-b border-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-primary rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+            Location de Voiture
+        </div>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">Location de <span class="font-black italic text-primary">Voiture</span> a Pattaya</h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">Location de voiture a Pattaya avec livraison directe a votre hotel ou appartement. A partir de ฿590/jour, sans frais caches, avec assurance complete incluse.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="/#booking" class="btn-primary inline-flex">Reserver Maintenant</a>
+            <a href="https://wa.me/<%= site.contact.whatsapp %>" class="inline-flex items-center justify-center gap-3 bg-white border-2 border-gray-200 hover:border-primary text-ink font-black uppercase tracking-widest py-4 px-8 rounded-full transition-all active:scale-95">Contacter via WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto space-y-20">
+
+            <!-- Pourquoi nous choisir -->
+            <div>
+                <h2 class="text-3xl font-black text-ink mb-6">Pourquoi Nous Choisir ?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-black text-ink text-sm mb-1">Livraison a l'Hotel</p>
+                            <p class="text-gray-500 text-sm leading-relaxed">Livraison gratuite a votre hotel ou appartement partout a Pattaya.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-black text-ink text-sm mb-1">Annulation Gratuite</p>
+                            <p class="text-gray-500 text-sm leading-relaxed">Besoin de modifier ou annuler votre reservation ? Contactez-nous a tout moment.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-black text-ink text-sm mb-1">Tarifs Transparents</p>
+                            <p class="text-gray-500 text-sm leading-relaxed">Des prix clairs, sans frais caches ni conditions supplementaires.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-black text-ink text-sm mb-1">Assurance Complete</p>
+                            <p class="text-gray-500 text-sm leading-relaxed">Chaque vehicule inclut une assurance complete de premiere classe de Viriyah Insurance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicules et tarifs -->
+            <div>
+                <h2 class="text-3xl font-black text-ink mb-6">Vehicules et Tarifs</h2>
+                <p class="text-gray-500 leading-relaxed mb-6">
+                    Nous disposons de plus de 100 vehicules, des citadines economiques aux SUV spacieux et pickups. Tous les vehicules sont climatises et regulierement entretenus. Location de motos disponible egalement, dont Honda PCX 150 et Honda Click.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="text-left p-3 font-black text-ink border-b border-gray-200">Categorie</th>
+                                <th class="text-left p-3 font-black text-ink border-b border-gray-200">Modeles Types</th>
+                                <th class="text-left p-3 font-black text-ink border-b border-gray-200">Tarif Journalier (THB)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <td class="p-3 text-gray-600 font-medium">Economique</td>
+                                <td class="p-3 text-gray-600">Honda Jazz, Toyota Yaris</td>
+                                <td class="p-3 text-gray-600">Des ฿590</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="p-3 text-gray-600 font-medium">Berline</td>
+                                <td class="p-3 text-gray-600">Toyota Vios, Honda City</td>
+                                <td class="p-3 text-gray-600">Des ฿790</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="p-3 text-gray-600 font-medium">SUV</td>
+                                <td class="p-3 text-gray-600">Honda HR-V, Toyota Fortuner</td>
+                                <td class="p-3 text-gray-600">Des ฿1 200</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 text-gray-600 font-medium">Pickup</td>
+                                <td class="p-3 text-gray-600">Toyota Revo, MG Extender</td>
+                                <td class="p-3 text-gray-600">Des ฿1 500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+                    Tarifs journaliers pour une location minimum de 3 jours. Les prix peuvent varier selon la saison. Contactez-nous par WhatsApp pour un tarif exact.
+                </p>
+            </div>
+
+            <!-- Documents necessaires -->
+            <div>
+                <h2 class="text-3xl font-black text-ink mb-6">Documents Necessaires</h2>
+                <ul class="space-y-3 mb-4">
+                    <li class="flex gap-3 items-start">
+                        <div class="w-5 h-5 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-gray-500">Passeport valide</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <div class="w-5 h-5 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-gray-500">Permis de conduire national et permis de conduire international (IDP recommande)</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <div class="w-5 h-5 bg-blue-50 text-primary rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <span class="text-gray-500">Caution en especes ou par virement bancaire (THB 5 000)</span>
+                    </li>
+                </ul>
+                <p class="text-gray-500 leading-relaxed">
+                    <strong class="text-ink">Important :</strong> nous recommandons d'obtenir un permis de conduire international (IDP) avant votre depart, car il ne peut pas etre delivre sur place en Thailande. Les regles de reconnaissance des permis varient selon les pays ; nous vous conseillons de verifier au prealable aupres de l'autorite emettrice de votre permis dans votre pays d'origine.
+                </p>
+            </div>
+
+            <!-- Livraison a l'hotel -->
+            <div>
+                <h2 class="text-3xl font-black text-ink mb-6">Livraison a l'Hotel</h2>
+                <p class="text-gray-500 leading-relaxed mb-4">
+                    Nous livrons gratuitement dans toute la region de Pattaya, y compris Pattaya Beach, Jomtien, Naklua et Pratumnak, directement a votre hotel ou appartement. Aucun deplacement necessaire pour recuperer le vehicule.
+                </p>
+                <p class="text-gray-500 leading-relaxed mb-4">
+                    A la fin de votre location, nous venons recuperer le vehicule directement chez vous. Indiquez-nous simplement votre adresse exacte via WhatsApp, et nous serons a l'heure convenue.
+                </p>
+                <p class="text-gray-500 leading-relaxed">
+                    Livraison egalement possible a l'aeroport d'U-Tapao et a l'aeroport de Suvarnabhumi. Merci de nous prevenir a l'avance.
+                </p>
+            </div>
+
+            <!-- Comment reserver -->
+            <div>
+                <h2 class="text-3xl font-black text-ink mb-6">Comment Reserver</h2>
+                <ol class="space-y-4 mb-8">
+                    <li class="flex gap-4 items-start">
+                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center shrink-0 font-black text-sm">1</span>
+                        <span class="text-gray-500 pt-1">Choisissez votre vehicule et vos dates de location.</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center shrink-0 font-black text-sm">2</span>
+                        <span class="text-gray-500 pt-1">Envoyez votre demande via le formulaire de reservation ou contactez-nous directement sur WhatsApp.</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center shrink-0 font-black text-sm">3</span>
+                        <span class="text-gray-500 pt-1">Recevez la confirmation et les instructions de livraison.</span>
+                    </li>
+                </ol>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/#booking" class="btn-primary inline-flex">Choisir un Vehicule et Reserver</a>
+                    <a href="https://wa.me/<%= site.contact.whatsapp %>" class="inline-flex items-center justify-center gap-3 bg-white border-2 border-gray-200 hover:border-primary text-ink font-black uppercase tracking-widest py-4 px-8 rounded-full transition-all active:scale-95">Contacter via WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Location de moto -->
+            <div>
+                <h2 class="text-3xl font-black text-ink mb-6">Location de Moto a Pattaya</h2>
+                <p class="text-gray-500 leading-relaxed mb-4">
+                    Si une voiture n'est pas necessaire, un scooter ou une moto est parfait pour circuler sur la route de bord de mer de Pattaya et dans les petites ruelles — vous pouvez vous garer partout et vous deplacer rapidement.
+                </p>
+                <p class="text-gray-500 leading-relaxed">
+                    Nous proposons egalement la location de motos et scooters, dont Honda Click, Honda PCX 150, Yamaha NMAX et plus encore. <a href="https://www.pattayarentabike.com" target="_blank" rel="noopener" class="text-primary font-bold hover:underline">Voir nos options de location de moto →</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA Block -->
+<section class="py-24 bg-ink">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-5xl font-black text-white italic tracking-tight mb-4">Pret a Reserver votre Location de Voiture a Pattaya ?</h2>
+        <p class="text-white/40 font-medium mb-10 max-w-lg mx-auto">Livraison a votre hotel ou appartement, 7 jours sur 7. Choisissez votre vehicule en ligne ou contactez-nous sur WhatsApp.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#booking" class="btn-primary inline-flex">Reserver Maintenant</a>
+            <a href="https://wa.me/<%= site.contact.whatsapp %>" class="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-black uppercase tracking-widest py-4 px-8 rounded-full transition-all active:scale-95">Contacter via WhatsApp</a>
+        </div>
+    </div>
+</section>

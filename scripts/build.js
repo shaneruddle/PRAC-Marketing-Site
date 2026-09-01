@@ -323,7 +323,7 @@ async function build() {
                 const lang    = langObj.code;
         const _en = i18n['en'] || {};
         const _lx = i18n[lang] || {};
-        const t = { nav: {...(_en.nav||{}), ...(_lx.nav||{})}, meta: {...(_en.meta||{}), ...(_lx.meta||{})}, home: {...(_en.home||{}), ...(_lx.home||{})}, longTerm: {...(_en.longTerm||{}), ...(_lx.longTerm||{})}, fleet: {...(_en.fleet||{}), ...(_lx.fleet||{})}, locationDetail: {...(_en.locationDetail||{}), ...(_lx.locationDetail||{})}, guideDetail: {...(_en.guideDetail||{}), ...(_lx.guideDetail||{})} };
+        const t = { nav: {...(_en.nav||{}), ...(_lx.nav||{})}, meta: {...(_en.meta||{}), ...(_lx.meta||{})}, home: {...(_en.home||{}), ...(_lx.home||{})}, longTerm: {...(_en.longTerm||{}), ...(_lx.longTerm||{})}, fleet: {...(_en.fleet||{}), ...(_lx.fleet||{})}, locationDetail: {...(_en.locationDetail||{}), ...(_lx.locationDetail||{})}, guideDetail: {...(_en.guideDetail||{}), ...(_lx.guideDetail||{})}, locationsIndex: {...(_en.locationsIndex||{}), ...(_lx.locationsIndex||{})} };
         const langPrefix = lang === 'en' ? '' : '/' + lang;
                 const baseDir = lang === 'en' ? './' : './' + lang + '/';
                 const tPath   = (p) => baseDir + p;
@@ -496,6 +496,14 @@ async function build() {
                             }, tPath('locations/' + flatLoc.slug + '/index.html'));
             }
 
+            // Custom 404 page — Firebase Hosting serves the nearest 404.html per directory
+            await renderPage('404', {
+                lang, t, langPrefix,
+                title: (lang === 'ru' ? 'Страница не найдена' : lang === 'ko' ? '페이지를 찾을 수 없습니다' : lang === 'zh' ? '页面未找到' : lang === 'de' ? 'Seite nicht gefunden' : lang === 'ja' ? 'ページが見つかりません' : lang === 'fr' ? 'Page Introuvable' : 'Page Not Found') + ' | ' + site.name,
+                description: 'The page you were looking for could not be found.',
+                schema: {}
+            }, tPath('404.html'));
+
             // Static pages - unique SEO meta per page
           const staticPageMeta = {
             'about':             { title: 'About Pattaya Rent a Car | Trusted Since 2009', description: 'Pattaya Rent a Car has been serving customers since 2009. Over 1,200 five-star Google reviews, 100+ vehicles, and free hotel delivery across Pattaya.' },
@@ -640,6 +648,99 @@ async function build() {
       'inLanguage': 'ko'
     }
   }, 'car-rental-pattaya-korean/index.html');
+  await renderPage('car-rental-pattaya-chinese', {
+    lang: 'zh',
+    t: {},
+    langPrefix: '',
+    title: '芭提雅租车 | 经济实惠的汽车租赁服务',
+    description: '芭提雅租车最优惠价格保证。从经济型到SUV应有尽有。提供酒店接送服务。每天฿590起。',
+    hreflangTags: [
+      { lang: 'zh', href: 'https://' + site.domain + '/car-rental-pattaya-chinese/' },
+      { lang: 'x-default', href: 'https://' + site.domain + '/' }
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'AutoRental',
+      'name': 'Pattaya Rent a Car',
+      'url': 'https://' + site.domain + '/car-rental-pattaya-chinese/',
+      'description': '芭提雅租车服务，提供酒店接送与还车服务。',
+      'telephone': site.contact.phone,
+      'email': site.contact.email,
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Pattaya',
+        'addressCountry': 'TH'
+      },
+      'areaServed': {
+        '@type': 'City',
+        'name': 'Pattaya'
+      },
+      'priceRange': '฿590 - ฿3000',
+      'inLanguage': 'zh'
+    }
+  }, 'car-rental-pattaya-chinese/index.html');
+  await renderPage('car-rental-pattaya-japanese', {
+    lang: 'ja',
+    t: {},
+    langPrefix: '',
+    title: 'パタヤ レンタカー | 最安値保証で車を借りる',
+    description: 'パタヤのレンタカーは最安値保証。エコノミーからSUVまで幅広い車種をご用意。ホテル配送サービス付き。1日฿590から。',
+    hreflangTags: [
+      { lang: 'ja', href: 'https://' + site.domain + '/car-rental-pattaya-japanese/' },
+      { lang: 'x-default', href: 'https://' + site.domain + '/' }
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'AutoRental',
+      'name': 'Pattaya Rent a Car',
+      'url': 'https://' + site.domain + '/car-rental-pattaya-japanese/',
+      'description': 'パタヤ レンタカーサービス。ホテルへの配送・回収に対応。',
+      'telephone': site.contact.phone,
+      'email': site.contact.email,
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Pattaya',
+        'addressCountry': 'TH'
+      },
+      'areaServed': {
+        '@type': 'City',
+        'name': 'Pattaya'
+      },
+      'priceRange': '฿590 - ฿3000',
+      'inLanguage': 'ja'
+    }
+  }, 'car-rental-pattaya-japanese/index.html');
+  await renderPage('location-voiture-pattaya', {
+    lang: 'fr',
+    t: {},
+    langPrefix: '',
+    title: 'Location de Voiture Pattaya | Tarifs Reserves aux Meilleurs Prix',
+    description: 'Location de voiture a Pattaya au meilleur prix garanti. De l\'economique au SUV. Livraison a l\'hotel incluse. A partir de ฿590/jour.',
+    hreflangTags: [
+      { lang: 'fr', href: 'https://' + site.domain + '/location-voiture-pattaya/' },
+      { lang: 'x-default', href: 'https://' + site.domain + '/' }
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'AutoRental',
+      'name': 'Pattaya Rent a Car',
+      'url': 'https://' + site.domain + '/location-voiture-pattaya/',
+      'description': 'Service de location de voiture a Pattaya avec livraison et recuperation a l\'hotel.',
+      'telephone': site.contact.phone,
+      'email': site.contact.email,
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Pattaya',
+        'addressCountry': 'TH'
+      },
+      'areaServed': {
+        '@type': 'City',
+        'name': 'Pattaya'
+      },
+      'priceRange': '฿590 - ฿3000',
+      'inLanguage': 'fr'
+    }
+  }, 'location-voiture-pattaya/index.html');
                 }
                 // FAQ page (real data from faqs collection, grouped by category)
                 await renderPage('faq', {
@@ -756,7 +857,7 @@ async function build() {
 
     if (lang === 'en') {
       const lcs = languages.map(l => l.code);
-      const allUrls = [...sitemapEntries, ...lcs.filter(c => c !== 'en').flatMap(c => sitemapEntries.map(e => '/' + c + e)), '/arenda-avto-pattaya/', '/autovermietung-pattaya/', '/car-rental-pattaya-korean/'];
+      const allUrls = [...sitemapEntries, ...lcs.filter(c => c !== 'en').flatMap(c => sitemapEntries.map(e => '/' + c + e)), '/arenda-avto-pattaya/', '/autovermietung-pattaya/', '/car-rental-pattaya-korean/', '/car-rental-pattaya-chinese/', '/car-rental-pattaya-japanese/', '/location-voiture-pattaya/'];
       const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         allUrls.map(e => '  <url><loc>https://' + site.domain + e + '</loc></url>').join('\n') +
         '\n</urlset>';

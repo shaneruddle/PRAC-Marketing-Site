@@ -320,13 +320,13 @@
         "type": 301
       },
       {
-        "source": "/fr//:rest*",
-        "destination": "/:rest*",
+        "source": "/ja//:rest*",
+        "destination": "/ja/:rest*",
         "type": 301
       },
       {
-        "source": "/fr/",
-        "destination": "/",
+        "source": "/fr//:rest*",
+        "destination": "/fr/:rest*",
         "type": 301
       }
     ],

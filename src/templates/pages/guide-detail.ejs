@@ -75,7 +75,8 @@
     <span class="text-3xl font-black text-ink">&#3647;<%= guide.typicalPerDay.toLocaleString() %></span>
     <span class="text-sm font-bold text-gray-400">&nbsp;<%= (t.guideDetail && t.guideDetail.perDay) || '/ day' %></span>
   </div>
-  <p class="text-xs text-gray-400 mt-1"><%= (t.guideDetail && t.guideDetail.rentalNotePrefix) || 'Based on a' %> <%= guide.typicalDays %><%= (t.guideDetail && t.guideDetail.rentalNoteSuffix) || '-day rental &middot; prices vary by season &amp; availability' %></p>
+  <%# ?? rather than ||: ja/ko set an intentionally empty prefix (the counter follows the number) %>
+  <p class="text-xs text-gray-400 mt-1"><%= (t.guideDetail && t.guideDetail.rentalNotePrefix) ?? 'Based on a' %> <%= guide.typicalDays %><%= (t.guideDetail && t.guideDetail.rentalNoteSuffix) ?? '-day rental &middot; prices vary by season &amp; availability' %></p>
 </div>
 <% } %>
 <div class="flex items-center justify-between mb-4">

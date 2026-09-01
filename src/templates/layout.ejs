@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> | <%= site.name %></title>
+    <%# Append the brand only when the page title does not already carry it,
+        otherwise pages like "Contact Us | Pattaya Rent a Car" get it twice.
+        Compared case-insensitively: site.json and the Firestore companyName
+        differ on the "a"/"A". %>
+    <%
+      const _rawTitle = String(typeof title === 'undefined' || title === null ? '' : title).trim();
+      const _brand    = String(site.name || '').trim();
+      const pageTitle = (_brand && !_rawTitle.toLowerCase().includes(_brand.toLowerCase()))
+        ? (_rawTitle + ' | ' + _brand)
+        : _rawTitle;
+    %>
+    <title><%= pageTitle %></title>
     <meta name="description" content="<%= description %>">
     
     <!-- Fonts -->
@@ -12,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="<%= title %> | <%= site.name %>">
+    <meta property="og:title" content="<%= pageTitle %>">
     <meta property="og:description" content="<%= description %>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://<%= site.domain %><%= url %>">

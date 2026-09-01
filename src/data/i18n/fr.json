@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "fleet": "Notre Flotte",
+    "locations": "Zones de Livraison",
+    "longTerm": "Location Longue Duree",
+    "faq": "FAQ",
+    "about": "A Propos",
+    "contact": "Contact",
+    "rentBike": "Louer une Moto"
+  },
+  "meta": {
+    "home": {
+      "title": "Location de Voiture Pattaya | Livraison Gratuite a l'Hotel",
+      "description": "Location de voiture a Pattaya des 800 THB/jour. Livraison gratuite a l'hotel, assurance complete incluse, 4,9 etoiles sur Google. Reservez en 2 minutes."
+    },
+    "about": {
+      "title": "A Propos de Pattaya Rent a Car | Digne de Confiance depuis 2009",
+      "description": "En activite a Pattaya depuis 2009. 4,9 etoiles sur Google, plus de 1200 avis, plus de 100 vehicules."
+    },
+    "contact": {
+      "title": "Contact | Pattaya Rent a Car",
+      "description": "Contactez-nous via WhatsApp, Line ou email. Reponse rapide, assistance 24h/24."
+    },
+    "terms": {
+      "title": "Conditions de Location | Pattaya Rent a Car",
+      "description": "Conditions generales de location de voiture a Pattaya."
+    },
+    "privacy": {
+      "title": "Politique de Confidentialite | Pattaya Rent a Car",
+      "description": "Politique de confidentialite du site pattayarentacar.com."
+    },
+    "insurance": {
+      "title": "Assurance Location de Voiture Pattaya | Couverture Complete Incluse",
+      "description": "Chaque location inclut une assurance complete Viriyah Insurance en standard."
+    },
+    "motorbike": {
+      "title": "Location de Moto Pattaya | Des 250 THB/jour",
+      "description": "Location de moto ou scooter a Pattaya des 250 THB/jour. Livraison gratuite a l'hotel, assistance complete."
+    },
+    "longTerm": {
+      "title": "Location Longue Duree Pattaya | Tarifs Mensuels",
+      "description": "Location de voiture mensuelle a Pattaya a partir de 10 000 THB/mois. Assurance complete, livraison gratuite et entretien inclus."
+    },
+    "fleet": {
+      "title": "Flotte Complete de Location Pattaya | Economique, SUV, Pickup, MPV",
+      "description": "Parcourez notre flotte complete de vehicules de location a Pattaya. Livraison gratuite pour chaque reservation."
+    },
+    "locations": {
+      "title": "Zones de Livraison Pattaya | Livraison Gratuite",
+      "description": "Nous livrons dans toute la region de Pattaya, y compris Jomtien, Naklua et Wongamat."
+    },
+    "faq": {
+      "title": "Questions Frequentes | Pattaya Rent a Car",
+      "description": "Reponses aux questions frequentes sur la location de voiture, l'assurance, la livraison et le paiement."
+    },
+    "blog": {
+      "title": "Blog Location de Voiture Pattaya | Pattaya Rent a Car",
+      "description": "Conseils et guides sur la location de voiture a Pattaya par Pattaya Rent a Car."
+    }
+  },
+  "home": {
+    "badge": "Vehicules disponibles maintenant",
+    "heading": "Location de Voiture Pattaya",
+    "tagline": "Livraison Gratuite a l'Hotel",
+    "taglineSuffix": "Le Meilleur a Pattaya.",
+    "subtitle": "Location de voiture de qualite a Pattaya avec livraison gratuite a votre hotel, assurance complete et assistance 24h/24",
+    "freeCancellation": "Annulation Gratuite",
+    "hotelDelivery": "Livraison a l'Hotel",
+    "support247": "Assistance 24/7",
+    "whyBadge": "Pourquoi Nous Choisir",
+    "whyHeading": "Pourquoi Choisir Pattaya Rent a Car ?",
+    "whySubtitle": "Plus de 16 ans de location de voiture avec une note de 4,9 etoiles pour plus de 1200 clients",
+    "viewAllCars": "Voir Tous les Vehicules",
+    "whereWeDeliver": "Zone de Livraison",
+    "deliveryHeading": "Nous Livrons dans Tout Pattaya",
+    "deliverySubtitle": "Livraison gratuite de votre vehicule a votre hotel, resort ou appartement dans tout Pattaya et ses environs",
+    "faqBadge": "Questions Frequentes",
+    "faqHeading": "Des Questions ?",
+    "faqSubtitle": "Reponses aux questions frequentes sur la location de voiture a Pattaya",
+    "viewAllFaqs": "Voir Toutes les Questions"
+  },
+  "longTerm": {
+    "eyebrow": "Tarifs Speciaux",
+    "h1": "Location de Voiture Longue Duree a Pattaya",
+    "intro": "Location mensuelle et longue duree pour expatries, nomades numeriques et touristes de longue duree. Plus la location est longue, meilleur est le tarif.",
+    "cta": "Demander un Devis",
+    "whyEyebrow": "Avantages de la Location Longue Duree",
+    "whyH2": "Tout est inclus, plus vous restez, plus c'est avantageux",
+    "pricingEyebrow": "Tarifs",
+    "pricingH2": "Location a partir de 10 000 THB/mois",
+    "pricingIntro": "Pickups a partir de 20 000 THB/mois, SUV a partir de 30 000 THB/mois. Assurance, livraison et entretien inclus.",
+    "quoteH2": "Obtenir un Devis Personnalise",
+    "quoteIntro": "Indiquez-nous la duree de location souhaitee et nous vous enverrons notre meilleur tarif sous quelques heures.",
+    "faqH2": "Questions Frequentes"
+  },
+  "fleet": {
+    "badge": "Location de Voiture Pattaya",
+    "heading": "Toute Notre",
+    "headingAccent": "Flotte",
+    "noImage": "Pas d'Image",
+    "seatsLabel": "Places",
+    "selectVehicle": "Choisir ce Vehicule",
+    "viewSpecs": "Voir les Caracteristiques"
+  },
+  "locationsIndex": {
+    "heading": "Zones de Livraison",
+    "subtitle": "Nous couvrons tout Pattaya - des immeubles de Wongamat aux villas de Huai Yai.",
+    "viewCarsIn": "Voir les vehicules a"
+  },
+  "locationDetail": {
+    "serviceArea": "Zone de Service",
+    "faqHeading": "Questions Frequentes",
+    "popularCarsPrefix": "Vehicules Populaires a",
+    "noImg": "Pas d'Image",
+    "checkAvailability": "Verifier la Disponibilite",
+    "browseFleetPrefix": "Parcourez notre flotte complete - tous les vehicules disponibles a",
+    "viewAllCars": "Voir Tous les Vehicules Disponibles",
+    "freeDeliveryPrefix": "Livraison Gratuite a",
+    "deliveryText": "Nous livrons le vehicule a votre hotel, condo ou villa. Assistance 24h/24 disponible.",
+    "contactUs": "Nous Contacter"
+  },
+  "guideDetail": {
+    "home": "Accueil",
+    "cars": "Vehicules",
+    "noImageAvailable": "Aucune image disponible",
+    "interior": "Interieur",
+    "bootSpace": "Coffre",
+    "dashboard": "Tableau de Bord",
+    "seats": "Places",
+    "gearbox": "Boite de Vitesses",
+    "fuel": "Carburant",
+    "luggage": "Bagages",
+    "modelYear": "Annee du Modele",
+    "typicalPrice": "Prix Habituel",
+    "perDay": "/ jour",
+    "rentalNotePrefix": "Base sur une location de",
+    "rentalNoteSuffix": " jours &middot; les prix varient selon la saison et la disponibilite",
+    "availableNow": "Disponible Maintenant",
+    "instantConfirmation": "Confirmation Instantanee",
+    "fullInsurance": "Assurance Complete",
+    "roadAssistance": "Assistance Routiere 24/7",
+    "bookThisInstead": "Reserver Celui-ci",
+    "featuredCarsSubtext": "Ces vehicules sont disponibles a la reservation des maintenant.",
+    "noImage": "Pas d'Image",
+    "checkAvailability": "Verifier la Disponibilite"
+  }
+}

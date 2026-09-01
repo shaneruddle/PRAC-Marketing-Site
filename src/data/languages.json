@@ -31,8 +31,20 @@
   },
   {
     "code": "ko",
-    "name": "",
-    "flag": "",
+    "name": "한국어",
+    "flag": "🇰🇷",
     "path": "/ko/"
+  },
+  {
+    "code": "ja",
+    "name": "日本語",
+    "flag": "🇯🇵",
+    "path": "/ja/"
+  },
+  {
+    "code": "fr",
+    "name": "Français",
+    "flag": "🇫🇷",
+    "path": "/fr/"
   }
 ]

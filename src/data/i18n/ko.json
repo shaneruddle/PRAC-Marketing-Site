@@ -1,12 +1,12 @@
 {
   "nav": {
-    "fleet": " ",
-    "locations": " ",
-    "longTerm": " ",
-    "faq": "  ",
-    "about": "",
-    "contact": "",
-    "rentBike": " "
+    "fleet": "차량",
+    "locations": "지역",
+    "longTerm": "장기 렌트",
+    "faq": "자주 묻는 질문",
+    "about": "회사 소개",
+    "contact": "문의하기",
+    "rentBike": "오토바이 렌트"
   },
   "meta": {
     "home": {
@@ -14,48 +14,48 @@
       "description": "파타야에서 하루 800밧부터 렌터카. 무료 호텔 배달, 완전 보험 포함, 구글 평점 4.9. 2분 내에 예약하세요."
     },
     "about": {
-      "title": "Pattaya Rent a Car  | 2009",
-      "description": "2009    .  5  1,200 ."
+      "title": "Pattaya Rent a Car 소개 | 2009년부터 신뢰받는 렌터카",
+      "description": "2009년부터 파타야에서 렌터카 서비스를 제공하고 있습니다. 구글 평점 4.9, 1,200개 이상의 리뷰, 100대 이상의 차량 보유."
     },
     "contact": {
-      "title": " | Pattaya Rent a Car",
-      "description": ", WhatsApp, Line .  ,    ."
+      "title": "문의하기 | Pattaya Rent a Car",
+      "description": "WhatsApp, Line 또는 이메일로 문의해 주세요. 빠른 답변과 24시간 지원을 제공합니다."
     },
     "terms": {
-      "title": "   | Pattaya Rent a Car",
-      "description": "  : , ,     ."
+      "title": "이용약관 | Pattaya Rent a Car",
+      "description": "파타야 렌터카 이용약관 및 대여 조건 안내."
     },
     "privacy": {
-      "title": "  | Pattaya Rent a Car",
-      "description": "pattayarentacar.com  ."
+      "title": "개인정보처리방침 | Pattaya Rent a Car",
+      "description": "pattayarentacar.com의 개인정보처리방침입니다."
     },
     "insurance": {
-      "title": "   |   ",
-      "description": "  Viriyah  ."
+      "title": "렌터카 보험 안내 | Pattaya Rent a Car",
+      "description": "모든 렌터카에 Viriyah 보험사의 완전 보험이 기본 포함됩니다."
     },
     "motorbike": {
-      "title": "   |  250/",
-      "description": "    250.   ."
+      "title": "파타야 오토바이 렌트 | 1일 250밧부터",
+      "description": "파타야 오토바이 및 스쿠터 렌트 1일 250밧부터. 무료 배달 및 전액 지원."
     },
     "longTerm": {
       "title": "파타야 장기 렌트카 | 월 렌트 요금",
       "description": "파타야 장기 렌트카 월 10,000바트부터. 완전 보험, 무료 배달 및 유지보수 포함."
     },
     "fleet": {
-      "title": "   | , SUV, , MPV",
-      "description": "  :    SUV."
+      "title": "파타야 렌터카 전체 차량 | 이코노미, SUV, 픽업, MPV",
+      "description": "파타야 렌터카의 전체 차량 목록: 이코노미부터 SUV까지. 모든 예약에 무료 배달 포함."
     },
     "locations": {
-      "title": "    |   ",
-      "description": "    ."
+      "title": "파타야 서비스 지역 | 무료 배달",
+      "description": "파타야 전 지역에 렌터카를 배달해 드립니다. 좀티엔, 나클루아, 웡아맛 등 포함."
     },
     "faq": {
-      "title": "   | Pattaya Rent a Car",
-      "description": "    ."
+      "title": "자주 묻는 질문 | Pattaya Rent a Car",
+      "description": "렌터카, 보험, 배달, 결제에 관한 자주 묻는 질문에 대한 답변입니다."
     },
     "blog": {
-      "title": "   |    ",
-      "description": "Pattaya Rent a Car    ."
+      "title": "파타야 렌터카 블로그 | Pattaya Rent a Car",
+      "description": "Pattaya Rent a Car의 렌터카 관련 팁과 가이드."
     }
   },
   "home": {
@@ -92,5 +92,56 @@
     "quoteH2": "맞춤 견적 받기",
     "quoteIntro": "필요한 기간을 알려주시면 몇 시간 내에 최적 요금을 보내드립니다.",
     "faqH2": "자주 묻는 질문"
+  },
+  "fleet": {
+    "badge": "파타야 렌터카",
+    "heading": "전체",
+    "headingAccent": "차량",
+    "noImage": "이미지 없음",
+    "seatsLabel": "인승",
+    "selectVehicle": "이 차량 선택하기",
+    "viewSpecs": "제원 보기"
+  },
+  "locationsIndex": {
+    "heading": "배달 가능 지역",
+    "subtitle": "웡아맛의 고층 콘도부터 후아이야이의 빌라까지, 파타야 전 지역에 서비스를 제공합니다.",
+    "viewCarsIn": "차량 보기:"
+  },
+  "locationDetail": {
+    "serviceArea": "서비스 지역",
+    "faqHeading": "자주 묻는 질문",
+    "popularCarsPrefix": "인기 차량 -",
+    "noImg": "이미지 없음",
+    "checkAvailability": "예약 가능 확인",
+    "browseFleetPrefix": "전체 차량 보기 — 아래 지역에서 모두 이용 가능:",
+    "viewAllCars": "이용 가능한 전체 차량 보기",
+    "freeDeliveryPrefix": "무료 배달 지역:",
+    "deliveryText": "호텔, 콘도, 빌라까지 차량을 배달해 드립니다. 24시간 지원 가능합니다.",
+    "contactUs": "문의하기"
+  },
+  "guideDetail": {
+    "home": "홈",
+    "cars": "차량",
+    "noImageAvailable": "이미지 없음",
+    "interior": "실내",
+    "bootSpace": "트렁크 공간",
+    "dashboard": "계기판",
+    "seats": "좌석",
+    "gearbox": "변속기",
+    "fuel": "연료",
+    "luggage": "수하물",
+    "modelYear": "연식",
+    "typicalPrice": "예상 가격",
+    "perDay": "/ 1일",
+    "rentalNotePrefix": "",
+    "rentalNoteSuffix": "일 렌트 기준 · 시즌 및 재고에 따라 가격 변동",
+    "availableNow": "즉시 이용 가능",
+    "instantConfirmation": "즉시 예약 확정",
+    "fullInsurance": "완전 보험",
+    "roadAssistance": "24시간 도로 지원",
+    "bookThisInstead": "이 차량으로 예약하기",
+    "featuredCarsSubtext": "지금 바로 예약 가능한 차량입니다.",
+    "noImage": "이미지 없음",
+    "checkAvailability": "예약 가능 확인"
   }
 }

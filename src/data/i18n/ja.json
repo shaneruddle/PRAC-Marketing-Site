@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "fleet": "車両一覧",
+    "locations": "サービスエリア",
+    "longTerm": "長期レンタル",
+    "faq": "よくある質問",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "rentBike": "バイクレンタル"
+  },
+  "meta": {
+    "home": {
+      "title": "パタヤ レンタカー | 無料ホテル配送",
+      "description": "パタヤのレンタカーは1日800THBから。無料ホテル配送、フル保険付き、Google評価4.9。2分で予約完了。"
+    },
+    "about": {
+      "title": "Pattaya Rent a Carについて | 2009年創業の信頼",
+      "description": "2009年からパタヤでレンタカーサービスを提供。Google評価4.9、1,200件以上のレビュー、100台以上の車両を保有。"
+    },
+    "contact": {
+      "title": "お問い合わせ | Pattaya Rent a Car",
+      "description": "WhatsApp、Line、メールでお気軽にご連絡ください。迅速な対応、24時間サポート。"
+    },
+    "terms": {
+      "title": "利用規約 | Pattaya Rent a Car",
+      "description": "パタヤでのレンタカー利用に関する規約・条件についてのご案内。"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー | Pattaya Rent a Car",
+      "description": "pattayarentacar.comのプライバシーポリシーです。"
+    },
+    "insurance": {
+      "title": "レンタカー保険について | Pattaya Rent a Car",
+      "description": "すべてのレンタカーにViriyah Insuranceのフル保険が標準で付帯します。"
+    },
+    "motorbike": {
+      "title": "パタヤ バイクレンタル | 1日250THBから",
+      "description": "パタヤのバイク・スクーターレンタルは1日250THBから。無料配送、フルサポート付き。"
+    },
+    "longTerm": {
+      "title": "パタヤ 長期レンタカー | 月極料金プラン",
+      "description": "パタヤの月極レンタカーは月10,000THBから。フル保険、無料配送、メンテナンス込み。"
+    },
+    "fleet": {
+      "title": "パタヤ レンタカー全車両一覧 | エコノミー、SUV、ピックアップ、MPV",
+      "description": "パタヤの全レンタカー車両をご紹介。エコノミーからSUVまで。すべてのご予約に無料配送付き。"
+    },
+    "locations": {
+      "title": "パタヤ サービスエリア | 無料配送",
+      "description": "パタヤ全域に配送対応。ジョムティエン、ナクルア、ウォンアマットなど。"
+    },
+    "faq": {
+      "title": "よくある質問 | Pattaya Rent a Car",
+      "description": "レンタカー、保険、配送、お支払いに関するよくある質問への回答です。"
+    },
+    "blog": {
+      "title": "パタヤ レンタカーブログ | Pattaya Rent a Car",
+      "description": "Pattaya Rent a Carによるレンタカーに関するヒントとガイド。"
+    }
+  },
+  "home": {
+    "badge": "今すぐご利用いただけます",
+    "heading": "パタヤ レンタカー",
+    "tagline": "無料ホテル配送",
+    "taglineSuffix": "パタヤNo.1のサービス",
+    "subtitle": "無料ホテル配送、フル保険、24時間サポート付きの高品質なパタヤレンタカーサービス",
+    "freeCancellation": "無料キャンセル",
+    "hotelDelivery": "ホテル配送",
+    "support247": "24時間サポート",
+    "whyBadge": "選ばれる理由",
+    "whyHeading": "Pattaya Rent a Carが選ばれる理由",
+    "whySubtitle": "16年以上の実績、1,200件以上のレビューでGoogle評価4.9星",
+    "viewAllCars": "全車両を見る",
+    "whereWeDeliver": "配送エリア",
+    "deliveryHeading": "パタヤ全域に配送対応",
+    "deliverySubtitle": "パタヤおよび周辺地域のホテル、リゾート、コンドミニアムまで無料で配送いたします",
+    "faqBadge": "よくある質問",
+    "faqHeading": "ご質問はありますか？",
+    "faqSubtitle": "パタヤでのレンタカーに関するよくある質問への回答",
+    "viewAllFaqs": "すべての質問を見る"
+  },
+  "longTerm": {
+    "eyebrow": "特別料金",
+    "h1": "パタヤ 長期レンタカー",
+    "intro": "駐在員、デジタルノマド、長期滞在者向けの月極・長期レンタルサービス。長期になるほどお得な料金でご利用いただけます。",
+    "cta": "見積もりを依頼する",
+    "whyEyebrow": "長期レンタルを選ぶ理由",
+    "whyH2": "すべて込みで、長く滞在するほどお得に",
+    "pricingEyebrow": "料金",
+    "pricingH2": "月極レンタルは10,000THBから",
+    "pricingIntro": "ピックアップトラックは月20,000THBから、SUVは月30,000THBから。保険、配送、メンテナンスすべて込みです。",
+    "quoteH2": "カスタム見積もりを取得",
+    "quoteIntro": "ご希望のレンタル期間をお知らせいただければ、数時間以内に最適な料金をご案内いたします。",
+    "faqH2": "よくある質問"
+  },
+  "fleet": {
+    "badge": "パタヤ レンタカー",
+    "heading": "全",
+    "headingAccent": "車両",
+    "noImage": "画像なし",
+    "seatsLabel": "人乗り",
+    "selectVehicle": "この車両を選択",
+    "viewSpecs": "詳細を見る"
+  },
+  "locationsIndex": {
+    "heading": "サービスエリア",
+    "subtitle": "ウォンアマットの高層コンドミニアムからフアイヤイのヴィラまで、パタヤ全域でサービスを提供しています。",
+    "viewCarsIn": "車両を見る："
+  },
+  "locationDetail": {
+    "serviceArea": "サービスエリア",
+    "faqHeading": "よくある質問",
+    "popularCarsPrefix": "人気の車両 -",
+    "noImg": "画像なし",
+    "checkAvailability": "空車状況を確認",
+    "browseFleetPrefix": "全車両を見る - このエリアでご利用いただけます：",
+    "viewAllCars": "利用可能な全車両を見る",
+    "freeDeliveryPrefix": "無料配送エリア：",
+    "deliveryText": "ホテル、コンドミニアム、ヴィラまで車両をお届けします。24時間サポート対応。",
+    "contactUs": "お問い合わせ"
+  },
+  "guideDetail": {
+    "home": "ホーム",
+    "cars": "車両一覧",
+    "noImageAvailable": "画像がありません",
+    "interior": "内装",
+    "bootSpace": "トランクスペース",
+    "dashboard": "ダッシュボード",
+    "seats": "座席数",
+    "gearbox": "トランスミッション",
+    "fuel": "燃料",
+    "luggage": "荷物スペース",
+    "modelYear": "年式",
+    "typicalPrice": "参考価格",
+    "perDay": "/ 1日",
+    "rentalNotePrefix": "",
+    "rentalNoteSuffix": "日間レンタルの場合 · 料金はシーズンや空き状況により変動します",
+    "availableNow": "即日利用可能",
+    "instantConfirmation": "即時予約確定",
+    "fullInsurance": "フル保険付き",
+    "roadAssistance": "24時間ロードサービス",
+    "bookThisInstead": "この車両を予約する",
+    "featuredCarsSubtext": "これらの車両は今すぐご予約いただけます。",
+    "noImage": "画像なし",
+    "checkAvailability": "空車状況を確認"
+  }
+}

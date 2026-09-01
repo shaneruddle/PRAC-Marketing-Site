@@ -1,12 +1,12 @@
 {
   "nav": {
-    "fleet": " ",
-    "locations": " ",
-    "longTerm": "",
-    "faq": "",
-    "about": " ",
-    "contact": "",
-    "rentBike": " "
+    "fleet": "Автопарк",
+    "locations": "Локации",
+    "longTerm": "Долгосрочная аренда",
+    "faq": "Вопросы",
+    "about": "О нас",
+    "contact": "Контакты",
+    "rentBike": "Аренда байка"
   },
   "meta": {
     "home": {
@@ -14,48 +14,48 @@
       "description": "Аренда автомобиля в Паттайе от 800 бат/день. Бесплатная доставка в отель, полное страхование, рейтинг 4,9 на Google. Бронирование за 2 минуты."
     },
     "about": {
-      "title": "  Pattaya Rent a Car |    2009 ",
-      "description": "   2009 .  1200   Google, 100+ ."
+      "title": "О компании Pattaya Rent a Car | Аренда авто с 2009 года",
+      "description": "Работаем в Паттайе с 2009 года. Рейтинг 4,9 на Google, более 1200 отзывов, автопарк из 100+ автомобилей."
     },
     "contact": {
-      "title": " | Pattaya Rent a Car",
-      "description": "  WhatsApp, Line  email.  .    ."
+      "title": "Контакты | Pattaya Rent a Car",
+      "description": "Свяжитесь с нами через WhatsApp, Line или email. Быстрый ответ и поддержка 24/7."
     },
     "terms": {
-      "title": "  | Pattaya Rent a Car",
-      "description": ", ,    ."
+      "title": "Условия аренды | Pattaya Rent a Car",
+      "description": "Условия, положения и правила аренды автомобиля в Паттайе."
     },
     "privacy": {
-      "title": "  | Pattaya Rent a Car",
-      "description": "  pattayarentacar.com."
+      "title": "Политика конфиденциальности | Pattaya Rent a Car",
+      "description": "Политика конфиденциальности сайта pattayarentacar.com."
     },
     "insurance": {
-      "title": "      |  ",
-      "description": "     Viriyah."
+      "title": "Страхование арендованных автомобилей | Pattaya Rent a Car",
+      "description": "Полное страховое покрытие от Viriyah на все автомобили в аренде."
     },
     "motorbike": {
-      "title": "    |   250 THB/",
-      "description": "   250 THB/.    ."
+      "title": "Аренда мотобайка в Паттайе | От 250 бат/день",
+      "description": "Аренда мотобайка в Паттайе от 250 бат/день. Бесплатная доставка и полная поддержка."
     },
     "longTerm": {
       "title": "Долгосрочная аренда авто в Паттайе | Помесячные тарифы",
       "description": "Аренда авто в Паттайе от 10 000 бат в месяц. Полная страховка, бесплатная доставка и техобслуживание включены."
     },
     "fleet": {
-      "title": "   | , SUV, , MPV",
-      "description": "   :    ."
+      "title": "Автопарк для аренды в Паттайе | Эконом, SUV, пикапы, MPV",
+      "description": "Весь наш автопарк для аренды в Паттайе: от эконом-класса до внедорожников. Бесплатная доставка на каждый заказ."
     },
     "locations": {
-      "title": "     |  ",
-      "description": "     ."
+      "title": "Зоны обслуживания в Паттайе | Бесплатная доставка",
+      "description": "Мы доставляем арендованные автомобили по всем районам Паттайи, включая Джомтьен, Наклуа и Вонгамат."
     },
     "faq": {
-      "title": "   | Pattaya Rent a Car",
-      "description": ",        ."
+      "title": "Частые вопросы | Pattaya Rent a Car",
+      "description": "Ответы на частые вопросы об аренде автомобиля, страховке, доставке и оплате."
     },
     "blog": {
-      "title": "      | ",
-      "description": "     Pattaya Rent a Car."
+      "title": "Блог об аренде авто в Паттайе | Pattaya Rent a Car",
+      "description": "Советы и гайды по аренде автомобиля в Паттайе от Pattaya Rent a Car."
     }
   },
   "home": {
@@ -92,5 +92,56 @@
     "quoteH2": "Получить индивидуальное предложение",
     "quoteIntro": "Укажите срок аренды и мы пришлём лучшую цену в течение нескольких часов.",
     "faqH2": "Часто задаваемые вопросы"
+  },
+  "fleet": {
+    "badge": "Аренда авто в Паттайе",
+    "heading": "Автомобили",
+    "headingAccent": "в аренду",
+    "noImage": "Нет фото",
+    "seatsLabel": "мест",
+    "selectVehicle": "Выбрать этот автомобиль",
+    "viewSpecs": "Смотреть характеристики"
+  },
+  "locationsIndex": {
+    "heading": "Зоны доставки",
+    "subtitle": "Мы обслуживаем весь Паттайю — от высоток Вонгамата до вилл в Хуай Яй.",
+    "viewCarsIn": "Смотреть автомобили в"
+  },
+  "locationDetail": {
+    "serviceArea": "Зона обслуживания",
+    "faqHeading": "Часто задаваемые вопросы",
+    "popularCarsPrefix": "Популярные автомобили в",
+    "noImg": "Нет фото",
+    "checkAvailability": "Проверить наличие",
+    "browseFleetPrefix": "Смотрите весь наш автопарк — все автомобили доступны в",
+    "viewAllCars": "Смотреть все доступные автомобили",
+    "freeDeliveryPrefix": "Бесплатная доставка в",
+    "deliveryText": "Мы доставим автомобиль в ваш отель, кондо или виллу. Поддержка 24/7.",
+    "contactUs": "Связаться с нами"
+  },
+  "guideDetail": {
+    "home": "Главная",
+    "cars": "Автомобили",
+    "noImageAvailable": "Изображение недоступно",
+    "interior": "Салон",
+    "bootSpace": "Багажник",
+    "dashboard": "Панель приборов",
+    "seats": "Мест",
+    "gearbox": "Коробка передач",
+    "fuel": "Топливо",
+    "luggage": "Багаж",
+    "modelYear": "Год выпуска",
+    "typicalPrice": "Ориентировочная цена",
+    "perDay": "/ день",
+    "rentalNotePrefix": "Рассчитано на",
+    "rentalNoteSuffix": "-дневную аренду · цена зависит от сезона и наличия",
+    "availableNow": "Доступен сейчас",
+    "instantConfirmation": "Мгновенное подтверждение",
+    "fullInsurance": "Полное страхование",
+    "roadAssistance": "Помощь на дороге 24/7",
+    "bookThisInstead": "Забронировать этот автомобиль",
+    "featuredCarsSubtext": "Эти автомобили доступны для бронирования прямо сейчас.",
+    "noImage": "Нет фото",
+    "checkAvailability": "Проверить наличие"
   }
 }

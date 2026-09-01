@@ -1,12 +1,12 @@
 {
   "nav": {
-    "fleet": "",
-    "locations": "",
-    "longTerm": "",
-    "faq": "",
-    "about": "",
-    "contact": "",
-    "rentBike": ""
+    "fleet": "车型",
+    "locations": "服务区域",
+    "longTerm": "长期租车",
+    "faq": "常见问题",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "rentBike": "摩托车租赁"
   },
   "meta": {
     "home": {
@@ -14,48 +14,48 @@
       "description": "芭提雅租车，每天从800泰铢起。免费送车至酒店，全险承保，谷歌评分4.9。2分钟即可完成预订。"
     },
     "about": {
-      "title": " Pattaya Rent a Car | 2009",
-      "description": "20091200100"
+      "title": "关于 Pattaya Rent a Car | 自2009年起值得信赖",
+      "description": "自2009年起在芭提雅提供租车服务。谷歌评分4.9，超过1200条好评，拥有100多辆车。"
     },
     "contact": {
-      "title": " | Pattaya Rent a Car",
-      "description": "WhatsAppLine"
+      "title": "联系我们 | Pattaya Rent a Car",
+      "description": "通过WhatsApp、Line或电子邮件联系我们。快速回复，24小时支持。"
     },
     "terms": {
-      "title": " | Pattaya Rent a Car",
-      "description": ""
+      "title": "租车条款 | Pattaya Rent a Car",
+      "description": "芭提雅租车的条款、条件与租赁政策说明。"
     },
     "privacy": {
-      "title": " | Pattaya Rent a Car",
-      "description": "pattayarentacar.com "
+      "title": "隐私政策 | Pattaya Rent a Car",
+      "description": "pattayarentacar.com 网站隐私政策。"
     },
     "insurance": {
-      "title": " | ",
-      "description": " Viriyah "
+      "title": "租车保险说明 | Pattaya Rent a Car",
+      "description": "每辆租车均标配 Viriyah Insurance 全险保障。"
     },
     "motorbike": {
-      "title": " | 250/",
-      "description": "250"
+      "title": "芭提雅摩托车租赁 | 每天250泰铢起",
+      "description": "芭提雅摩托车及踏板车租赁，每天250泰铢起。免费送车，全程支持。"
     },
     "longTerm": {
       "title": "芭提雅长期租车 | 月租优惠价格",
       "description": "芭提雅月租车起价每月10,000泰銅。全险、免费送车及维护服务均包含在内。"
     },
     "fleet": {
-      "title": " | SUVMPV",
-      "description": "SUV"
+      "title": "芭提雅租车全部车型 | 经济型、SUV、皮卡、MPV",
+      "description": "浏览我们的全部车型：从经济型到SUV一应俱全。每笔订单均含免费送车服务。"
     },
     "locations": {
-      "title": " | ",
-      "description": ""
+      "title": "芭提雅服务区域 | 免费送车",
+      "description": "我们为芭提雅各个区域提供送车服务，包括芭提雅中心、乔木田、纳克鲁亚等。"
     },
     "faq": {
-      "title": " | Pattaya Rent a Car",
-      "description": ""
+      "title": "常见问题 | Pattaya Rent a Car",
+      "description": "关于租车、保险、送车和付款的常见问题解答。"
     },
     "blog": {
-      "title": " | ",
-      "description": " Pattaya Rent a Car "
+      "title": "芭提雅租车博客 | Pattaya Rent a Car",
+      "description": "来自 Pattaya Rent a Car 的租车相关技巧与指南。"
     }
   },
   "home": {
@@ -92,5 +92,56 @@
     "quoteH2": "获取专属报价",
     "quoteIntro": "告诉我们您需要租车的时长，我们将在数小时内发送最优惠价格。",
     "faqH2": "常见问题"
+  },
+  "fleet": {
+    "badge": "芭提雅租车",
+    "heading": "全部",
+    "headingAccent": "车型",
+    "noImage": "暂无图片",
+    "seatsLabel": "座",
+    "selectVehicle": "选择此车型",
+    "viewSpecs": "查看规格"
+  },
+  "locationsIndex": {
+    "heading": "服务区域",
+    "subtitle": "我们的服务覆盖整个芭提雅——从旺阿马特的高层公寓到怀艾的别墅区。",
+    "viewCarsIn": "查看车型："
+  },
+  "locationDetail": {
+    "serviceArea": "服务区域",
+    "faqHeading": "常见问题",
+    "popularCarsPrefix": "热门车型 -",
+    "noImg": "暂无图片",
+    "checkAvailability": "查看是否有车",
+    "browseFleetPrefix": "浏览我们的全部车型 —— 均可在此区域使用：",
+    "viewAllCars": "查看全部可用车型",
+    "freeDeliveryPrefix": "免费送车区域：",
+    "deliveryText": "我们会将车送到您的酒店、公寓或别墅，24小时提供支持。",
+    "contactUs": "联系我们"
+  },
+  "guideDetail": {
+    "home": "首页",
+    "cars": "车辆",
+    "noImageAvailable": "暂无图片",
+    "interior": "内饰",
+    "bootSpace": "后备箱空间",
+    "dashboard": "仪表盘",
+    "seats": "座位数",
+    "gearbox": "变速箱",
+    "fuel": "燃油",
+    "luggage": "行李空间",
+    "modelYear": "车型年份",
+    "typicalPrice": "参考价格",
+    "perDay": "/ 天",
+    "rentalNotePrefix": "基于",
+    "rentalNoteSuffix": "天租期 · 价格因季节及库存而异",
+    "availableNow": "现在可用",
+    "instantConfirmation": "即时确认",
+    "fullInsurance": "全险保障",
+    "roadAssistance": "24小时道路救援",
+    "bookThisInstead": "预订此车型",
+    "featuredCarsSubtext": "这些车辆现在即可预订。",
+    "noImage": "暂无图片",
+    "checkAvailability": "查看是否有车"
   }
 }

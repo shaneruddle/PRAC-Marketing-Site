@@ -1,7 +1,7 @@
 <section class="bg-gray-900 pt-32 pb-24 text-white">
     <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-[0.9] mb-6">Our Delivery Areas</h1>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto">We serve every corner of Pattaya. From the high-rises of Wongamat to the villas of Huai Yai.</p>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-[0.9] mb-6"><%= (t.locationsIndex && t.locationsIndex.heading) || 'Our Delivery Areas' %></h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto"><%= (t.locationsIndex && t.locationsIndex.subtitle) || 'We serve every corner of Pattaya. From the high-rises of Wongamat to the villas of Huai Yai.' %></p>
     </div>
 </section>
 
@@ -9,7 +9,7 @@
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <% locations.forEach(loc => { %>
-                <a href="/locations/<%= loc.slug %>" class="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all">
+                <a href="<%= langPrefix %>/locations/<%= loc.slug %>" class="group bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all">
                     <div class="flex justify-between items-start mb-6">
                         <h2 class="text-2xl font-bold tracking-tight text-ink group-hover:text-orange-500 transition-colors"><%= loc.name %></h2>
                         <div class="w-10 h-10 bg-gray-50 text-gray-300 rounded-full flex items-center justify-center group-hover:bg-orange-100 group-hover:text-orange-500 transition-all">
@@ -20,7 +20,7 @@
                         <%= loc.description %>
                     </p>
                     <div class="flex items-center gap-2 text-orange-600 font-bold text-sm uppercase tracking-widest">
-                        <span>View Cars in <%= loc.name %></span>
+                        <span><%= (t.locationsIndex && t.locationsIndex.viewCarsIn) || 'View Cars in' %> <%= loc.name %></span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </div>
                 </a>

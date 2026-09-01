@@ -2,11 +2,11 @@
     <div class="container mx-auto px-4">
         <h1 class="text-9xl font-black text-gray-100 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 -z-10 select-none">404</h1>
         <div class="relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-6">Oops! Lost in Pattaya?</h2>
-            <p class="text-xl text-gray-500 max-w-xl mx-auto mb-10">We couldn't find the page you were looking for. Maybe you're looking for a better car deal?</p>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-6"><%= lang === 'ru' ? 'Ой! Потерялись в Паттайе?' : (lang === 'ko' ? '이런! 파타야에서 길을 잃으셨나요?' : (lang === 'zh' ? '哎呀！在芭提雅迷路了吗？' : (lang === 'de' ? 'Ups! In Pattaya verirrt?' : (lang === 'ja' ? 'おっと！パタヤで迷子ですか？' : (lang === 'fr' ? 'Oups ! Perdu a Pattaya ?' : 'Oops! Lost in Pattaya?'))))) %></h2>
+            <p class="text-xl text-gray-500 max-w-xl mx-auto mb-10"><%= lang === 'ru' ? 'Мы не смогли найти страницу, которую вы искали. Может быть, вы ищете выгодное предложение на автомобиль?' : (lang === 'ko' ? '찾으시는 페이지를 찾을 수 없습니다. 더 좋은 렌터카 조건을 찾고 계신가요?' : (lang === 'zh' ? '我们找不到您要访问的页面。也许您正在寻找更优惠的租车方案？' : (lang === 'de' ? 'Wir konnten die gesuchte Seite nicht finden. Suchen Sie vielleicht nach einem besseren Autoangebot?' : (lang === 'ja' ? 'お探しのページが見つかりませんでした。もっとお得なレンタカーをお探しですか？' : (lang === 'fr' ? "Nous n'avons pas trouve la page que vous cherchiez. Cherchez-vous peut-etre une meilleure offre de voiture ?" : "We couldn't find the page you were looking for. Maybe you're looking for a better car deal?"))))) %></p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/" class="px-8 py-4 bg-orange-500 text-white font-bold rounded-xl hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20">Back to Home</a>
-                <a href="/cars" class="px-8 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-black transition-all">View All Cars</a>
+                <a href="<%= langPrefix %>/" class="px-8 py-4 bg-orange-500 text-white font-bold rounded-xl hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"><%= lang === 'ru' ? 'На главную' : (lang === 'ko' ? '홈으로 돌아가기' : (lang === 'zh' ? '返回首页' : (lang === 'de' ? 'Zur Startseite' : (lang === 'ja' ? 'ホームに戻る' : (lang === 'fr' ? "Retour a l'Accueil" : 'Back to Home'))))) %></a>
+                <a href="<%= langPrefix %>/cars" class="px-8 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-black transition-all"><%= lang === 'ru' ? 'Смотреть все автомобили' : (lang === 'ko' ? '전체 차량 보기' : (lang === 'zh' ? '查看全部车辆' : (lang === 'de' ? 'Alle Autos ansehen' : (lang === 'ja' ? '全車両を見る' : (lang === 'fr' ? 'Voir Tous les Vehicules' : 'View All Cars'))))) %></a>
             </div>
         </div>
     </div>

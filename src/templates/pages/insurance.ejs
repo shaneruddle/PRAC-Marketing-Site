@@ -1,26 +1,64 @@
 <section class="bg-gray-50 pt-32 pb-24 border-b border-gray-100">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-4">Insurance Coverage</h1>
-        <p class="text-xl text-gray-500">Stay protected on the road with our comprehensive insurance.</p>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-4"><%= lang === 'ru' ? 'Страховое покрытие' : (lang === 'ko' ? '보험 안내' : (lang === 'zh' ? '保险保障' : (lang === 'de' ? 'Versicherungsschutz' : (lang === 'ja' ? '保険について' : (lang === 'fr' ? 'Couverture d\'Assurance' : 'Insurance Coverage'))))) %></h1>
+        <p class="text-xl text-gray-500"><%= lang === 'ru' ? 'Оставайтесь защищёнными на дороге благодаря нашему полному страхованию.' : (lang === 'ko' ? '완전 보험으로 안심하고 도로를 달리세요.' : (lang === 'zh' ? '全面保险，让您安心上路。' : (lang === 'de' ? 'Bleiben Sie mit unserer umfassenden Versicherung auf der Strasse geschuetzt.' : (lang === 'ja' ? '充実の保険で安心のドライブを。' : (lang === 'fr' ? 'Restez proteges sur la route grace a notre assurance complete.' : 'Stay protected on the road with our comprehensive insurance.'))))) %></p>
     </div>
 </section>
 
 <section class="py-24">
     <div class="container mx-auto px-4 max-w-4xl">
         <div class="prose prose-lg max-w-none text-gray-600">
-            <h2 class="text-3xl font-bold tracking-tighter text-ink mb-8">Comprehensive Protection Included</h2>
-            <p>At Pattaya Rent A Car, safety is our priority. Every vehicle in our fleet is covered by first-class commercial insurance for rental vehicles.</p>
-            
-            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">What is covered?</h3>
+            <h2 class="text-3xl font-bold tracking-tighter text-ink mb-8"><%= lang === 'ru' ? 'Полная защита включена' : (lang === 'ko' ? '완전한 보호가 포함됩니다' : (lang === 'zh' ? '包含全面保障' : (lang === 'de' ? 'Umfassender Schutz inklusive' : (lang === 'ja' ? '充実の補償が標準付帯' : (lang === 'fr' ? 'Protection Complete Incluse' : 'Comprehensive Protection Included'))))) %></h2>
+            <p><% if (lang === 'ru') { %>Безопасность — наш приоритет в Pattaya Rent A Car. Каждый автомобиль нашего автопарка застрахован первоклассной коммерческой страховкой для арендованных транспортных средств.<% } else if (lang === 'ko') { %>Pattaya Rent A Car는 안전을 최우선으로 생각합니다. 저희 차량은 모두 렌터카 전용 1종 상업보험으로 보장됩니다.<% } else if (lang === 'zh') { %>在Pattaya Rent A Car，安全是我们的首要任务。我们车队中的每辆车都投保了针对租赁车辆的一级商业保险。<% } else if (lang === 'de') { %>Bei Pattaya Rent A Car steht Sicherheit an erster Stelle. Jedes Fahrzeug unserer Flotte ist durch eine erstklassige gewerbliche Versicherung fuer Mietfahrzeuge abgesichert.<% } else if (lang === 'ja') { %>Pattaya Rent A Carでは安全を最優先に考えています。当社の全車両はレンタカー専用の一種商業保険に加入しています。<% } else if (lang === 'fr') { %>Chez Pattaya Rent A Car, la securite est notre priorite. Chaque vehicule de notre flotte est couvert par une assurance commerciale de premiere classe pour vehicules de location.<% } else { %>At Pattaya Rent A Car, safety is our priority. Every vehicle in our fleet is covered by first-class commercial insurance for rental vehicles.<% } %></p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6"><%= lang === 'ru' ? 'Что покрывается?' : (lang === 'ko' ? '보장 내용' : (lang === 'zh' ? '保障范围' : (lang === 'de' ? 'Was ist abgedeckt?' : (lang === 'ja' ? '補償内容' : (lang === 'fr' ? 'Que Couvre l\'Assurance ?' : 'What is covered?'))))) %></h3>
+            <% if (lang === 'ru') { %>
             <ul class="list-disc pl-6 space-y-4">
-                <li>**Third Party Liability:** Coverage for damage to other vehicles or property.</li>
-                <li>**Medical Expense:** Coverage for the driver and passengers in the event of an accident.</li>
-                <li>**Collision Damage Waiver (CDW):** Reduces your financial responsibility in case of accidental damage to the rental car.</li>
+                <li><strong>Гражданская ответственность:</strong> покрытие ущерба другим автомобилям или имуществу.</li>
+                <li><strong>Медицинские расходы:</strong> покрытие расходов водителя и пассажиров в случае ДТП.</li>
+                <li><strong>Франшиза при повреждении (CDW):</strong> снижает вашу финансовую ответственность в случае случайного повреждения арендованного автомобиля.</li>
             </ul>
+            <% } else if (lang === 'ko') { %>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>제3자 배상책임:</strong> 타인의 차량이나 재산 피해에 대한 보장.</li>
+                <li><strong>의료비 보장:</strong> 사고 발생 시 운전자 및 탑승자에 대한 의료비 보장.</li>
+                <li><strong>차량손해면책제도(CDW):</strong> 렌터카에 우발적 손상이 발생했을 때 고객의 부담금을 줄여드립니다.</li>
+            </ul>
+            <% } else if (lang === 'zh') { %>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>第三方责任险：</strong>承保对他人车辆或财产造成的损失。</li>
+                <li><strong>医疗费用：</strong>承保发生事故时驾驶员及乘客的医疗费用。</li>
+                <li><strong>碰撞损坏免赔（CDW）：</strong>降低您因租赁车辆意外损坏而承担的经济责任。</li>
+            </ul>
+            <% } else if (lang === 'de') { %>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>Haftpflichtversicherung:</strong> Deckung fuer Schaeden an anderen Fahrzeugen oder Eigentum.</li>
+                <li><strong>Medizinische Kosten:</strong> Deckung fuer Fahrer und Beifahrer im Falle eines Unfalls.</li>
+                <li><strong>Haftungsreduzierung (CDW):</strong> reduziert Ihre finanzielle Verantwortung bei versehentlichen Schaeden am Mietwagen.</li>
+            </ul>
+            <% } else if (lang === 'ja') { %>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>対人・対物賠償責任保険：</strong>他の車両や財産への損害を補償します。</li>
+                <li><strong>傷害保険：</strong>事故発生時の運転者・同乗者の医療費を補償します。</li>
+                <li><strong>車両損害免責制度（CDW）：</strong>レンタカーが偶発的に損傷した場合のお客様の経済的負担を軽減します。</li>
+            </ul>
+            <% } else if (lang === 'fr') { %>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>Responsabilite Civile :</strong> couverture des dommages causes a d'autres vehicules ou proprietes.</li>
+                <li><strong>Frais Medicaux :</strong> couverture du conducteur et des passagers en cas d'accident.</li>
+                <li><strong>Rachat de Franchise (CDW) :</strong> reduit votre responsabilite financiere en cas de dommage accidentel au vehicule loue.</li>
+            </ul>
+            <% } else { %>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>Third Party Liability:</strong> Coverage for damage to other vehicles or property.</li>
+                <li><strong>Medical Expense:</strong> Coverage for the driver and passengers in the event of an accident.</li>
+                <li><strong>Collision Damage Waiver (CDW):</strong> Reduces your financial responsibility in case of accidental damage to the rental car.</li>
+            </ul>
+            <% } %>
 
             <div class="mt-12 p-8 bg-blue-50 border border-blue-100 rounded-3xl">
-                <h4 class="text-xl font-bold text-blue-900 mb-4">Excess Levels</h4>
-                <p class="text-blue-800 text-sm">Most vehicles have an insurance excess (deductible) of ฿5,000 to ฿10,000. This is the maximum you would pay for damage if you are at fault. Optional "Full Protection" to reduce excess to zero is available at checkout.</p>
+                <h4 class="text-xl font-bold text-blue-900 mb-4"><%= lang === 'ru' ? 'Размер франшизы' : (lang === 'ko' ? '자기부담금 안내' : (lang === 'zh' ? '免赔额说明' : (lang === 'de' ? 'Selbstbeteiligung' : (lang === 'ja' ? '免責金額について' : (lang === 'fr' ? 'Niveaux de Franchise' : 'Excess Levels'))))) %></h4>
+                <p class="text-blue-800 text-sm"><% if (lang === 'ru') { %>Большинство автомобилей имеют страховую франшизу от 5 000 до 10 000 бат. Это максимальная сумма, которую вы заплатите за ущерб по своей вине. При оформлении доступна опция «Полная защита», снижающая франшизу до нуля.<% } else if (lang === 'ko') { %>대부분의 차량은 5,000~10,000밧의 자기부담금이 설정되어 있습니다. 이는 귀책 사고 발생 시 고객님이 부담하시는 최대 금액입니다. 결제 시 자기부담금을 0으로 낮추는 "완전 보장" 옵션을 선택하실 수 있습니다.<% } else if (lang === 'zh') { %>大多数车辆的保险免赔额为5,000至10,000泰铢。这是您因自身过失造成损坏时需支付的最高金额。结账时可选择"全额保障"选项，将免赔额降至零。<% } else if (lang === 'de') { %>Die meisten Fahrzeuge haben eine Selbstbeteiligung von 5.000 bis 10.000 Baht. Dies ist der Hoechstbetrag, den Sie bei selbstverschuldeten Schaeden zahlen wuerden. Ein optionaler "Vollschutz" zur Reduzierung der Selbstbeteiligung auf null ist beim Checkout erhaeltlich.<% } else if (lang === 'ja') { %>ほとんどの車両には5,000〜10,000THBの保険免責金額が設定されています。これはお客様に過失がある損害の場合にお支払いいただく最大金額です。チェックアウト時に免責金額をゼロにするオプション「フルプロテクション」もご利用いただけます。<% } else if (lang === 'fr') { %>La plupart des vehicules ont une franchise d'assurance de 5 000 a 10 000 baht. C'est le montant maximum que vous paieriez en cas de dommage dont vous etes responsable. Une "Protection Complete" optionnelle pour reduire la franchise a zero est disponible lors de la reservation.<% } else { %>Most vehicles have an insurance excess (deductible) of ฿5,000 to ฿10,000. This is the maximum you would pay for damage if you are at fault. Optional "Full Protection" to reduce excess to zero is available at checkout.<% } %></p>
             </div>
         </div>
     </div>
@@ -31,12 +69,12 @@
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="bg-white border border-ink/10 rounded-2xl px-7 py-6 flex flex-wrap items-center justify-between gap-5">
       <div>
-        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary block mb-1">Protect your deposit</span>
-        <h2 class="text-xl font-extrabold text-ink tracking-tight m-0">Run the pre-drive checklist first</h2>
-        <p class="text-ink/60 text-sm mt-1 mb-0">Before you drive away, take 90 seconds to photograph any existing damage. Our animated guide walks you through all 10 checks — tyres, glass, lights, fuel and more.</p>
+        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary block mb-1"><%= lang === 'ru' ? 'Защитите ваш депозит' : (lang === 'ko' ? '보증금을 지키세요' : (lang === 'zh' ? '保护您的押金' : (lang === 'de' ? 'Schuetzen Sie Ihre Kaution' : (lang === 'ja' ? 'デポジットを守ろう' : (lang === 'fr' ? 'Protegez votre Caution' : 'Protect your deposit'))))) %></span>
+        <h2 class="text-xl font-extrabold text-ink tracking-tight m-0"><%= lang === 'ru' ? 'Сначала пройдите чек-лист перед поездкой' : (lang === 'ko' ? '먼저 운전 전 체크리스트를 확인하세요' : (lang === 'zh' ? '先查看行前检查清单' : (lang === 'de' ? 'Fuehren Sie zuerst die Checkliste vor der Fahrt durch' : (lang === 'ja' ? 'まずは運転前チェックリストを実施' : (lang === 'fr' ? 'Effectuez d\'abord la liste de controle' : 'Run the pre-drive checklist first'))))) %></h2>
+        <p class="text-ink/60 text-sm mt-1 mb-0"><%= lang === 'ru' ? 'Перед тем как уехать, потратьте 90 секунд, чтобы сфотографировать любые существующие повреждения. Наше видео-руководство проведёт вас через все 10 проверок — шины, стёкла, фары, топливо и многое другое.' : (lang === 'ko' ? '출발하기 전 90초만 투자해 기존 손상 부위를 사진으로 남겨두세요. 타이어, 유리, 조명, 연료 등 10가지 확인 항목을 애니메이션으로 안내해 드립니다.' : (lang === 'zh' ? '出发前花90秒为现有损伤拍照。我们的动画指南将带您完成全部10项检查——轮胎、玻璃、灯光、油量等。' : (lang === 'de' ? 'Bevor Sie losfahren, nehmen Sie sich 90 Sekunden Zeit, um vorhandene Schaeden zu fotografieren. Unsere animierte Anleitung fuehrt Sie durch alle 10 Kontrollen &mdash; Reifen, Glas, Beleuchtung, Kraftstoff und mehr.' : (lang === 'ja' ? '出発前に90秒かけて、既存の傷を写真に記録しましょう。タイヤ、ガラス、ライト、燃料など10項目のチェックをアニメーションガイドでご案内します。' : (lang === 'fr' ? 'Avant de partir, prenez 90 secondes pour photographier les dommages existants. Notre guide anime vous accompagne a travers les 10 verifications &mdash; pneus, vitres, phares, carburant et plus encore.' : 'Before you drive away, take 90 seconds to photograph any existing damage. Our animated guide walks you through all 10 checks — tyres, glass, lights, fuel and more.'))))) %></p>
       </div>
       <a href="<%= langPrefix %>/pre-drive-checklist/" class="font-mono font-bold text-[12px] uppercase tracking-[0.1em] bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-full whitespace-nowrap transition-colors inline-block">
-        View Checklist
+        <%= lang === 'ru' ? 'Смотреть чек-лист' : (lang === 'ko' ? '체크리스트 보기' : (lang === 'zh' ? '查看检查清单' : (lang === 'de' ? 'Checkliste ansehen' : (lang === 'ja' ? 'チェックリストを見る' : (lang === 'fr' ? 'Voir la Liste de Controle' : 'View Checklist'))))) %>
       </a>
     </div>
   </div>

@@ -1,8 +1,34 @@
 <section class="bg-paper pt-32 pb-20">
   <div class="max-w-7xl mx-auto px-6">
+    <% if (lang === 'ru') { %>
+    <span class="eyebrow">Свяжитесь с нами</span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">Контакты</h1>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">Мы всегда готовы помочь &mdash; свяжитесь с нами по телефону, email, или зайдите в наш офис. Бесплатная доставка по всей Паттайе, семь дней в неделю.</p>
+    <% } else if (lang === 'ko') { %>
+    <span class="eyebrow">문의하기</span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">문의하기</h1>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">전화, 이메일로 연락 주시거나 저희 사무실로 방문해 주세요 &mdash; 언제든 도와드리겠습니다. 파타야 전 지역에 주 7일 무료 배달을 제공합니다.</p>
+    <% } else if (lang === 'zh') { %>
+    <span class="eyebrow">联系我们</span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">联系我们</h1>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">我们随时为您提供帮助 &mdash; 欢迎通过电话、邮件联系我们，或直接到访我们的办公室。芭提雅全境每周7天提供免费送车服务。</p>
+    <% } else if (lang === 'de') { %>
+    <span class="eyebrow">Kontaktieren Sie uns</span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">Kontakt</h1>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">Wir helfen Ihnen gerne &mdash; erreichen Sie uns per Telefon, E-Mail oder besuchen Sie unser Buero. Kostenlose Lieferung in ganz Pattaya, sieben Tage die Woche.</p>
+    <% } else if (lang === 'ja') { %>
+    <span class="eyebrow">お問い合わせ</span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">お問い合わせ</h1>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">お電話、メール、または直接オフィスにお越しください &mdash; いつでもサポートいたします。パタヤ全域で週7日無料配送を行っております。</p>
+    <% } else if (lang === 'fr') { %>
+    <span class="eyebrow">Nous Contacter</span>
+    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">Contact</h1>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">Nous sommes la pour vous aider &mdash; contactez-nous par telephone, email, ou passez a notre bureau. Livraison gratuite dans tout Pattaya, sept jours sur sept.</p>
+    <% } else { %>
     <span class="eyebrow">Get in Touch</span>
     <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9]">Contact Us</h1>
-    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">We're here to help â reach us by phone, email, or pop into our office. Free delivery across Pattaya, seven days a week.</p>
+    <p class="text-ink/60 text-lg leading-relaxed mt-8 max-w-2xl">We're here to help &mdash; reach us by phone, email, or pop into our office. Free delivery across Pattaya, seven days a week.</p>
+    <% } %>
   </div>
 </section>
 
@@ -18,7 +44,7 @@
           <div class="icon-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h3 class="card-title-sm">Our Location</h3>
+          <h3 class="card-title-sm"><%= lang === 'ru' ? 'Наш адрес' : (lang === 'ko' ? '위치' : (lang === 'zh' ? '我们的位置' : (lang === 'de' ? 'Unser Standort' : (lang === 'ja' ? '所在地' : (lang === 'fr' ? 'Notre Emplacement' : 'Our Location'))))) %></h3>
           <p class="card-body"><%= site.address %></p>
         </div>
 
@@ -27,7 +53,7 @@
           <div class="icon-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-          <h3 class="card-title-sm">Phone</h3>
+          <h3 class="card-title-sm"><%= lang === 'ru' ? 'Телефон' : (lang === 'ko' ? '전화' : (lang === 'zh' ? '电话' : (lang === 'de' ? 'Telefon' : (lang === 'ja' ? '電話番号' : (lang === 'fr' ? 'Telephone' : 'Phone'))))) %></h3>
           <p class="card-body"><a href="tel:<%= site.contact.phone.replace(/\s/g, '') %>" class="hover:text-primary transition-colors"><%= site.contact.phone %></a></p>
         </div>
 
@@ -36,7 +62,7 @@
           <div class="icon-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </div>
-          <h3 class="card-title-sm">Email</h3>
+          <h3 class="card-title-sm"><%= lang === 'ru' ? 'Email' : 'Email' %></h3>
           <p class="card-body"><a href="mailto:<%= site.contact.email %>" class="hover:text-primary transition-colors"><%= site.contact.email %></a></p>
         </div>
 
@@ -45,15 +71,15 @@
           <div class="icon-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3 class="card-title-sm">Opening Hours</h3>
-          <p class="card-body"><% if (site.openingHours && site.openingHours.Monday) { %>Open daily, <%= site.openingHours.Monday %><% } else { %>Open daily, 09:00 - 17:00<% } %></p>
+          <h3 class="card-title-sm"><%= lang === 'ru' ? 'Часы работы' : (lang === 'ko' ? '영업시간' : (lang === 'zh' ? '营业时间' : (lang === 'de' ? 'Oeffnungszeiten' : (lang === 'ja' ? '営業時間' : (lang === 'fr' ? 'Heures d\'Ouverture' : 'Opening Hours'))))) %></h3>
+          <p class="card-body"><% if (lang === 'ru') { %>Открыто ежедневно, <%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } else if (lang === 'ko') { %>매일 영업, <%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } else if (lang === 'zh') { %>每日营业，<%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } else if (lang === 'de') { %>Taeglich geoeffnet, <%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } else if (lang === 'ja') { %>毎日営業、<%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } else if (lang === 'fr') { %>Ouvert tous les jours, <%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } else { %>Open daily, <%= (site.openingHours && site.openingHours.Monday) || '09:00 - 17:00' %><% } %></p>
         </div>
 
       </div><!-- /info cards -->
 
       <!-- Form panel -->
       <div class="card-compact">
-        <h2 class="text-2xl font-bold tracking-tight text-ink mb-6">Send us a Message</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-ink mb-6"><%= lang === 'ru' ? 'Отправьте нам сообщение' : (lang === 'ko' ? '메시지 보내기' : (lang === 'zh' ? '给我们发消息' : (lang === 'de' ? 'Senden Sie uns eine Nachricht' : (lang === 'ja' ? 'メッセージを送る' : (lang === 'fr' ? 'Envoyez-nous un Message' : 'Send us a Message'))))) %></h2>
         <form id="ct-form" class="space-y-5">
           <!-- Honeypot field — hidden from humans, bots fill it -->
           <input
@@ -67,11 +93,11 @@
           />
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2">First Name</label>
+              <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2"><%= lang === 'ru' ? 'Имя' : (lang === 'ko' ? '이름' : (lang === 'zh' ? '名字' : (lang === 'de' ? 'Vorname' : (lang === 'ja' ? '名' : (lang === 'fr' ? 'Prenom' : 'First Name'))))) %></label>
               <input type="text" id="ct-firstname" name="First Name" required class="w-full bg-black/5 border-none rounded-2xl p-4 outline-none focus:bg-black/10 transition-all font-medium">
             </div>
             <div>
-              <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2">Last Name</label>
+              <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2"><%= lang === 'ru' ? 'Фамилия' : (lang === 'ko' ? '성' : (lang === 'zh' ? '姓氏' : (lang === 'de' ? 'Nachname' : (lang === 'ja' ? '姓' : (lang === 'fr' ? 'Nom' : 'Last Name'))))) %></label>
               <input type="text" id="ct-lastname" name="Last Name" class="w-full bg-black/5 border-none rounded-2xl p-4 outline-none focus:bg-black/10 transition-all font-medium">
             </div>
           </div>
@@ -80,15 +106,15 @@
             <input type="email" id="ct-email" name="Email" required class="w-full bg-black/5 border-none rounded-2xl p-4 outline-none focus:bg-black/10 transition-all font-medium">
           </div>
           <div>
-            <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2">Phone / WhatsApp</label>
+            <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2"><%= lang === 'ru' ? 'Телефон / WhatsApp' : (lang === 'ko' ? '전화 / WhatsApp' : (lang === 'zh' ? '电话 / WhatsApp' : (lang === 'de' ? 'Telefon / WhatsApp' : (lang === 'ja' ? '電話番号 / WhatsApp' : (lang === 'fr' ? 'Telephone / WhatsApp' : 'Phone / WhatsApp'))))) %></label>
             <input type="tel" id="ct-phone" name="Phone" placeholder="+66 81 234 5678"
               class="w-full bg-black/5 border-none rounded-2xl p-4 outline-none focus:bg-black/10 transition-all font-medium">
           </div>
           <div>
-            <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2">Message</label>
+            <label class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/30 font-bold block mb-2"><%= lang === 'ru' ? 'Сообщение' : (lang === 'ko' ? '메시지' : (lang === 'zh' ? '留言' : (lang === 'de' ? 'Nachricht' : (lang === 'ja' ? 'メッセージ' : (lang === 'fr' ? 'Message' : 'Message'))))) %></label>
             <textarea id="ct-message" name="Message" rows="5" required class="w-full bg-black/5 border-none rounded-2xl p-4 outline-none focus:bg-black/10 transition-all font-medium resize-none"></textarea>
           </div>
-          <button type="submit" id="ct-submit" class="btn-primary w-full justify-center">Send Message</button>
+          <button type="submit" id="ct-submit" class="btn-primary w-full justify-center"><%= lang === 'ru' ? 'Отправить сообщение' : (lang === 'ko' ? '메시지 보내기' : (lang === 'zh' ? '发送消息' : (lang === 'de' ? 'Nachricht senden' : (lang === 'ja' ? '送信する' : (lang === 'fr' ? 'Envoyer le Message' : 'Send Message'))))) %></button>
         </form>
         <div id="ct-result" class="hidden"></div>
       </div><!-- /form panel -->

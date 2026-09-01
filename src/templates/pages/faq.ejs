@@ -1,7 +1,7 @@
 <section class="bg-gray-100 pt-32 pb-24">
     <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-4">Frequently Asked Questions</h1>
-        <p class="text-xl text-gray-500">Everything you need to know about renting a car in Pattaya.</p>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-4"><%= lang === 'ru' ? 'Часто задаваемые вопросы' : (lang === 'ko' ? '자주 묻는 질문' : (lang === 'zh' ? '常见问题' : (lang === 'de' ? 'Haeufig gestellte Fragen' : (lang === 'ja' ? 'よくある質問' : (lang === 'fr' ? 'Questions Frequentes' : 'Frequently Asked Questions'))))) %></h1>
+        <p class="text-xl text-gray-500"><%= lang === 'ru' ? 'Всё, что нужно знать об аренде автомобиля в Паттайе.' : (lang === 'ko' ? '파타야에서 렌터카를 이용하는 데 필요한 모든 정보.' : (lang === 'zh' ? '关于在芭提雅租车您需要了解的一切。' : (lang === 'de' ? 'Alles, was Sie ueber die Autovermietung in Pattaya wissen muessen.' : (lang === 'ja' ? 'パタヤでのレンタカーに関するすべての情報。' : (lang === 'fr' ? 'Tout ce que vous devez savoir sur la location de voiture a Pattaya.' : 'Everything you need to know about renting a car in Pattaya.'))))) %></p>
     </div>
 </section>
 
@@ -34,7 +34,7 @@
             </div>
             <% }) %>
         <% } else { %>
-        <p class="text-center text-gray-500">FAQs coming soon.</p>
+        <p class="text-center text-gray-500"><%= lang === 'ru' ? 'Вопросы и ответы скоро появятся.' : (lang === 'ko' ? '곧 자주 묻는 질문이 업데이트됩니다.' : (lang === 'zh' ? '常见问题即将上线。' : (lang === 'de' ? 'FAQs folgen in Kuerze.' : (lang === 'ja' ? 'よくある質問は近日公開予定です。' : (lang === 'fr' ? 'Les questions frequentes arrivent bientot.' : 'FAQs coming soon.'))))) %></p>
         <% } %>
     </div>
 </section>
@@ -44,12 +44,12 @@
   <div class="container mx-auto px-4 max-w-3xl">
     <div class="bg-white border border-ink/10 rounded-2xl px-7 py-6 flex flex-wrap items-center justify-between gap-5">
       <div>
-        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary block mb-1">New</span>
-        <h2 class="text-xl font-extrabold text-ink tracking-tight m-0">Watch our pre-drive checklist</h2>
-        <p class="text-ink/60 text-sm mt-1 mb-0">A 90-second guide to the 10 checks to make before you drive away — protects your deposit and keeps your insurance simple.</p>
+        <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary block mb-1"><%= lang === 'ru' ? 'Новое' : (lang === 'ko' ? '신규' : (lang === 'zh' ? '新功能' : (lang === 'de' ? 'Neu' : (lang === 'ja' ? '新着' : (lang === 'fr' ? 'Nouveau' : 'New'))))) %></span>
+        <h2 class="text-xl font-extrabold text-ink tracking-tight m-0"><%= lang === 'ru' ? 'Посмотрите наш чек-лист перед поездкой' : (lang === 'ko' ? '운전 전 체크리스트 영상 보기' : (lang === 'zh' ? '观看我们的行前检查清单' : (lang === 'de' ? 'Sehen Sie sich unsere Checkliste vor der Fahrt an' : (lang === 'ja' ? '運転前チェックリストを見る' : (lang === 'fr' ? 'Regardez notre liste de controle avant depart' : 'Watch our pre-drive checklist'))))) %></h2>
+        <p class="text-ink/60 text-sm mt-1 mb-0"><%= lang === 'ru' ? '90-секундное руководство по 10 проверкам перед началом поездки — защищает ваш депозит и упрощает вопросы со страховкой.' : (lang === 'ko' ? '출발 전 확인해야 할 10가지 항목을 90초 만에 안내하는 가이드입니다 — 보증금을 보호하고 보험 처리를 간편하게 해드립니다.' : (lang === 'zh' ? '90秒指南，教您出发前需检查的10个要点 — 保护您的押金，简化保险流程。' : (lang === 'de' ? 'Eine 90-Sekunden-Anleitung zu den 10 Kontrollen vor der Abfahrt &mdash; schuetzt Ihre Kaution und vereinfacht die Versicherung.' : (lang === 'ja' ? '出発前に確認すべき10のポイントを90秒でご紹介するガイドです &mdash; デポジットを守り、保険手続きをシンプルにします。' : (lang === 'fr' ? 'Un guide de 90 secondes sur les 10 verifications a faire avant de partir &mdash; protege votre caution et simplifie votre assurance.' : "A 90-second guide to the 10 checks to make before you drive away — protects your deposit and keeps your insurance simple."))))) %></p>
       </div>
       <a href="<%= langPrefix %>/pre-drive-checklist/" class="font-mono font-bold text-[12px] uppercase tracking-[0.1em] bg-ink text-white px-6 py-3 rounded-full whitespace-nowrap hover:bg-ink/80 transition-colors inline-block">
-        Watch Now
+        <%= lang === 'ru' ? 'Смотреть' : (lang === 'ko' ? '지금 시청하기' : (lang === 'zh' ? '立即观看' : (lang === 'de' ? 'Jetzt ansehen' : (lang === 'ja' ? '今すぐ見る' : (lang === 'fr' ? 'Regarder Maintenant' : 'Watch Now'))))) %>
       </a>
     </div>
   </div>

@@ -7,6 +7,18 @@
         <p class="text-xl text-gray-500 max-w-2xl font-medium">
         <% if (lang === 'th') { %>
             รถทุกคันได้รับการดูแลตามมาตรฐานสูงสุด พร้อมประกันภัยและบริการช่วยเหลือฉุกเฉินรวมอยู่ในทุกการเช่า ดู<a href="<%= langPrefix %>/cheap-car-rental-pattaya/" class="text-primary font-semibold hover:underline">รถเช่าราคาประหยัดในพัทยา</a>สำหรับรถราคาถูกที่สุดและอัตราค่าเช่ารายวัน
+        <% } else if (lang === 'ru') { %>
+            Качественные автомобили, обслуживаемые по высочайшим стандартам. Страхование и помощь на дороге включены в каждую аренду. Полный список моделей, цены и условия — на странице <a href="<%= langPrefix %>/arenda-avto-pattaya/" class="text-primary font-semibold hover:underline">аренда авто в Паттайе</a>.
+        <% } else if (lang === 'ko') { %>
+            모든 차량은 최고 기준으로 관리되며, 보험과 긴급 도로 지원이 모든 렌트에 포함됩니다. <a href="<%= langPrefix %>/car-rental-pattaya-korean/" class="text-primary font-semibold hover:underline">파타야 렌터카 전체 안내</a>에서 차량 종류, 가격, 예약 방법을 확인하세요.
+        <% } else if (lang === 'zh') { %>
+            所有车辆均按最高标准维护。每笔租车订单均含保险及道路救援服务。查看我们的<a href="<%= langPrefix %>/cars/" class="text-primary font-semibold hover:underline">全部车型</a>，了解详细车款与每日价格。
+        <% } else if (lang === 'de') { %>
+            Qualitativ hochwertige Fahrzeuge nach hoechsten Standards gewartet. Versicherung und Pannenhilfe sind in jeder Miete enthalten. Alle Details zu Modellen und Tagespreisen finden Sie unter <a href="<%= langPrefix %>/autovermietung-pattaya/" class="text-primary font-semibold hover:underline">Autovermietung Pattaya</a>.
+        <% } else if (lang === 'ja') { %>
+            すべての車両は最高水準で整備されています。保険とロードサービスはすべてのレンタルに含まれます。<a href="<%= langPrefix %>/car-rental-pattaya-japanese/" class="text-primary font-semibold hover:underline">パタヤ レンタカー完全ガイド</a>で車種、料金、ご予約方法をご確認いただけます。
+        <% } else if (lang === 'fr') { %>
+            Des vehicules de qualite entretenus selon les normes les plus elevees. Assurance et assistance routiere incluses dans chaque location. Consultez notre page <a href="<%= langPrefix %>/location-voiture-pattaya/" class="text-primary font-semibold hover:underline">Location de Voiture Pattaya</a> pour tous les details sur les modeles et tarifs journaliers.
         <% } else { %>
             Quality vehicles maintained to the highest standards. Insurance and road assistance included in every rental. View our <a href="/cheap-car-rental-pattaya/" class="text-primary font-semibold hover:underline">cheap car rental Pattaya</a> page for our lowest-priced vehicles and daily rate breakdown.
         <% } %>
@@ -67,6 +79,60 @@
         <p class="text-ink/70 leading-relaxed mb-4">พัทยาเรนท์อะคาร์มีรถเช่าให้เลือกกว่า 100 คัน ครอบคลุมทุกความต้องการ ตั้งแต่รถอีโคคาร์ประหยัดน้ำมัน รถเก๋งขนาดกลาง รถกระบะ รถ MPV สำหรับครอบครัว ไปจนถึง SUV ขนาดใหญ่สำหรับเดินทางเป็นกลุ่ม</p>
         <p class="text-ink/70 leading-relaxed mb-4">รถเช่าทุกคันมีประกันภัยครบวงจร ไม่มีค่าใช้จ่ายแอบแฝง พร้อมบริการส่งรถฟรีถึงโรงแรมทั่วพัทยา จอมเทียน หาดนาเกลือ วงศ์อมาตย์ และพระตำหนัก เริ่มต้นเพียง &#x0E3F;590 ต่อวัน</p>
         <p class="text-ink/70 leading-relaxed">ต้องการเช่ารถระยะยาว? ดู<a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">รถเช่ารายเดือนในพัทยา</a>เริ่มต้น &#x0E3F;10,000 ต่อเดือน หรือ<a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">ตรวจสอบพื้นที่ให้บริการส่งรถ</a>ทั้งหมดของเรา</p>
+    </div>
+</section>
+<% } else if (lang === 'ru') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">Весь автопарк аренды авто в Паттайе</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">В автопарке Pattaya Rent a Car более 100 автомобилей на любой запрос: экономичные модели эконом-класса, комфортные седаны, пикапы, вместительные MPV для семей и внедорожники (SUV) для поездок компанией.</p>
+        <p class="text-ink/70 leading-relaxed mb-4">Каждый автомобиль включает полное страхование, без скрытых платежей, с бесплатной доставкой в отель по всей Паттайе, Джомтьену, Наклуа, Вонгамату и Пратамнаку.</p>
+        <p class="text-ink/70 leading-relaxed">Нужна аренда на длительный срок? Смотрите <a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">помесячную аренду в Паттайе</a> от 10 000 бат в месяц, или <a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">проверьте зону бесплатной доставки</a> в вашем районе.</p>
+    </div>
+</section>
+<% } else if (lang === 'ko') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">파타야 렌터카 전체 차량</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">Pattaya Rent a Car는 100대 이상의 차량을 보유하고 있습니다. 이코노미 차량부터 편안한 세단, 픽업트럭, 가족용 MPV, 여러 명이 함께 탈 수 있는 SUV까지 다양하게 준비되어 있습니다.</p>
+        <p class="text-ink/70 leading-relaxed mb-4">모든 차량은 완전 보험이 포함되며 숨겨진 비용이 없습니다. 파타야, 좀티엔, 나클루아, 웡아맛, 프라탐낙 전 지역에 무료 호텔 배달 서비스를 제공합니다.</p>
+        <p class="text-ink/70 leading-relaxed">장기 렌트가 필요하신가요? 월 10,000밧부터 시작하는 <a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">파타야 장기 렌터카</a>를 확인하시거나, <a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">배달 가능 지역</a>을 확인해 보세요.</p>
+    </div>
+</section>
+<% } else if (lang === 'zh') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">芭提雅租车全部车型</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">Pattaya Rent a Car 拥有100多辆车，满足各种需求：经济型轿车、舒适中型轿车、皮卡、适合家庭出行的MPV，以及适合多人出行的SUV。</p>
+        <p class="text-ink/70 leading-relaxed mb-4">每辆租车均含全险，无隐藏费用，并可免费送车至芭提雅、乔木田、纳克鲁亚、旺阿马特、巴统纳等区域的酒店。</p>
+        <p class="text-ink/70 leading-relaxed">需要长期租车吗？查看月租起价10,000泰铢的<a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">芭提雅长期租车</a>，或<a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">查看您所在区域的免费送车范围</a>。</p>
+    </div>
+</section>
+<% } else if (lang === 'de') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">Die komplette Mietwagenflotte in Pattaya</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">Pattaya Rent a Car hat ueber 100 Fahrzeuge fuer jeden Bedarf: sparsame Economy-Fahrzeuge, komfortable Limousinen, Pickups, geraeumige MPVs fuer Familien und SUVs fuer Gruppenreisen.</p>
+        <p class="text-ink/70 leading-relaxed mb-4">Jedes Fahrzeug enthaelt eine Vollkasko-Versicherung ohne versteckte Kosten, mit kostenloser Hotellieferung in ganz Pattaya, Jomtien, Naklua, Wongamat und Pratumnak.</p>
+        <p class="text-ink/70 leading-relaxed">Benoetigen Sie eine Langzeitmiete? Sehen Sie sich unsere <a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">Langzeitmiete in Pattaya</a> ab 10.000 Baht/Monat an, oder <a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">pruefen Sie unser Liefergebiet</a> in Ihrer Naehe.</p>
+    </div>
+</section>
+<% } else if (lang === 'ja') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">パタヤ レンタカー全車両一覧</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">Pattaya Rent a Carは100台以上の車両を保有し、あらゆるニーズにお応えします。低燃費なエコノミーカーから、ファミリー向けの快適なセダン、ピックアップトラック、広々としたMPV、グループ旅行に最適なSUVまで幅広くご用意しております。</p>
+        <p class="text-ink/70 leading-relaxed mb-4">すべての車両にはフル保険が含まれ、追加料金は一切ありません。パタヤ、ジョムティエン、ナクルア、ウォンアマット、プラタムナックの各エリアへ無料でホテル配送いたします。</p>
+        <p class="text-ink/70 leading-relaxed">長期レンタルをお考えですか？月10,000THBからの<a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">パタヤ長期レンタカー</a>をご覧いただくか、<a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">お住まいのエリアの配送範囲</a>をご確認ください。</p>
+    </div>
+</section>
+<% } else if (lang === 'fr') { %>
+<section class="py-16 bg-paper border-t border-ink/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-ink mb-4">Toute la Flotte de Location Pattaya</h2>
+        <p class="text-ink/70 leading-relaxed mb-4">Pattaya Rent a Car dispose de plus de 100 vehicules pour repondre a tous les besoins : voitures economiques, berlines confortables, pickups, MPV spacieux pour les familles et SUV pour les voyages en groupe.</p>
+        <p class="text-ink/70 leading-relaxed mb-4">Chaque vehicule inclut une assurance complete, sans frais caches, avec livraison gratuite a l'hotel dans tout Pattaya, Jomtien, Naklua, Wongamat et Pratumnak.</p>
+        <p class="text-ink/70 leading-relaxed">Besoin d'une location longue duree ? Consultez notre <a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">location longue duree a Pattaya</a> a partir de 10 000 baht/mois, ou <a href="<%= langPrefix %>/locations/" class="text-primary font-semibold hover:underline">verifiez notre zone de livraison</a> pres de chez vous.</p>
     </div>
 </section>
 <% } %>

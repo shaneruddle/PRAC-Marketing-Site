@@ -1,37 +1,87 @@
 <section class="bg-paper pt-32 pb-24 border-b border-gray-100">
     <div class="container mx-auto px-6">
         <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-primary rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
-            Scooter & Motorbikes
+            <%= lang === 'ru' ? 'Скутеры и мотоциклы' : (lang === 'ko' ? '스쿠터 & 오토바이' : (lang === 'zh' ? '踏板车与摩托车' : (lang === 'de' ? 'Roller & Motorraeder' : (lang === 'ja' ? 'スクーター＆バイク' : (lang === 'fr' ? 'Scooters & Motos' : 'Scooter & Motorbikes'))))) %>
         </div>
+        <% if (lang === 'ru') { %>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">Аренда <span class="font-black italic text-primary">мотоцикла</span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">Настоящая свобода передвижения в Паттайе. Современные, хорошо обслуживаемые байки, включая Honda Click, PCX и другие.</p>
+        <% } else if (lang === 'ko') { %>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">오토바이 <span class="font-black italic text-primary">렌트</span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">파타야에서 누리는 최고의 자유. Honda Click, PCX 등 잘 관리된 최신 오토바이를 만나보세요.</p>
+        <% } else if (lang === 'zh') { %>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">摩托车<span class="font-black italic text-primary">租赁</span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">在芭提雅体验极致自由。现代化、维护良好的车型，包括Honda Click、PCX等。</p>
+        <% } else if (lang === 'de') { %>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">Motorrad<span class="font-black italic text-primary">vermietung</span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">Die ultimative Freiheit in Pattaya. Moderne, gepflegte Motorraeder, darunter Honda Click, PCX und mehr.</p>
+        <% } else if (lang === 'ja') { %>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">バイク<span class="font-black italic text-primary">レンタル</span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">パタヤで究極の自由を。Honda Click、PCXなど、整備の行き届いた最新のバイクをご用意しております。</p>
+        <% } else if (lang === 'fr') { %>
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">Location de <span class="font-black italic text-primary">Moto</span></h1>
+        <p class="text-xl text-gray-500 max-w-2xl font-medium">La liberte ultime a Pattaya. Motos modernes et bien entretenues, dont Honda Click, PCX et plus encore.</p>
+        <% } else { %>
         <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-6 text-ink">Motorbike <span class="font-black italic text-primary">Rental</span></h1>
         <p class="text-xl text-gray-500 max-w-2xl font-medium">The ultimate freedom in Pattaya. Modern, well-maintained bikes including Honda Click, PCX, and more.</p>
+        <% } %>
     </div>
 </section>
 
 <section class="py-24">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <% [
+            <% (lang === 'ru' ? [
+                { name: 'Honda Click 125i', price: 250, desc: 'Идеальный городской транспорт. Легко парковать, экономичный расход топлива.' },
+                { name: 'Honda PCX 160', price: 500, desc: 'Премиальный скутер с дополнительным багажным отсеком и комфортом для дальних поездок.' },
+                { name: 'Yamaha NMAX', price: 500, desc: 'Отличная динамика и безопасное торможение благодаря ABS.' },
+                { name: 'Yamaha Aerox 155', price: 450, desc: 'Спортивный дизайн и мощный двигатель для яркой езды.' }
+            ] : lang === 'ko' ? [
+                { name: 'Honda Click 125i', price: 250, desc: '완벽한 시내 이동용. 주차가 쉽고 연비가 좋습니다.' },
+                { name: 'Honda PCX 160', price: 500, desc: '수납공간이 넉넉하고 장거리 라이딩에도 편안한 프리미엄 스쿠터.' },
+                { name: 'Yamaha NMAX', price: 500, desc: 'ABS로 안전한 제동과 뛰어난 성능을 자랑합니다.' },
+                { name: 'Yamaha Aerox 155', price: 450, desc: '스포티한 디자인과 강력한 엔진으로 즐거운 라이딩을 선사합니다.' }
+            ] : lang === 'zh' ? [
+                { name: 'Honda Click 125i', price: 250, desc: '完美的城市代步车。易于停放，省油经济。' },
+                { name: 'Honda PCX 160', price: 500, desc: '高端踏板车，储物空间大，长途骑行更舒适。' },
+                { name: 'Yamaha NMAX', price: 500, desc: '出色的性能，配备ABS安全刹车系统。' },
+                { name: 'Yamaha Aerox 155', price: 450, desc: '运动外观搭配强劲发动机，骑行更有乐趣。' }
+            ] : lang === 'de' ? [
+                { name: 'Honda Click 125i', price: 250, desc: 'Perfekt fuer die Stadt. Leicht zu parken und sparsam im Verbrauch.' },
+                { name: 'Honda PCX 160', price: 500, desc: 'Premium-Roller mit extra Stauraum und Komfort fuer laengere Fahrten.' },
+                { name: 'Yamaha NMAX', price: 500, desc: 'Hervorragende Leistung und sicheres Bremsen dank ABS.' },
+                { name: 'Yamaha Aerox 155', price: 450, desc: 'Sportliches Design und starker Motor fuer eine spassige Fahrt.' }
+            ] : lang === 'ja' ? [
+                { name: 'Honda Click 125i', price: 250, desc: '街乗りに最適。駐車も簡単で燃費も良好です。' },
+                { name: 'Honda PCX 160', price: 500, desc: '収納スペースが広く、長距離ライドも快適なプレミアムスクーター。' },
+                { name: 'Yamaha NMAX', price: 500, desc: 'ABS搭載で安全な制動力と優れた走行性能。' },
+                { name: 'Yamaha Aerox 155', price: 450, desc: 'スポーティなデザインとパワフルなエンジンで爽快な走りを。' }
+            ] : lang === 'fr' ? [
+                { name: 'Honda Click 125i', price: 250, desc: 'Parfait pour la ville. Facile a garer et economique.' },
+                { name: 'Honda PCX 160', price: 500, desc: 'Scooter premium avec rangement supplementaire et confort pour les longs trajets.' },
+                { name: 'Yamaha NMAX', price: 500, desc: 'Excellentes performances et freinage securise grace a l\'ABS.' },
+                { name: 'Yamaha Aerox 155', price: 450, desc: 'Design sportif et moteur puissant pour une conduite amusante.' }
+            ] : [
                 { name: 'Honda Click 125i', price: 250, desc: 'Perfect city commuter. Easy to park and fuel efficient.' },
                 { name: 'Honda PCX 160', price: 500, desc: 'Premium scooter with extra storage and comfort for longer rides.' },
                 { name: 'Yamaha NMAX', price: 500, desc: 'Great performance and safe braking with ABS.' },
                 { name: 'Yamaha Aerox 155', price: 450, desc: 'Sporty look and powerful engine for a fun ride.' }
-            ].forEach(bike => { %>
+            ]).forEach(bike => { %>
                 <div class="card-editorial flex flex-col transition-all hover:-translate-y-1">
                     <div class="w-full aspect-square bg-paper rounded-2xl mb-8 flex items-center justify-center text-gray-300 font-black uppercase tracking-widest text-[10px]">
-                        <%= bike.name %> Image
+                        <%= bike.name %> <%= lang === 'ru' ? 'Фото' : (lang === 'ko' ? '이미지' : (lang === 'zh' ? '图片' : (lang === 'de' ? 'Bild' : (lang === 'ja' ? '画像' : (lang === 'fr' ? 'Image' : 'Image'))))) %>
                     </div>
                     <h3 class="text-2xl font-black mb-2 text-ink"><%= bike.name %></h3>
                     <p class="text-xs text-gray-400 font-medium leading-relaxed mb-8"><%= bike.desc %></p>
-                    <a href="https://wa.me/<%= site.contact.whatsapp %>" class="btn-primary w-full text-xs py-3.5 mt-auto">Book WhatsApp</a>
+                    <a href="https://wa.me/<%= site.contact.whatsapp %>" class="btn-primary w-full text-xs py-3.5 mt-auto"><%= lang === 'ru' ? 'Забронировать в WhatsApp' : (lang === 'ko' ? 'WhatsApp으로 예약' : (lang === 'zh' ? '通过WhatsApp预订' : (lang === 'de' ? 'Per WhatsApp buchen' : (lang === 'ja' ? 'WhatsAppで予約' : (lang === 'fr' ? 'Reserver via WhatsApp' : 'Book WhatsApp'))))) %></a>
                 </div>
             <% }) %>
         </div>
 
         <div class="mt-24 max-w-4xl mx-auto bg-blue-50 p-12 rounded-[2rem] border border-blue-100">
-            <h2 class="text-2xl font-black text-ink mb-8 italic uppercase tracking-tight">Essential Information</h2>
+            <h2 class="text-2xl font-black text-ink mb-8 italic uppercase tracking-tight"><%= lang === 'ru' ? 'Важная информация' : (lang === 'ko' ? '필수 안내사항' : (lang === 'zh' ? '重要信息' : (lang === 'de' ? 'Wichtige Informationen' : (lang === 'ja' ? '重要事項' : (lang === 'fr' ? 'Informations Essentielles' : 'Essential Information'))))) %></h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <% ['Valid passport and driving license required.', 'Helmets included for both riders.', 'IDP recommended for legality.', 'Full tank to full tank policy.'].forEach(info => { %>
+                <% (lang === 'ru' ? ['Требуется действующий паспорт и водительское удостоверение.', 'Шлемы включены для обоих седоков.', 'Международное водительское удостоверение рекомендуется.', 'Возврат с полным баком топлива.'] : lang === 'ko' ? ['유효한 여권과 운전면허증이 필요합니다.', '탑승자 전원 헬멧이 제공됩니다.', '국제운전면허증(IDP) 소지를 권장합니다.', '연료를 가득 채워 반납해 주세요.'] : lang === 'zh' ? ['需要有效护照和驾驶证。', '为两位乘客均提供头盔。', '建议携带国际驾驶执照(IDP)。', '还车时需加满油箱。'] : lang === 'de' ? ['Gueltiger Reisepass und Fuehrerschein erforderlich.', 'Helme fuer beide Fahrer inklusive.', 'Internationaler Fuehrerschein (IDP) empfohlen.', 'Vollgetankt zurueckgeben.'] : lang === 'ja' ? ['有効なパスポートと運転免許証が必要です。', '同乗者2名分のヘルメットが含まれます。', '国際運転免許証(IDP)の携行を推奨します。', '満タンでの返却をお願いします。'] : lang === 'fr' ? ['Passeport valide et permis de conduire requis.', 'Casques inclus pour les deux passagers.', 'Permis de conduire international (IDP) recommande.', 'Retour avec le plein d\'essence.'] : ['Valid passport and driving license required.', 'Helmets included for both riders.', 'IDP recommended for legality.', 'Full tank to full tank policy.']).forEach(info => { %>
                     <div class="flex gap-4 items-start">
                         <div class="w-6 h-6 bg-blue-100 text-primary rounded-full flex items-center justify-center shrink-0 mt-0.5">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
@@ -47,7 +97,21 @@
 <section class="py-16 border-t border-gray-100">
     <div class="container mx-auto px-6">
         <div class="max-w-2xl mx-auto text-center">
-            <p class="text-gray-500 font-medium">Also looking for a rental car in the Jomtien area? We offer <a href="/jomtien-car-rental/" class="text-primary font-bold hover:underline">car rental in Jomtien</a> with hotel delivery 7 days a week.</p>
+            <% if (lang === 'ru') { %>
+            <p class="text-gray-500 font-medium">Также ищете аренду автомобиля в районе Джомтьен? Мы предлагаем <a href="<%= langPrefix %>/jomtien-car-rental/" class="text-primary font-bold hover:underline">аренду авто в Джомтьене</a> с доставкой в отель 7 дней в неделю.</p>
+            <% } else if (lang === 'ko') { %>
+            <p class="text-gray-500 font-medium">좀티엔 지역 렌터카도 찾고 계신가요? <a href="<%= langPrefix %>/jomtien-car-rental/" class="text-primary font-bold hover:underline">좀티엔 렌터카</a>도 주 7일 호텔 배달로 이용하실 수 있습니다.</p>
+            <% } else if (lang === 'zh') { %>
+            <p class="text-gray-500 font-medium">同时也在寻找乔木田地区的租车服务吗？我们提供<a href="<%= langPrefix %>/jomtien-car-rental/" class="text-primary font-bold hover:underline">乔木田租车服务</a>，每周7天提供酒店送车服务。</p>
+            <% } else if (lang === 'de') { %>
+            <p class="text-gray-500 font-medium">Suchen Sie auch eine Autovermietung? Wir bieten <a href="<%= langPrefix %>/autovermietung-pattaya/" class="text-primary font-bold hover:underline">Autovermietung Pattaya</a> mit Hotellieferung an 7 Tagen die Woche.</p>
+            <% } else if (lang === 'ja') { %>
+            <p class="text-gray-500 font-medium">レンタカーもお探しですか？<a href="<%= langPrefix %>/car-rental-pattaya-japanese/" class="text-primary font-bold hover:underline">パタヤ レンタカー</a>も週7日ホテル配送でご利用いただけます。</p>
+            <% } else if (lang === 'fr') { %>
+            <p class="text-gray-500 font-medium">Vous cherchez aussi une location de voiture ? Nous proposons la <a href="<%= langPrefix %>/location-voiture-pattaya/" class="text-primary font-bold hover:underline">location de voiture a Pattaya</a> avec livraison a l'hotel 7 jours sur 7.</p>
+            <% } else { %>
+            <p class="text-gray-500 font-medium">Also looking for a rental car in the Jomtien area? We offer <a href="<%= langPrefix %>/jomtien-car-rental/" class="text-primary font-bold hover:underline">car rental in Jomtien</a> with hotel delivery 7 days a week.</p>
+            <% } %>
         </div>
     </div>
 </section>

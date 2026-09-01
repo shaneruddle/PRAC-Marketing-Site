@@ -1,12 +1,56 @@
 <!-- Section 1: Hero -->
 <section class="bg-paper pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-6">
+        <% if (lang === 'ru') { %>
+        <span class="eyebrow">Основана в 2009 году</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">Компания №1 по аренде авто в Паттайе</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
+            <p class="text-ink/60 text-lg leading-relaxed">Основанная в 2009 году, компания Pattaya Rent a Car за более чем 16 лет стала самым надёжным сервисом аренды в городе, с автопарком из 100+ автомобилей, внедорожников, пикапов и мотоциклов. Тысячи туристов, экспатов и долгосрочных резидентов пользуются нашими услугами каждый год &mdash; потому что мы делаем аренду простой, прозрачной и без лишних хлопот.</p>
+            <p class="text-ink/60 text-lg leading-relaxed">Каждая аренда включает полное страхование от Viriyah Insurance, бесплатную доставку в отель или виллу, и поддержку 24/7 по телефону, WhatsApp и Line. Наша команда говорит на английском и русском языках, а рейтинг 4,9 звезды на основе более 1200 отзывов Google говорит сам за себя.</p>
+        </div>
+        <% } else if (lang === 'ko') { %>
+        <span class="eyebrow">2009년 설립</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">파타야 넘버원 렌터카 회사</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
+            <p class="text-ink/60 text-lg leading-relaxed">2009년 설립된 Pattaya Rent a Car는 16년 이상 파타야에서 가장 신뢰받는 렌터카 서비스로 성장해 왔으며, 100대 이상의 승용차, SUV, 픽업트럭, 오토바이를 보유하고 있습니다. 매년 수많은 관광객, 교민, 장기 체류자들이 저희를 이용합니다 &mdash; 렌트를 간단하고 투명하게, 스트레스 없이 만들어 드리기 때문입니다.</p>
+            <p class="text-ink/60 text-lg leading-relaxed">모든 렌트에는 Viriyah 보험사의 완전 보험, 호텔이나 빌라까지 무료 배달, 전화·WhatsApp·Line을 통한 24시간 지원이 기본으로 포함됩니다. 구글 리뷰 1,200개 이상, 평점 4.9점이 저희 서비스를 증명합니다.</p>
+        </div>
+        <% } else if (lang === 'zh') { %>
+        <span class="eyebrow">成立于2009年</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">芭提雅第一租车公司</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
+            <p class="text-ink/60 text-lg leading-relaxed">Pattaya Rent a Car 成立于2009年，历经16年多的发展，已成为芭提雅最值得信赖的租车服务商，拥有100多辆汽车、SUV、皮卡和摩托车。每年都有数以千计的游客、外籍人士和长期居民选择我们 &mdash; 因为我们让租车变得简单、透明、无忧。</p>
+            <p class="text-ink/60 text-lg leading-relaxed">每笔租车均标配 Viriyah Insurance 全险，免费送车至酒店或别墅，并提供电话、WhatsApp、Line全天候24小时支持。谷歌评分4.9星、超过1200条好评，就是最好的证明。</p>
+        </div>
+        <% } else if (lang === 'de') { %>
+        <span class="eyebrow">Gegruendet 2009</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">Pattayas Autovermietung Nr. 1</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
+            <p class="text-ink/60 text-lg leading-relaxed">Pattaya Rent a Car wurde 2009 gegruendet und hat sich in ueber 16 Jahren zum vertrauenswuerdigsten Vermietservice der Stadt entwickelt, mit einer Flotte von ueber 100 Autos, SUVs, Pickups und Motorraedern. Tausende Touristen, Expats und Langzeitbewohner vertrauen uns jedes Jahr &mdash; weil wir das Mieten einfach, transparent und stressfrei machen.</p>
+            <p class="text-ink/60 text-lg leading-relaxed">Jede Miete beinhaltet eine erstklassige Viriyah-Versicherung, kostenlose Lieferung zu Ihrem Hotel oder Ihrer Villa und 24/7-Support per Telefon, WhatsApp und Line. Unsere 4,9-Sterne-Bewertung von ueber 1.200 Google-Rezensionen spricht fuer sich.</p>
+        </div>
+        <% } else if (lang === 'ja') { %>
+        <span class="eyebrow">2009年創業</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">パタヤNo.1のレンタカー会社</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
+            <p class="text-ink/60 text-lg leading-relaxed">Pattaya Rent a Carは2009年の創業以来16年以上にわたり、100台以上の車両、SUV、ピックアップトラック、バイクを保有するパタヤで最も信頼されるレンタルサービスへと成長してまいりました。毎年多くの観光客、駐在員、長期滞在者にご利用いただいております &mdash; レンタルをシンプルで透明性のある、ストレスフリーなものにすることを大切にしているからです。</p>
+            <p class="text-ink/60 text-lg leading-relaxed">すべてのレンタルにはViriyah Insuranceのフル保険、ホテルまたはヴィラへの無料配送、電話・WhatsApp・Lineによる24時間サポートが標準で含まれます。1,200件以上のGoogleレビューで評価4.9星という実績が、私たちのサービスを物語っています。</p>
+        </div>
+        <% } else if (lang === 'fr') { %>
+        <span class="eyebrow">Fonde en 2009</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">La Compagnie de Location N°1 de Pattaya</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
+            <p class="text-ink/60 text-lg leading-relaxed">Fondee en 2009, Pattaya Rent a Car est devenue en plus de 16 ans le service de location le plus fiable de la ville, avec une flotte de plus de 100 voitures, SUV, pickups et motos. Des milliers de touristes, expatries et residents de longue duree nous font confiance chaque annee &mdash; parce que nous rendons la location simple, transparente et sans stress.</p>
+            <p class="text-ink/60 text-lg leading-relaxed">Chaque location inclut une assurance Viriyah Insurance complete en standard, une livraison gratuite a votre hotel ou villa, et une assistance 24h/24 par telephone, WhatsApp et Line. Notre note de 4,9 etoiles sur plus de 1200 avis Google parle d'elle-meme.</p>
+        </div>
+        <% } else { %>
         <span class="eyebrow">Established 2009</span>
         <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-ink leading-[0.9] max-w-4xl">Pattaya's Number 1 Car Hire Company</h1>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 max-w-5xl">
-            <p class="text-ink/60 text-lg leading-relaxed">Founded in 2009, Pattaya Rent a Car has grown over 16 years into the city's most trusted rental service, operating a fleet of 100+ cars, SUVs, pickups and motorbikes. Thousands of tourists, expats and long-term residents rely on us every year Ã¢ÂÂ because we make renting simple, transparent and stress-free.</p>
+            <p class="text-ink/60 text-lg leading-relaxed">Founded in 2009, Pattaya Rent a Car has grown over 16 years into the city's most trusted rental service, operating a fleet of 100+ cars, SUVs, pickups and motorbikes. Thousands of tourists, expats and long-term residents rely on us every year &mdash; because we make renting simple, transparent and stress-free.</p>
             <p class="text-ink/60 text-lg leading-relaxed">Every rental includes first-class Viriyah Insurance as standard, free delivery to your hotel or villa, and 24/7 support by phone, WhatsApp and Line. Our team speaks English and Russian, and our 4.9-star rating from over 1,200 Google reviews speaks for itself.</p>
         </div>
+        <% } %>
     </div>
 </section>
 
@@ -26,20 +70,20 @@
 
             <div class="card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mb-8"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
-                <h3 class="card-title">Quality Fleet</h3>
-                <p class="card-body">100+ well-maintained vehicles spanning economy cars, spacious 7-seat SUVs, pickups and motorbikes Ã¢ÂÂ all automatic and freshly serviced.</p>
+                <h3 class="card-title"><%= lang === 'ru' ? 'Качественный автопарк' : (lang === 'ko' ? '우수한 차량' : (lang === 'zh' ? '优质车队' : (lang === 'de' ? 'Erstklassige Flotte' : (lang === 'ja' ? '高品質な車両' : (lang === 'fr' ? 'Flotte de Qualite' : 'Quality Fleet'))))) %></h3>
+                <p class="card-body"><% if (lang === 'ru') { %>100+ хорошо обслуживаемых автомобилей: эконом-класс, просторные 7-местные внедорожники, пикапы и мотоциклы &mdash; все с автоматической коробкой передач и свежим техобслуживанием.<% } else if (lang === 'ko') { %>이코노미부터 넓은 7인승 SUV, 픽업트럭, 오토바이까지 100대 이상의 잘 관리된 차량 &mdash; 모두 오토매틱이며 정기적으로 정비됩니다.<% } else if (lang === 'zh') { %>100多辆维护良好的车辆，涵盖经济型轿车、宽敞的7座SUV、皮卡和摩托车 &mdash; 全部为自动挡，并定期保养。<% } else if (lang === 'de') { %>Ueber 100 gepflegte Fahrzeuge, von Economy-Autos bis zu geraeumigen 7-Sitzer SUVs, Pickups und Motorraedern &mdash; alle automatik und regelmaessig gewartet.<% } else if (lang === 'ja') { %>エコノミーカーから広々とした7人乗りSUV、ピックアップトラック、バイクまで100台以上の車両を整備 &mdash; すべてオートマチックで定期的にメンテナンスしています。<% } else if (lang === 'fr') { %>Plus de 100 vehicules bien entretenus, des voitures economiques aux SUV 7 places spacieux, pickups et motos &mdash; tous automatiques et regulierement entretenus.<% } else { %>100+ well-maintained vehicles spanning economy cars, spacious 7-seat SUVs, pickups and motorbikes &mdash; all automatic and freshly serviced.<% } %></p>
             </div>
 
             <div class="card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mb-8"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-                <h3 class="card-title">Full Insurance</h3>
-                <p class="card-body">First-class insurance through Viriyah Insurance included as standard on every rental Ã¢ÂÂ no add-ons, no surprises.</p>
+                <h3 class="card-title"><%= lang === 'ru' ? 'Полное страхование' : (lang === 'ko' ? '완전 보험' : (lang === 'zh' ? '全险保障' : (lang === 'de' ? 'Vollkasko inklusive' : (lang === 'ja' ? 'フル保険付き' : (lang === 'fr' ? 'Assurance Complete' : 'Full Insurance'))))) %></h3>
+                <p class="card-body"><% if (lang === 'ru') { %>Полное страховое покрытие от Viriyah Insurance включено по умолчанию в каждую аренду &mdash; без доплат и сюрпризов.<% } else if (lang === 'ko') { %>모든 렌트에 Viriyah 보험사의 완전 보험이 기본으로 포함됩니다 &mdash; 추가 비용이나 예상치 못한 부담이 없습니다.<% } else if (lang === 'zh') { %>每笔租车均标配 Viriyah Insurance 一级保险 &mdash; 无附加费用，无意外惊喜。<% } else if (lang === 'de') { %>Erstklassige Versicherung durch Viriyah Insurance standardmaessig in jeder Miete enthalten &mdash; keine Zusatzkosten, keine Ueberraschungen.<% } else if (lang === 'ja') { %>Viriyah Insuranceによるフル保険がすべてのレンタルに標準で付帯 &mdash; 追加料金もサプライズもありません。<% } else if (lang === 'fr') { %>Assurance complete Viriyah Insurance incluse en standard dans chaque location &mdash; sans supplement, sans surprise.<% } else { %>First-class insurance through Viriyah Insurance included as standard on every rental &mdash; no add-ons, no surprises.<% } %></p>
             </div>
 
             <div class="card">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mb-8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <h3 class="card-title">24/7 Support</h3>
-                <p class="card-body">Round-the-clock support via phone, WhatsApp and Line, with free hotel delivery across Pattaya Ã¢ÂÂ we're always just a message away.</p>
+                <h3 class="card-title"><%= lang === 'ru' ? 'Поддержка 24/7' : (lang === 'ko' ? '24시간 지원' : (lang === 'zh' ? '24小时支持' : (lang === 'de' ? '24/7 Support' : (lang === 'ja' ? '24時間サポート' : (lang === 'fr' ? 'Assistance 24/7' : '24/7 Support'))))) %></h3>
+                <p class="card-body"><% if (lang === 'ru') { %>Круглосуточная поддержка по телефону, WhatsApp и Line, с бесплатной доставкой в отель по всей Паттайе &mdash; мы всегда на связи.<% } else if (lang === 'ko') { %>전화, WhatsApp, Line을 통한 24시간 지원과 파타야 전 지역 무료 호텔 배달 &mdash; 언제든 메시지 한 통이면 됩니다.<% } else if (lang === 'zh') { %>提供电话、WhatsApp和Line全天候支持，芭提雅全境免费送车至酒店 &mdash; 我们随时为您服务。<% } else if (lang === 'de') { %>Rund-um-die-Uhr-Support per Telefon, WhatsApp und Line, mit kostenloser Hotellieferung in ganz Pattaya &mdash; wir sind immer nur eine Nachricht entfernt.<% } else if (lang === 'ja') { %>電話、WhatsApp、Lineによる24時間サポートと、パタヤ全域への無料ホテル配送 &mdash; いつでもメッセージ一つでご対応いたします。<% } else if (lang === 'fr') { %>Assistance 24h/24 par telephone, WhatsApp et Line, avec livraison gratuite a l'hotel dans tout Pattaya &mdash; toujours a un message de vous.<% } else { %>Round-the-clock support via phone, WhatsApp and Line, with free hotel delivery across Pattaya &mdash; we're always just a message away.<% } %></p>
             </div>
 
         </div>
@@ -52,9 +96,9 @@
         <div class="dark-block">
             <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none"></div>
             <div class="relative z-10 max-w-3xl">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-6">Experience Pattaya with the freedom of your own vehicle</h2>
-                <p class="text-white/60 text-lg leading-relaxed mb-10">Our team knows every road in Pattaya Ã¢ÂÂ and we'll deliver your vehicle straight to your door. Get in touch and we'll take care of the rest.</p>
-                <a href="/contact/" class="btn-primary inline-flex">Get in Touch</a>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-6"><%= lang === 'ru' ? 'Исследуйте Паттайю со свободой собственного автомобиля' : (lang === 'ko' ? '나만의 차량으로 자유롭게 파타야를 즐기세요' : (lang === 'zh' ? '拥有自己的座驾，自由探索芭提雅' : (lang === 'de' ? 'Erleben Sie Pattaya mit der Freiheit Ihres eigenen Fahrzeugs' : (lang === 'ja' ? '自分の車でパタヤの自由を体験しよう' : (lang === 'fr' ? 'Decouvrez Pattaya en toute liberte avec votre propre vehicule' : 'Experience Pattaya with the freedom of your own vehicle'))))) %></h2>
+                <p class="text-white/60 text-lg leading-relaxed mb-10"><% if (lang === 'ru') { %>Наша команда знает каждую дорогу в Паттайе &mdash; и мы доставим ваш автомобиль прямо к двери. Свяжитесь с нами, и мы позаботимся обо всём остальном.<% } else if (lang === 'ko') { %>저희 팀은 파타야의 모든 길을 알고 있습니다 &mdash; 차량을 문 앞까지 배달해 드립니다. 연락 주시면 나머지는 저희가 처리해 드리겠습니다.<% } else if (lang === 'zh') { %>我们的团队熟悉芭提雅的每一条道路 &mdash; 我们会将车辆直接送到您的门口。联系我们，剩下的交给我们来办。<% } else if (lang === 'de') { %>Unser Team kennt jede Strasse in Pattaya &mdash; und wir liefern Ihr Fahrzeug direkt vor Ihre Tuer. Kontaktieren Sie uns, wir kuemmern uns um den Rest.<% } else if (lang === 'ja') { %>私たちのチームはパタヤのすべての道を熟知しています &mdash; 車両を玄関先まで直接お届けします。ご連絡いただければ、あとはすべてお任せください。<% } else if (lang === 'fr') { %>Notre equipe connait chaque route de Pattaya &mdash; et nous livrons votre vehicule directement a votre porte. Contactez-nous et nous nous occupons du reste.<% } else { %>Our team knows every road in Pattaya &mdash; and we'll deliver your vehicle straight to your door. Get in touch and we'll take care of the rest.<% } %></p>
+                <a href="<%= langPrefix %>/contact/" class="btn-primary inline-flex"><%= lang === 'ru' ? 'Связаться с нами' : (lang === 'ko' ? '문의하기' : (lang === 'zh' ? '联系我们' : (lang === 'de' ? 'Kontaktieren Sie uns' : (lang === 'ja' ? 'お問い合わせ' : (lang === 'fr' ? 'Nous Contacter' : 'Get in Touch'))))) %></a>
             </div>
         </div>
     </div>

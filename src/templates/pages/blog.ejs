@@ -16,7 +16,7 @@
         <% if (posts && posts.length > 0) { %>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-post-grid">
             <% posts.forEach(post => { %>
-            <a href="/blog/<%= post.slug %>/" class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:-translate-y-1 transition-all">
+            <a href="<%= langPrefix %>/blog/<%= post.slug %>/" class="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:-translate-y-1 transition-all">
                 <div class="aspect-[16/9] bg-gray-200 overflow-hidden">
                     <% if (post.coverImage) { %>
                     <img src="<%= post.coverImage %>" alt="<%= post.title %>" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy" />
@@ -39,12 +39,12 @@
 
         <% if (totalPages > 1) { %>
         <nav class="flex items-center justify-center gap-2 mt-16" id="blog-pagination">
-            <% const prevHref = currentPage === 2 ? '/blog/' : '/blog/page/' + (currentPage - 1) + '/'; %>
+            <% const prevHref = currentPage === 2 ? (langPrefix + '/blog/') : (langPrefix + '/blog/page/' + (currentPage - 1) + '/'); %>
             <% if (currentPage > 1) { %>
             <a href="<%= prevHref %>" class="px-4 py-2 rounded-xl border border-gray-100 text-xs font-black uppercase tracking-widest hover:border-gray-300 transition-colors">Prev</a>
             <% } %>
             <% for (let i = 1; i <= totalPages; i++) { %>
-                <% const href = i === 1 ? '/blog/' : '/blog/page/' + i + '/'; %>
+                <% const href = i === 1 ? (langPrefix + '/blog/') : (langPrefix + '/blog/page/' + i + '/'); %>
                 <% if (i === currentPage) { %>
                 <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-white text-sm font-black"><%= i %></span>
                 <% } else { %>
@@ -52,7 +52,7 @@
                 <% } %>
             <% } %>
             <% if (currentPage < totalPages) { %>
-            <a href="/blog/page/<%= currentPage + 1 %>/" class="px-4 py-2 rounded-xl border border-gray-100 text-xs font-black uppercase tracking-widest hover:border-gray-300 transition-colors">Next</a>
+            <a href="<%= langPrefix %>/blog/page/<%= currentPage + 1 %>/" class="px-4 py-2 rounded-xl border border-gray-100 text-xs font-black uppercase tracking-widest hover:border-gray-300 transition-colors">Next</a>
             <% } %>
         </nav>
         <% } %>

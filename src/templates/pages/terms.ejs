@@ -1,33 +1,81 @@
-<% 
-const legalPages = {
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    insurance: "Insurance Coverage"
-};
-%>
 <section class="bg-gray-50 pt-32 pb-24 border-b border-gray-100">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-4">Legal Disclaimer</h1>
-        <p class="text-xl text-gray-500">Official documents and safety information.</p>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-4">Terms of Service</h1>
+        <p class="text-xl text-gray-500">The terms and conditions that apply when you rent a vehicle with us.</p>
     </div>
 </section>
 
 <section class="py-24">
     <div class="container mx-auto px-4 max-w-4xl">
         <div class="prose prose-lg max-w-none text-gray-600">
-            <h2 class="text-3xl font-bold text-ink mb-8">[PLACEHOLDER — REPLACE WITH ACTUAL CONTENT]</h2>
-            <p class="mb-6 font-bold text-ink uppercase tracking-widest text-xs">Last Updated: May 17, 2026</p>
-            
-            <p class="mb-4">This page contains placeholder content. Please replace this with the legally binding <%= title %> approved by your legal counsel in Thailand.</p>
-            
-            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">1. General Provisions</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non magna ut libero scelerisque eleifend. Suspendisse potenti. Nam at sapien non risus aliquet convallis sed ac urna. Donec varius metus elementum, pulvinar odio eu, condimentum nisi.</p>
-            
-            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">2. Rights and Obligations</h3>
-            <p>Phasellus eget risus et felis rhoncus convallis. Curabitur sed nisl eu libero blandit vulputate sed ut dui. Aliquam erat volutpat. Pellentesque tincidunt facilisis felis, at convallis orci varius vitae.</p>
 
-            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">3. Dispute Resolution</h3>
-            <p>Mauris sit amet est at tellus condimentum blandit. Donec ullamcorper neque sed leo rhoncus, sed egestas odio pretium. Pellentesque imperdiet arcu a sollicitudin suscipit.</p>
+            <p class="mb-6 font-bold text-ink uppercase tracking-widest text-xs">Last Updated: September 1, 2026</p>
+
+            <p class="mb-8">These Terms of Service ("Terms") govern the rental of vehicles from <%= site.name %>, operated by Auto Trader (Pattaya) Co., Ltd. ("we", "us", "our"), registered in Thailand with its place of business at <%= site.address %>. By booking a vehicle with us, whether online, by phone, or in person, you ("the Renter") agree to be bound by these Terms.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">1. Eligibility to Rent</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>The Renter must be at least 21 years of age at the time of rental.</li>
+                <li>The Renter must hold a valid driving licence from their home country covering the category of vehicle being rented.</li>
+                <li>Foreign nationals must also hold a valid International Driving Permit (IDP) issued in their home country before travelling to Thailand. An IDP cannot be obtained locally in Thailand.</li>
+                <li>We reserve the right to refuse a rental, or to end a rental early without refund, if the Renter cannot provide valid identification and licensing documents, or if we reasonably believe the Renter is unfit to drive.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">2. Bookings, Deposits and Payment</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>A booking is confirmed once we have acknowledged your reservation request, whether made through our website, WhatsApp, Line, phone, or in person.</li>
+                <li>A refundable security deposit is required for every rental, typically between ฿5,000 and ฿10,000 depending on vehicle category, payable in cash or by bank transfer at the time of vehicle collection.</li>
+                <li>Rental fees are payable in Thai Baht (THB) at the time of collection unless otherwise agreed in writing.</li>
+                <li>The security deposit will be returned in full at the end of the rental, less any deductions for damage, missing fuel, unpaid fines, or other charges permitted under these Terms.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">3. Insurance and Liability</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>Every vehicle is covered by first-class commercial insurance for rental vehicles, underwritten by Viriyah Insurance, including third-party liability and medical expense coverage. Full details are set out on our <a href="<%= langPrefix %>/insurance/" class="text-primary font-semibold hover:underline">Insurance Coverage</a> page.</li>
+                <li>Standard insurance carries an excess (deductible) of between ฿5,000 and ฿10,000 depending on vehicle category. This is the maximum the Renter is liable for in the event of damage they are responsible for. An optional "Full Protection" upgrade to reduce this excess to zero may be available at the time of booking.</li>
+                <li>Insurance does not cover damage arising from reckless or negligent driving, driving under the influence of alcohol or drugs, driving without a valid licence or IDP, use of the vehicle outside the terms of this agreement, or damage to tyres, wheels, and the vehicle's underside caused by driving on unpaved or unsuitable roads.</li>
+                <li>The Renter is responsible for reporting any accident to us and to the Thai police as soon as reasonably possible, and for cooperating fully with any resulting insurance claim.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">4. Vehicle Condition and Pre-Drive Checks</h3>
+            <p>We strongly encourage every Renter to complete our <a href="<%= langPrefix %>/pre-drive-checklist/" class="text-primary font-semibold hover:underline">pre-drive checklist</a> and photograph the vehicle's condition before departure. Any pre-existing damage should be noted with us at the point of collection. Failure to record pre-existing damage may result in the Renter being held responsible for it at the end of the rental.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">5. Fuel Policy</h3>
+            <p>Vehicles are provided with a full tank of fuel and must be returned with a full tank. If the vehicle is returned with less fuel than provided, the cost of refuelling plus a reasonable service charge will be deducted from the security deposit.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">6. Use of the Vehicle</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>The vehicle may only be driven by the Renter and any additional drivers named and approved at the time of booking.</li>
+                <li>The vehicle must not be used for racing, off-road driving (unless specifically rented as a 4x4/SUV for that purpose), towing, or any illegal purpose.</li>
+                <li>The vehicle must not be sublet, rented out, or used to carry passengers or goods for hire or reward.</li>
+                <li>The vehicle must not be taken outside Thailand without our prior written consent.</li>
+                <li>Smoking inside the vehicle is not permitted; a cleaning charge will apply if this condition is breached.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">7. Delivery and Collection</h3>
+            <p>We offer free vehicle delivery and collection to hotels, condominiums, and villas across Pattaya, and to U-Tapao and Suvarnabhumi airports on request. The Renter agrees to provide accurate delivery details and to be reasonably available at the agreed time and location.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">8. Rental Extensions and Long-Term Rentals</h3>
+            <p>Rental extensions must be requested and confirmed with us before the original rental period ends; extensions are subject to vehicle availability. Long-term rentals of one month or longer are subject to the monthly rates and terms confirmed at the time of booking, and generally include scheduled servicing and maintenance as part of the agreed rate. Full details are available on our <a href="<%= langPrefix %>/long-term-rental/" class="text-primary font-semibold hover:underline">Long Term Rental</a> page.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">9. Cancellations</h3>
+            <p>Cancellations made with reasonable notice before the scheduled collection time are eligible for a full refund of any advance payment. Cancellations made shortly before collection, or failure to collect the vehicle at the agreed time without notice, may result in forfeiture of any deposit paid. Please contact us as early as possible if your plans change so we can accommodate you fairly.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">10. Traffic Fines and Toll Charges</h3>
+            <p>The Renter is responsible for all traffic fines, toll charges, and parking fees incurred during the rental period. Where such charges are notified to us after the rental has ended, we reserve the right to charge the Renter's deposit, or invoice the Renter directly, for the amount due plus a reasonable administration fee.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">11. Limitation of Liability</h3>
+            <p>To the fullest extent permitted under Thai law, <%= site.name %> and Auto Trader (Pattaya) Co., Ltd. shall not be liable for any indirect, incidental, or consequential loss arising from the rental of a vehicle, including but not limited to loss of enjoyment, missed connections, or business losses. Nothing in these Terms limits our liability for death or personal injury caused by our negligence, or for any other liability that cannot lawfully be excluded or limited.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">12. Governing Law and Jurisdiction</h3>
+            <p>These Terms are governed by the laws of the Kingdom of Thailand. Any disputes arising from these Terms or from a rental agreement shall be subject to the exclusive jurisdiction of the courts of Chonburi Province, Thailand.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">13. Changes to These Terms</h3>
+            <p>We may update these Terms from time to time to reflect changes in our services or legal requirements. The version in force at the time of your booking will apply to that rental. The most current version is always available on this page.</p>
+
+            <h3 class="text-2xl font-bold text-ink mt-12 mb-6">14. Contact Us</h3>
+            <p>If you have any questions about these Terms, please contact us at <a href="mailto:<%= site.contact.email %>" class="text-primary font-semibold hover:underline"><%= site.contact.email %></a> or via the details on our <a href="<%= langPrefix %>/contact/" class="text-primary font-semibold hover:underline">Contact</a> page.</p>
+
         </div>
     </div>
 </section>

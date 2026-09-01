@@ -1,60 +1,105 @@
 <%
-const steps = [
-  {
-    title: 'Exterior damage walk',
-    body: 'Do a full 360° lap of the car before you get in and <b style="color:#F07D17;font-weight:700">photograph any existing dents, scratches or scuffs</b>. Show them to the delivery driver so they\'re noted on your agreement.'
-  },
-  {
-    title: 'Tyre condition',
-    body: 'Check all four tyres plus the spare for sidewall bulges, nails and low pressure. <b style="color:#F07D17;font-weight:700">Flat or damaged? WhatsApp us before you drive.</b>'
-  },
-  {
-    title: 'Windscreen & glass',
-    body: 'Scan the windscreen and every window for chips, cracks and star fractures. <b style="color:#F07D17;font-weight:700">Sunlight at an angle reveals chips you can\'t see head-on.</b>'
-  },
-  {
-    title: 'Lights check',
-    body: 'Test headlights, indicators, hazards, brake and reverse lights. <b style="color:#F07D17;font-weight:700">Thai law requires every light to work when driving.</b>'
-  },
-  {
-    title: 'Fuel level',
-    body: 'Note the gauge reading and confirm the fuel type before the driver leaves. <b style="color:#F07D17;font-weight:700">Return it like-for-like — wrong fuel isn\'t covered by insurance.</b>'
-  },
-  {
-    title: 'Seat & seatbelt',
-    body: 'Adjust the seat for an easy reach to the pedals and wheel, then pull-test every belt. <b style="color:#F07D17;font-weight:700">Check the rear belts too if you have passengers.</b>'
-  },
-  {
-    title: 'Mirror adjustment',
-    body: 'Set both wing mirrors and the rear-view from your seated position. <b style="color:#F07D17;font-weight:700">Pattaya motorbikes filter fast — angle a little wider.</b>'
-  },
-  {
-    title: 'Audio & air-con',
-    body: 'Pair your phone to Bluetooth and get the air-con blowing cold before you roll. <b style="color:#F07D17;font-weight:700">Pattaya hits 36°C — run the AC from minute one.</b>'
-  },
-  {
-    title: 'Navigation setup',
-    body: 'Enter your first destination and mount your phone before moving off. <b style="color:#F07D17;font-weight:700">Never type while driving.</b>'
-  },
-  {
-    title: 'Final sign-off',
-    body: 'Confirm every check is done and agree the vehicle\'s condition with the delivery driver. <b style="color:#F07D17;font-weight:700">Your 24/7 WhatsApp support is active for the whole rental.</b>'
-  }
-];
+const stepsByLang = {
+  en: [
+    { title: 'Exterior damage walk', body: 'Do a full 360° lap of the car before you get in and <b style="color:#F07D17;font-weight:700">photograph any existing dents, scratches or scuffs</b>. Show them to the delivery driver so they\'re noted on your agreement.' },
+    { title: 'Tyre condition', body: 'Check all four tyres plus the spare for sidewall bulges, nails and low pressure. <b style="color:#F07D17;font-weight:700">Flat or damaged? WhatsApp us before you drive.</b>' },
+    { title: 'Windscreen & glass', body: 'Scan the windscreen and every window for chips, cracks and star fractures. <b style="color:#F07D17;font-weight:700">Sunlight at an angle reveals chips you can\'t see head-on.</b>' },
+    { title: 'Lights check', body: 'Test headlights, indicators, hazards, brake and reverse lights. <b style="color:#F07D17;font-weight:700">Thai law requires every light to work when driving.</b>' },
+    { title: 'Fuel level', body: 'Note the gauge reading and confirm the fuel type before the driver leaves. <b style="color:#F07D17;font-weight:700">Return it like-for-like — wrong fuel isn\'t covered by insurance.</b>' },
+    { title: 'Seat & seatbelt', body: 'Adjust the seat for an easy reach to the pedals and wheel, then pull-test every belt. <b style="color:#F07D17;font-weight:700">Check the rear belts too if you have passengers.</b>' },
+    { title: 'Mirror adjustment', body: 'Set both wing mirrors and the rear-view from your seated position. <b style="color:#F07D17;font-weight:700">Pattaya motorbikes filter fast — angle a little wider.</b>' },
+    { title: 'Audio & air-con', body: 'Pair your phone to Bluetooth and get the air-con blowing cold before you roll. <b style="color:#F07D17;font-weight:700">Pattaya hits 36°C — run the AC from minute one.</b>' },
+    { title: 'Navigation setup', body: 'Enter your first destination and mount your phone before moving off. <b style="color:#F07D17;font-weight:700">Never type while driving.</b>' },
+    { title: 'Final sign-off', body: 'Confirm every check is done and agree the vehicle\'s condition with the delivery driver. <b style="color:#F07D17;font-weight:700">Your 24/7 WhatsApp support is active for the whole rental.</b>' }
+  ],
+  ru: [
+    { title: 'Осмотр кузова', body: 'Обойдите автомобиль по кругу перед посадкой и <b style="color:#F07D17;font-weight:700">сфотографируйте все имеющиеся вмятины, царапины и потёртости</b>. Покажите их водителю доставки, чтобы они были отмечены в договоре.' },
+    { title: 'Состояние шин', body: 'Проверьте все четыре шины и запасное колесо на наличие вздутий, проколов и недостаточного давления. <b style="color:#F07D17;font-weight:700">Прокол или повреждение? Напишите нам в WhatsApp перед поездкой.</b>' },
+    { title: 'Лобовое стекло и окна', body: 'Осмотрите лобовое стекло и все окна на наличие сколов, трещин и звёздочек. <b style="color:#F07D17;font-weight:700">Солнечный свет под углом выявляет сколы, незаметные при обычном взгляде.</b>' },
+    { title: 'Проверка света', body: 'Проверьте фары, поворотники, аварийку, стоп-сигналы и заднюю фару. <b style="color:#F07D17;font-weight:700">По тайскому закону все фонари должны работать во время движения.</b>' },
+    { title: 'Уровень топлива', body: 'Отметьте показания датчика и уточните тип топлива перед отъездом водителя. <b style="color:#F07D17;font-weight:700">Верните с тем же уровнем — неправильное топливо не покрывается страховкой.</b>' },
+    { title: 'Сиденье и ремень безопасности', body: 'Отрегулируйте сиденье для удобного доступа к педалям и рулю, затем проверьте все ремни на прочность. <b style="color:#F07D17;font-weight:700">Проверьте и задние ремни, если едете с пассажирами.</b>' },
+    { title: 'Настройка зеркал', body: 'Отрегулируйте оба боковых зеркала и зеркало заднего вида из положения сидя. <b style="color:#F07D17;font-weight:700">Мотоциклы в Паттайе быстро лавируют — настройте зеркала чуть шире.</b>' },
+    { title: 'Аудио и кондиционер', body: 'Подключите телефон по Bluetooth и включите кондиционер на охлаждение перед выездом. <b style="color:#F07D17;font-weight:700">В Паттайе до 36°C — включайте кондиционер сразу.</b>' },
+    { title: 'Настройка навигации', body: 'Введите первый пункт назначения и закрепите телефон перед началом движения. <b style="color:#F07D17;font-weight:700">Никогда не печатайте за рулём.</b>' },
+    { title: 'Финальная проверка', body: 'Убедитесь, что все пункты проверены, и согласуйте состояние автомобиля с водителем доставки. <b style="color:#F07D17;font-weight:700">Наша поддержка в WhatsApp работает 24/7 на протяжении всей аренды.</b>' }
+  ],
+  ko: [
+    { title: '외관 손상 점검', body: '차량에 타기 전 차량 주위를 한 바퀴 돌며 <b style="color:#F07D17;font-weight:700">기존의 찌그러짐, 긁힘, 스크래치를 사진으로 남기세요</b>. 배송 기사에게 보여주어 계약서에 기록되도록 하세요.' },
+    { title: '타이어 상태', body: '네 개의 타이어와 스페어 타이어의 옆면 부풀음, 못자국, 공기압을 확인하세요. <b style="color:#F07D17;font-weight:700">펑크나 손상이 있다면 운전 전에 WhatsApp으로 연락 주세요.</b>' },
+    { title: '앞유리 및 창문', body: '앞유리와 모든 창문에 흠집, 균열, 별 모양 파손이 있는지 확인하세요. <b style="color:#F07D17;font-weight:700">햇빛을 비스듬히 비추면 정면에서 보이지 않는 흠집도 확인할 수 있습니다.</b>' },
+    { title: '전조등 점검', body: '헤드라이트, 방향지시등, 비상등, 브레이크등, 후진등을 테스트하세요. <b style="color:#F07D17;font-weight:700">태국 법률상 운전 중에는 모든 조명이 작동해야 합니다.</b>' },
+    { title: '연료 상태', body: '출발 전 연료 게이지와 연료 종류를 확인하세요. <b style="color:#F07D17;font-weight:700">동일한 상태로 반납해 주세요 — 잘못된 연료 주입은 보험 처리가 되지 않습니다.</b>' },
+    { title: '좌석 및 안전벨트', body: '페달과 핸들에 편하게 손이 닿도록 좌석을 조정한 후, 모든 안전벨트를 당겨서 확인하세요. <b style="color:#F07D17;font-weight:700">동승자가 있다면 뒷좌석 벨트도 확인하세요.</b>' },
+    { title: '미러 조정', body: '앉은 자세에서 양쪽 사이드 미러와 룸미러를 조정하세요. <b style="color:#F07D17;font-weight:700">파타야 오토바이는 빠르게 끼어드는 경우가 많으니 조금 더 넓게 조정하세요.</b>' },
+    { title: '오디오 및 에어컨', body: '출발 전 블루투스로 휴대폰을 연결하고 에어컨을 시원하게 틀어두세요. <b style="color:#F07D17;font-weight:700">파타야는 36°C까지 올라가니 처음부터 에어컨을 가동하세요.</b>' },
+    { title: '내비게이션 설정', body: '출발하기 전 첫 목적지를 입력하고 휴대폰을 거치하세요. <b style="color:#F07D17;font-weight:700">운전 중 절대 타이핑하지 마세요.</b>' },
+    { title: '최종 확인', body: '모든 점검이 완료되었는지 확인하고 배송 기사와 차량 상태를 함께 확인하세요. <b style="color:#F07D17;font-weight:700">전체 렌탈 기간 동안 24시간 WhatsApp 지원이 제공됩니다.</b>' }
+  ],
+  zh: [
+    { title: '外观损伤检查', body: '上车前绕车一周，<b style="color:#F07D17;font-weight:700">拍照记录任何现有的凹痕、划痕或磨损</b>。将照片展示给送车司机，以便记录在协议中。' },
+    { title: '轮胎状况', body: '检查四个轮胎及备胎是否有侧壁鼓包、扎钉或胎压不足。<b style="color:#F07D17;font-weight:700">发现漏气或损坏？请在驾驶前通过WhatsApp联系我们。</b>' },
+    { title: '挡风玻璃与车窗', body: '检查挡风玻璃及所有车窗是否有裂纹、破损或星状裂痕。<b style="color:#F07D17;font-weight:700">斜射的阳光能发现正面看不到的裂痕。</b>' },
+    { title: '灯光检查', body: '测试大灯、转向灯、双闪灯、刹车灯及倒车灯。<b style="color:#F07D17;font-weight:700">泰国法律要求行驶时所有灯光均需正常工作。</b>' },
+    { title: '油量检查', body: '出发前记录油量表读数并确认燃油类型。<b style="color:#F07D17;font-weight:700">请按原样加满归还——加错燃油不在保险范围内。</b>' },
+    { title: '座椅与安全带', body: '调整座椅至方便操控踏板和方向盘的位置，然后拉动测试每条安全带。<b style="color:#F07D17;font-weight:700">如有乘客，也请检查后排安全带。</b>' },
+    { title: '后视镜调整', body: '坐好后调整两侧后视镜及车内后视镜。<b style="color:#F07D17;font-weight:700">芭提雅的摩托车穿行速度快——建议角度调宽一些。</b>' },
+    { title: '音响与空调', body: '出发前将手机连接蓝牙并开启空调制冷。<b style="color:#F07D17;font-weight:700">芭提雅气温可达36°C——从一开始就开启空调。</b>' },
+    { title: '导航设置', body: '出发前输入第一个目的地并固定好手机支架。<b style="color:#F07D17;font-weight:700">切勿在驾驶时操作手机打字。</b>' },
+    { title: '最终确认', body: '确认所有检查项目均已完成，并与送车司机确认车辆状况。<b style="color:#F07D17;font-weight:700">整个租期内均提供24小时WhatsApp支持。</b>' }
+  ],
+  de: [
+    { title: 'Rundgang auf Schaeden', body: 'Machen Sie vor dem Einsteigen eine vollstaendige Runde um das Auto und <b style="color:#F07D17;font-weight:700">fotografieren Sie vorhandene Dellen, Kratzer oder Schrammen</b>. Zeigen Sie diese dem Lieferfahrer, damit sie im Vertrag vermerkt werden.' },
+    { title: 'Reifenzustand', body: 'Pruefen Sie alle vier Reifen sowie das Reserverad auf Beulen, Naegel und niedrigen Reifendruck. <b style="color:#F07D17;font-weight:700">Platt oder beschaedigt? Schreiben Sie uns vor der Abfahrt per WhatsApp.</b>' },
+    { title: 'Windschutzscheibe & Glas', body: 'Untersuchen Sie Windschutzscheibe und alle Fenster auf Steinschlaege, Risse und Spruenge. <b style="color:#F07D17;font-weight:700">Sonnenlicht im flachen Winkel zeigt Schaeden, die man frontal nicht sieht.</b>' },
+    { title: 'Lichtcheck', body: 'Testen Sie Scheinwerfer, Blinker, Warnblinker, Brems- und Rueckfahrlichter. <b style="color:#F07D17;font-weight:700">Nach thailaendischem Recht muessen beim Fahren alle Lichter funktionieren.</b>' },
+    { title: 'Tankstand', body: 'Notieren Sie den Tankstand und bestaetigen Sie die Kraftstoffart, bevor der Fahrer geht. <b style="color:#F07D17;font-weight:700">Geben Sie das Fahrzeug im gleichen Zustand zurueck &mdash; falscher Kraftstoff ist nicht versichert.</b>' },
+    { title: 'Sitz & Sicherheitsgurt', body: 'Stellen Sie den Sitz fuer bequeme Erreichbarkeit von Pedalen und Lenkrad ein und pruefen Sie jeden Gurt durch Ziehen. <b style="color:#F07D17;font-weight:700">Pruefen Sie bei Mitfahrern auch die Rueckbankgurte.</b>' },
+    { title: 'Spiegeleinstellung', body: 'Stellen Sie beide Aussenspiegel und den Innenspiegel aus Ihrer Sitzposition ein. <b style="color:#F07D17;font-weight:700">Motorraeder in Pattaya schlaengeln sich schnell durch &mdash; stellen Sie die Spiegel etwas weiter.</b>' },
+    { title: 'Audio & Klimaanlage', body: 'Verbinden Sie Ihr Handy per Bluetooth und lassen Sie die Klimaanlage vor der Abfahrt kalt werden. <b style="color:#F07D17;font-weight:700">In Pattaya werden es bis zu 36°C &mdash; schalten Sie die Klimaanlage von Anfang an ein.</b>' },
+    { title: 'Navigation einrichten', body: 'Geben Sie Ihr erstes Ziel ein und befestigen Sie Ihr Handy, bevor Sie losfahren. <b style="color:#F07D17;font-weight:700">Tippen Sie niemals waehrend der Fahrt.</b>' },
+    { title: 'Abschliessende Abnahme', body: 'Bestaetigen Sie, dass alle Kontrollen durchgefuehrt wurden, und stimmen Sie den Fahrzeugzustand mit dem Lieferfahrer ab. <b style="color:#F07D17;font-weight:700">Ihr 24/7-WhatsApp-Support ist waehrend der gesamten Mietzeit aktiv.</b>' }
+  ],
+  ja: [
+    { title: '外装の傷チェック', body: '乗車前に車の周りを一周し、<b style="color:#F07D17;font-weight:700">既存のへこみ、傷、こすり跡を写真に記録してください</b>。配送ドライバーに見せて、契約書に記載してもらいましょう。' },
+    { title: 'タイヤの状態', body: '4本のタイヤとスペアタイヤの側面の膨らみ、釘、空気圧不足を確認してください。<b style="color:#F07D17;font-weight:700">パンクや損傷がある場合は、運転前にWhatsAppでご連絡ください。</b>' },
+    { title: 'フロントガラス・窓ガラス', body: 'フロントガラスとすべての窓に欠け、ひび、星型のひびがないか確認してください。<b style="color:#F07D17;font-weight:700">斜めからの日光で正面からは見えない欠けが見つかることがあります。</b>' },
+    { title: 'ライトチェック', body: 'ヘッドライト、ウインカー、ハザード、ブレーキランプ、バックランプをテストしてください。<b style="color:#F07D17;font-weight:700">タイの法律では運転中すべてのライトが正常に動作する必要があります。</b>' },
+    { title: '燃料レベル', body: 'ドライバーが出発する前に燃料計の表示と燃料の種類を確認してください。<b style="color:#F07D17;font-weight:700">同じ状態で返却してください — 誤った燃料は保険の対象外です。</b>' },
+    { title: 'シート・シートベルト', body: 'ペダルとハンドルに無理なく届くようシートを調整し、すべてのベルトを引っ張って確認してください。<b style="color:#F07D17;font-weight:700">同乗者がいる場合は後部座席のベルトも確認してください。</b>' },
+    { title: 'ミラー調整', body: '着席した状態で両サイドミラーとルームミラーを調整してください。<b style="color:#F07D17;font-weight:700">パタヤのバイクは素早くすり抜けてくるため、少し広めに角度を取りましょう。</b>' },
+    { title: 'オーディオ・エアコン', body: '走行前にスマートフォンをBluetoothでペアリングし、エアコンを冷やしておきましょう。<b style="color:#F07D17;font-weight:700">パタヤは36°Cにもなるため、最初からエアコンを稼働させましょう。</b>' },
+    { title: 'ナビ設定', body: '走行前に最初の目的地を入力し、スマートフォンを固定してください。<b style="color:#F07D17;font-weight:700">運転中の操作は絶対に避けてください。</b>' },
+    { title: '最終確認', body: 'すべてのチェックが完了したことを確認し、配送ドライバーと車両状態を確認しあってください。<b style="color:#F07D17;font-weight:700">レンタル期間中は24時間WhatsAppサポートをご利用いただけます。</b>' }
+  ],
+  fr: [
+    { title: 'Inspection des dommages exterieurs', body: 'Faites le tour complet du vehicule avant de monter et <b style="color:#F07D17;font-weight:700">photographiez toute bosse, rayure ou eraflure existante</b>. Montrez-les au chauffeur-livreur pour qu\'elles soient notees sur votre contrat.' },
+    { title: 'Etat des pneus', body: 'Verifiez les quatre pneus ainsi que la roue de secours pour detecter des boursouflures, des clous ou une pression insuffisante. <b style="color:#F07D17;font-weight:700">Pneu a plat ou endommage ? Contactez-nous sur WhatsApp avant de partir.</b>' },
+    { title: 'Pare-brise et vitres', body: 'Examinez le pare-brise et toutes les vitres pour detecter des eclats, fissures ou impacts en etoile. <b style="color:#F07D17;font-weight:700">La lumiere du soleil en angle revele des eclats invisibles de face.</b>' },
+    { title: 'Verification des feux', body: 'Testez les phares, clignotants, feux de detresse, feux de freinage et de recul. <b style="color:#F07D17;font-weight:700">La loi thailandaise exige que tous les feux fonctionnent en conduisant.</b>' },
+    { title: 'Niveau de carburant', body: 'Notez le niveau de la jauge et confirmez le type de carburant avant le depart du chauffeur. <b style="color:#F07D17;font-weight:700">Rendez le vehicule dans le meme etat &mdash; un mauvais carburant n\'est pas couvert par l\'assurance.</b>' },
+    { title: 'Siege et ceinture', body: 'Ajustez le siege pour atteindre facilement les pedales et le volant, puis testez chaque ceinture en tirant dessus. <b style="color:#F07D17;font-weight:700">Verifiez aussi les ceintures arriere si vous avez des passagers.</b>' },
+    { title: 'Reglage des retroviseurs', body: 'Reglez les deux retroviseurs exterieurs et interieur depuis votre position assise. <b style="color:#F07D17;font-weight:700">Les motos a Pattaya se faufilent rapidement &mdash; elargissez un peu l\'angle.</b>' },
+    { title: 'Audio et climatisation', body: 'Connectez votre telephone en Bluetooth et faites refroidir la climatisation avant de partir. <b style="color:#F07D17;font-weight:700">Pattaya atteint 36°C &mdash; activez la climatisation des le depart.</b>' },
+    { title: 'Configuration GPS', body: 'Entrez votre premiere destination et fixez votre telephone avant de demarrer. <b style="color:#F07D17;font-weight:700">Ne tapez jamais en conduisant.</b>' },
+    { title: 'Validation finale', body: 'Confirmez que toutes les verifications sont faites et validez l\'etat du vehicule avec le chauffeur-livreur. <b style="color:#F07D17;font-weight:700">Notre assistance WhatsApp 24h/24 est active pendant toute la duree de la location.</b>' }
+  ]
+};
+const steps = stepsByLang[lang] || stepsByLang.en;
 %>
 
 <!-- Hero + Video embed -->
 <section class="bg-paper pt-32 pb-10">
   <div class="container mx-auto px-4 max-w-3xl">
 
-    <span class="font-mono text-[12px] font-bold uppercase tracking-[0.28em] block mb-4" style="color:#F07D17">Before You Drive · Pattaya Rent a Car</span>
+    <span class="font-mono text-[12px] font-bold uppercase tracking-[0.28em] block mb-4" style="color:#F07D17"><%= lang === 'ru' ? 'Перед поездкой · Pattaya Rent a Car' : (lang === 'ko' ? '운전 전 · Pattaya Rent a Car' : (lang === 'zh' ? '出发前 · Pattaya Rent a Car' : (lang === 'de' ? 'Vor der Fahrt · Pattaya Rent a Car' : (lang === 'ja' ? '運転前に · Pattaya Rent a Car' : (lang === 'fr' ? 'Avant de Partir · Pattaya Rent a Car' : 'Before You Drive · Pattaya Rent a Car'))))) %></span>
 
     <h1 class="font-black text-ink mb-5" style="font-size:clamp(32px,5vw,52px);letter-spacing:-0.025em;line-height:1.02">
-      Your <em class="italic" style="color:#F07D17">pre-drive</em> checklist
+      <% if (lang === 'ru') { %>Ваш чек-лист <em class="italic" style="color:#F07D17">перед поездкой</em><% } else if (lang === 'ko') { %>운전 전 <em class="italic" style="color:#F07D17">체크리스트</em><% } else if (lang === 'zh') { %>您的<em class="italic" style="color:#F07D17">行前检查</em>清单<% } else if (lang === 'de') { %>Ihre Checkliste <em class="italic" style="color:#F07D17">vor der Fahrt</em><% } else if (lang === 'ja') { %>運転前<em class="italic" style="color:#F07D17">チェックリスト</em><% } else if (lang === 'fr') { %>Votre liste de controle <em class="italic" style="color:#F07D17">avant depart</em><% } else { %>Your <em class="italic" style="color:#F07D17">pre-drive</em> checklist<% } %>
     </h1>
 
     <p style="font-size:19px;color:rgba(29,29,27,.62);max-width:680px">
-      Renting a car in Pattaya? Take ninety seconds before you drive away. These ten quick checks protect your deposit, keep your insurance simple, and get you on the road with total peace of mind.
+      <% if (lang === 'ru') { %>Арендуете автомобиль в Паттайе? Уделите девяносто секунд перед отъездом. Эти десять быстрых проверок защитят ваш депозит, упростят страховые вопросы и подарят полное спокойствие на дороге.<% } else if (lang === 'ko') { %>파타야에서 렌터카를 이용하시나요? 출발 전 90초만 투자하세요. 이 10가지 빠른 점검이 보증금을 보호하고 보험 처리를 간편하게 하며 마음 편히 운전하실 수 있게 도와드립니다.<% } else if (lang === 'zh') { %>在芭提雅租车吗？出发前花90秒进行检查。这10项快速检查能保护您的押金，简化保险流程，让您安心上路。<% } else if (lang === 'de') { %>Mieten Sie ein Auto in Pattaya? Nehmen Sie sich neunzig Sekunden Zeit, bevor Sie losfahren. Diese zehn schnellen Kontrollen schuetzen Ihre Kaution, vereinfachen die Versicherung und geben Ihnen absolute Sicherheit auf der Strasse.<% } else if (lang === 'ja') { %>パタヤでレンタカーをご利用ですか？出発前に90秒お時間をください。この10項目の簡単なチェックで、デポジットを守り、保険手続きをシンプルにし、安心してドライブに出発できます。<% } else if (lang === 'fr') { %>Vous louez une voiture a Pattaya ? Prenez quatre-vingt-dix secondes avant de partir. Ces dix verifications rapides protegent votre caution, simplifient votre assurance et vous offrent une tranquillite d'esprit totale sur la route.<% } else { %>Renting a car in Pattaya? Take ninety seconds before you drive away. These ten quick checks protect your deposit, keep your insurance simple, and get you on the road with total peace of mind.<% } %>
     </p>
 
     <!-- Responsive 16:9 video embed -->
@@ -67,7 +112,7 @@ const steps = [
         style="position:absolute;inset:0;width:100%;height:100%;border:0"
       ></iframe>
     </div>
-    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/40 mb-12">90-second guide · No sign-up · Works on mobile</p>
+    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/40 mb-12"><%= lang === 'ru' ? '90-секундное руководство · Без регистрации · Работает на мобильных' : (lang === 'ko' ? '90초 가이드 · 가입 불필요 · 모바일 지원' : (lang === 'zh' ? '90秒指南 · 无需注册 · 支持手机浏览' : (lang === 'de' ? '90-Sekunden-Anleitung · Keine Anmeldung · Mobilfreundlich' : (lang === 'ja' ? '90秒ガイド · 登録不要 · スマホ対応' : (lang === 'fr' ? 'Guide de 90 secondes · Sans inscription · Compatible mobile' : '90-second guide · No sign-up · Works on mobile'))))) %></p>
 
   </div>
 </section>
@@ -76,7 +121,7 @@ const steps = [
 <section class="bg-paper pb-16">
   <div class="container mx-auto px-4 max-w-3xl">
 
-    <h2 class="text-3xl font-extrabold tracking-tight text-ink mb-6">The 10-point check, step by step</h2>
+    <h2 class="text-3xl font-extrabold tracking-tight text-ink mb-6"><%= lang === 'ru' ? 'Проверка из 10 пунктов, шаг за шагом' : (lang === 'ko' ? '10가지 단계별 점검 항목' : (lang === 'zh' ? '10项检查，逐步完成' : (lang === 'de' ? 'Die 10-Punkte-Kontrolle, Schritt fuer Schritt' : (lang === 'ja' ? '10項目のチェック、ステップごとに解説' : (lang === 'fr' ? 'La verification en 10 points, etape par etape' : 'The 10-point check, step by step'))))) %></h2>
 
     <ol class="space-y-3 list-none m-0 p-0">
       <% steps.forEach(function(step, i) { %>
@@ -100,10 +145,10 @@ const steps = [
   <div class="container mx-auto px-4 max-w-3xl">
     <div class="bg-ink rounded-3xl px-8 py-9 md:px-10 flex flex-wrap items-center justify-between gap-5">
       <h2 class="text-3xl font-extrabold text-white tracking-tight m-0">
-        Ready to <em class="italic" style="color:#F07D17">explore Pattaya?</em>
+        <% if (lang === 'ru') { %>Готовы <em class="italic" style="color:#F07D17">исследовать Паттайю?</em><% } else if (lang === 'ko') { %>파타야를 <em class="italic" style="color:#F07D17">탐험할 준비가 되셨나요?</em><% } else if (lang === 'zh') { %>准备好<em class="italic" style="color:#F07D17">探索芭提雅了吗？</em><% } else if (lang === 'de') { %>Bereit, <em class="italic" style="color:#F07D17">Pattaya zu erkunden?</em><% } else if (lang === 'ja') { %><em class="italic" style="color:#F07D17">パタヤを探検する</em>準備はできましたか？<% } else if (lang === 'fr') { %>Prets a <em class="italic" style="color:#F07D17">explorer Pattaya ?</em><% } else { %>Ready to <em class="italic" style="color:#F07D17">explore Pattaya?</em><% } %>
       </h2>
       <a href="<%= langPrefix %>/" class="font-mono font-bold text-[13px] uppercase tracking-[0.12em] text-white px-7 py-4 rounded-full whitespace-nowrap transition-colors inline-block" style="background:#F07D17">
-        Search Available Cars
+        <%= lang === 'ru' ? 'Смотреть доступные автомобили' : (lang === 'ko' ? '이용 가능한 차량 검색' : (lang === 'zh' ? '搜索可用车辆' : (lang === 'de' ? 'Verfuegbare Autos suchen' : (lang === 'ja' ? '利用可能な車両を検索' : (lang === 'fr' ? 'Rechercher un Vehicule' : 'Search Available Cars'))))) %>
       </a>
     </div>
   </div>

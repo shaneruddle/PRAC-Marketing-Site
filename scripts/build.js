@@ -72,6 +72,37 @@ async function fetchPublishedHotels(db) {
         .get();
     return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
+
+// Long-term rental listings - staff-entered via the CMS (Long Term Rentals
+// section), one per fleet vehicle currently offered for long-term rent.
+// Only `published` listings are kept - unpublished ones stay admin-only.
+// Filters/sorts in JS rather than a compound where+orderBy query (same
+// approach as fetchFaqs) so this never needs a Firestore composite index.
+async function fetchPublishedLongTermListings(db) {
+    const snap = await db.collection('long_term_listings').get();
+    const listings = snap.docs
+        .map(d => ({ id: d.id, ...d.data() }))
+        .filter(l => l.published === true);
+    listings.sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
+    return listings;
+}
+
+// Best-effort photo for a long-term listing: match the listing's car class
+// (carType) against website_cars.type and use that model's mainImage. Several
+// physical cars can share one class, so this is a representative photo, not
+// necessarily the exact plated vehicle - website_cars is the only collection
+// with real hosted images. Returns { [type]: imageUrl }, first match wins.
+async function fetchWebsiteCarImageByType(db) {
+    const snap = await db.collection('website_cars')
+        .where('isActive', '==', true)
+        .get();
+    const map = {};
+    snap.docs.forEach(d => {
+        const car = d.data();
+        if (car.type && car.mainImage && !map[car.type]) map[car.type] = car.mainImage;
+    });
+    return map;
+}
 async function fetchPublishedBlogPosts(db) {
     const snap = await db.collection('blog_posts')
         .where('status', 'in', ['Published', 'published'])
@@ -270,7 +301,7 @@ async function build() {
 
     // -- Fetch all Firestore data upfront ------------------------------------
     console.log('Fetching from Firestore...');
-  const [guides, locations, blogPosts, faqs, company, priceMap, hotels] = await Promise.all([
+  const [guides, locations, blogPosts, faqs, company, priceMap, hotels, longTermListingsRaw, websiteCarImageByType] = await Promise.all([
     fetchPublishedGuides(db),
     fetchPublishedLocations(db),
     fetchPublishedBlogPosts(db),
@@ -278,7 +309,15 @@ async function build() {
     fetchCompanySettings(db),
     fetchTypicalPrices(),
     fetchPublishedHotels(db),
+    fetchPublishedLongTermListings(db),
+    fetchWebsiteCarImageByType(db),
   ]);
+  // Attach a representative photo per listing (see fetchWebsiteCarImageByType) -
+  // language-independent, so this is computed once outside the per-language loop.
+  const longTermListings = longTermListingsRaw.map(l => ({
+    ...l,
+    image: websiteCarImageByType[l.carType] || null,
+  }));
                 const carMap = Object.fromEntries(guides.map(g => [g.id, g]));
         site = {
             ...site,                                 // site.json defaults (incl. domain) underneath
@@ -520,15 +559,24 @@ async function build() {
             await renderPage(page, { lang, t, langPrefix, title, description, schema: {} }, tPath(page + '/index.html'));
                 }
         // Long-term rental — dedicated renderPage with full SEO data
+                    // "From" price for meta/schema: the lowest currently-published listing's
+                    // monthly rate, if any - never a hardcoded guess. When nothing is published
+                    // right now, the Offer is omitted entirely rather than advertise a number
+                    // with no vehicle behind it (same reasoning as the bike site's decision not
+                    // to emit Product/Offer schema when a reliable price isn't known).
+                    const ltFromPrice = longTermListings.length
+                        ? Math.min(...longTermListings.map(l => l.monthlyPrice))
+                        : null;
                     await renderPage('long-term-rental', {
                                             lang, t, langPrefix,
+                                            listings: longTermListings,
                                             title: (t.meta && t.meta.longTerm && t.meta.longTerm.title) || 'Long Term Car Rental Pattaya | Monthly & Expat Rates',
-                                            description: (t.meta && t.meta.longTerm && t.meta.longTerm.description) || 'Monthly car rental in Pattaya from ฿10,000/month. Full insurance, free condo delivery, servicing included. Preferred by expats, digital nomads and long-stay visitors. Get a quote today.',
+                                            description: (t.meta && t.meta.longTerm && t.meta.longTerm.description) || 'Monthly and long-stay car rentals for expats, digital nomads and long-term visitors in Pattaya. Full insurance, free delivery and servicing included. See current availability and get a quote today.',
                                             schema: {
                                                                             '@context': 'https://schema.org',
                                                                             '@graph': [
-                                                                                    { '@type': 'Service', '@id': 'https://' + site.domain + '/long-term-rental/#service', 'name': 'Long Term Car Rental Pattaya', 'alternateName': 'Monthly Car Rental Pattaya', 'description': 'Monthly and long-stay car rentals for expats, digital nomads, and long-term visitors in Pattaya. Rates from 10,000 THB/month with full insurance, free delivery and all servicing included.', 'url': 'https://' + site.domain + '/long-term-rental/', 'provider': { '@type': 'CarRental', 'name': site.name, 'telephone': site.contact.phone, 'address': { '@type': 'PostalAddress', 'streetAddress': site.address, 'addressLocality': 'Pattaya', 'addressRegion': 'Chon Buri', 'addressCountry': 'TH' }, ...(site.trust.googleRating ? { 'aggregateRating': { '@type': 'AggregateRating', 'ratingValue': site.trust.googleRating, 'reviewCount': site.trust.googleReviews } } : {}) }, 'areaServed': { '@type': 'City', 'name': 'Pattaya' }, 'offers': { '@type': 'Offer', 'priceCurrency': 'THB', 'price': '10000', 'description': 'Monthly car rental from 10,000 THB — exact rate depends on vehicle and duration', 'eligibleDuration': { '@type': 'QuantitativeValue', 'value': 1, 'unitCode': 'MON' } } },
-                                                                                    { '@type': 'FAQPage', 'mainEntity': [ { '@type': 'Question', 'name': 'How much does long-term car rental in Pattaya cost?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Monthly car rental in Pattaya starts from 10,000 THB per month with Pattaya Rent a Car. The exact rate depends on the vehicle model and rental duration — the longer you rent, the better the rate.' } }, { '@type': 'Question', 'name': 'What is included in a monthly car rental?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Every long-term rental includes comprehensive Viriyah insurance, free delivery and collection to your condo or villa, all scheduled servicing and oil changes, and 24/7 WhatsApp support.' } }, { '@type': 'Question', 'name': 'Can I rent a car in Pattaya for 3 months or longer?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We offer flexible long-term rentals for 1 month, 3 months, 6 months, or longer. Multi-month rentals receive preferential rates. Contact us for a custom quote.' } }, { '@type': 'Question', 'name': 'Can someone else drive my rental car?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — additional drivers are permitted at no extra charge. All drivers must hold a valid foreign or Thai driving licence.' } }, { '@type': 'Question', 'name': 'Do I need a Thai driving licence for a long-term rental?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. A valid foreign driving licence is accepted. An International Driving Permit (IDP) is recommended for stays over 90 days.' } } ] }
+                                                                                    { '@type': 'Service', '@id': 'https://' + site.domain + '/long-term-rental/#service', 'name': 'Long Term Car Rental Pattaya', 'alternateName': 'Monthly Car Rental Pattaya', 'description': 'Monthly and long-stay car rentals for expats, digital nomads, and long-term visitors in Pattaya. Rates vary by vehicle and availability - full insurance, free delivery and all servicing included.', 'url': 'https://' + site.domain + '/long-term-rental/', 'provider': { '@type': 'CarRental', 'name': site.name, 'telephone': site.contact.phone, 'address': { '@type': 'PostalAddress', 'streetAddress': site.address, 'addressLocality': 'Pattaya', 'addressRegion': 'Chon Buri', 'addressCountry': 'TH' }, ...(site.trust.googleRating ? { 'aggregateRating': { '@type': 'AggregateRating', 'ratingValue': site.trust.googleRating, 'reviewCount': site.trust.googleReviews } } : {}) }, 'areaServed': { '@type': 'City', 'name': 'Pattaya' }, ...(ltFromPrice ? { 'offers': { '@type': 'Offer', 'priceCurrency': 'THB', 'price': String(ltFromPrice), 'description': 'Long-term car rental from ' + ltFromPrice.toLocaleString() + ' THB/month - exact rate depends on which vehicle is currently available', 'eligibleDuration': { '@type': 'QuantitativeValue', 'value': 1, 'unitCode': 'MON' } } } : {}) },
+                                                                                    { '@type': 'FAQPage', 'mainEntity': [ { '@type': 'Question', 'name': 'How much does long-term car rental in Pattaya cost?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Long-term rental rates in Pattaya vary depending on which vehicle is currently available for long-term hire. See current availability and pricing on this page, or contact us directly for today\'s rates.' } }, { '@type': 'Question', 'name': 'What is included in a monthly car rental?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Every long-term rental includes comprehensive Viriyah insurance, free delivery and collection to your condo or villa, all scheduled servicing and oil changes, and 24/7 WhatsApp support.' } }, { '@type': 'Question', 'name': 'Can I rent a car in Pattaya for 3 months or longer?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, subject to availability. Long-term vehicles are limited, especially during high season, so contact us to check what\'s currently available and for how long.' } }, { '@type': 'Question', 'name': 'Can someone else drive my rental car?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — additional drivers are permitted at no extra charge. All drivers must hold a valid foreign or Thai driving licence.' } }, { '@type': 'Question', 'name': 'Do I need a Thai driving licence for a long-term rental?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. A valid foreign driving licence is accepted. An International Driving Permit (IDP) is recommended for stays over 90 days.' } } ] }
                                                                                                             ]
                                             }
                     }, tPath('long-term-rental/index.html'));

@@ -83,61 +83,58 @@
   </div>
 </section>
 
-<!-- Pricing & vehicles section -->
+<!-- Availability & vehicles section -->
 <section class="bg-paper py-20">
   <div class="max-w-7xl mx-auto px-6">
-    <span class="eyebrow"><%= (t.longTerm && t.longTerm.pricingEyebrow) || 'Pricing' %></span>
-    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-ink mb-4 max-w-3xl"><%= (t.longTerm && t.longTerm.pricingH2) || 'Monthly Car Rental from ฿10,000' %></h2>
-    <p class="text-ink/60 text-lg mb-12 max-w-2xl"><%= (t.longTerm && t.longTerm.pricingIntro) || 'Rates start from ฿20,000/month for pickup trucks and ฿30,000/month for SUVs. The longer you stay, the better the deal. All rates include insurance, delivery, and servicing.' %></p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-      <% const ltPricing = lang === 'ru' ? {
-        pickupLabel: 'Пикап', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max. Самый популярный выбор для долгосрочной аренды среди экспатов в Паттайе.', seePickups: 'Смотреть пикапы',
-        suvLabel: 'Внедорожник', suvBody: 'Toyota Fortuner, Ford Everest. Премиальный комфорт для семей и специалистов на долгом контракте.', seeSuvs: 'Смотреть внедорожники',
-        bestPrice: 'Лучшая цена', monthLabel: 'мес.', ratesLabel: ' Тарифы', bestBody: 'Остаётесь на 3 месяца и дольше? Мы предлагаем значительно более выгодные тарифы. Свяжитесь с нами для индивидуального расчёта.', getQuote: 'Получить расчёт', fromLabel: 'От '
+    <span class="eyebrow"><%= (t.longTerm && t.longTerm.pricingEyebrow) || 'Availability' %></span>
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-ink mb-4 max-w-3xl"><%= (t.longTerm && t.longTerm.pricingH2) || 'Vehicles Currently Available for Long-Term Rent' %></h2>
+    <p class="text-ink/60 text-lg mb-12 max-w-2xl"><%= (t.longTerm && t.longTerm.pricingIntro) || 'Availability changes as vehicles come free from short-term bookings, so here\'s what we currently have. All long-term rentals include insurance, delivery, and servicing.' %></p>
+
+    <% const ltUi = lang === 'ru' ? {
+        perMonth: 'мес.', minMonths: 'мин. срок', enquire: 'Узнать больше',
+        noListings: 'Сейчас нет свободных автомобилей для долгосрочной аренды — свяжитесь с нами, и мы сообщим, как только появится подходящий вариант.'
       } : lang === 'ko' ? {
-        pickupLabel: '픽업트럭', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max. 파타야 교민들에게 가장 인기 있는 장기 렌트 차종입니다.', seePickups: '픽업트럭 보기',
-        suvLabel: 'SUV', suvBody: 'Toyota Fortuner, Ford Everest. 가족 및 장기 체류 전문직을 위한 프리미엄 편안함.', seeSuvs: 'SUV 보기',
-        bestPrice: '최저가', monthLabel: '개월', ratesLabel: ' 요금', bestBody: '3개월 이상 머무르시나요? 장기 체류에는 훨씬 더 좋은 요금을 제공해 드립니다. 맞춤 견적은 저희에게 문의해 주세요.', getQuote: '견적 받기', fromLabel: ''
+        perMonth: '개월', minMonths: '최소 기간', enquire: '문의하기',
+        noListings: '현재 장기 렌트 가능한 차량이 없습니다 — 문의해 주시면 가능해지는 대로 알려드리겠습니다.'
       } : lang === 'zh' ? {
-        pickupLabel: '皮卡', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max。芭提雅外籍人士最热门的长期租车选择。', seePickups: '查看皮卡车型',
-        suvLabel: 'SUV', suvBody: 'Toyota Fortuner, Ford Everest。为家庭及长期居留专业人士提供高端舒适体验。', seeSuvs: '查看SUV车型',
-        bestPrice: '最优价格', monthLabel: '个月', ratesLabel: '起租价', bestBody: '计划停留3个月或以上？我们为长期租赁提供更优惠的价格。请联系我们获取专属报价。', getQuote: '获取报价', fromLabel: '低至'
+        perMonth: '月', minMonths: '最短租期', enquire: '立即咨询',
+        noListings: '目前没有可供长期租赁的车辆 — 请联系我们，一旦有车可用我们会立即通知您。'
       } : lang === 'de' ? {
-        pickupLabel: 'Pickup', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max. Die beliebteste Langzeitwahl fuer Expats in Pattaya.', seePickups: 'Pickups ansehen',
-        suvLabel: 'SUV', suvBody: 'Toyota Fortuner, Ford Everest. Premium-Komfort fuer Familien und Langzeit-Profis.', seeSuvs: 'SUVs ansehen',
-        bestPrice: 'Bester Preis', monthLabel: 'Monat', ratesLabel: ' Tarife', bestBody: 'Bleiben Sie 3 Monate oder laenger? Wir bieten deutlich bessere Tarife fuer Langzeitaufenthalte. Kontaktieren Sie uns fuer ein individuelles Angebot.', getQuote: 'Angebot anfordern', fromLabel: 'Ab '
+        perMonth: 'Monat', minMonths: 'Mindestdauer', enquire: 'Anfragen',
+        noListings: 'Aktuell ist kein Fahrzeug fuer eine Langzeitmiete verfuegbar — kontaktieren Sie uns, wir informieren Sie, sobald eines frei wird.'
       } : lang === 'ja' ? {
-        pickupLabel: 'ピックアップトラック', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max。パタヤ在住の駐在員に最も人気の長期レンタル車種。', seePickups: 'ピックアップを見る',
-        suvLabel: 'SUV', suvBody: 'Toyota Fortuner, Ford Everest。ファミリーや長期滞在のプロフェッショナルに最適な快適さ。', seeSuvs: 'SUVを見る',
-        bestPrice: '最安値', monthLabel: 'ヶ月', ratesLabel: '料金', bestBody: '3ヶ月以上の滞在をご検討ですか？長期滞在にはさらにお得な料金をご提供しています。カスタム見積もりはお問い合わせください。', getQuote: '見積もりを取得', fromLabel: ''
+        perMonth: 'ヶ月', minMonths: '最低期間', enquire: 'お問い合わせ',
+        noListings: '現在、長期レンタル可能な車両はございません — お問い合わせいただければ、空き次第ご連絡いたします。'
       } : lang === 'fr' ? {
-        pickupLabel: 'Pickup', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max. Le choix longue duree le plus populaire pour les expatries a Pattaya.', seePickups: 'Voir les pickups',
-        suvLabel: 'SUV', suvBody: 'Toyota Fortuner, Ford Everest. Confort premium pour les familles et les professionnels de longue duree.', seeSuvs: 'Voir les SUV',
-        bestPrice: 'Meilleur Prix', monthLabel: 'Mois', ratesLabel: ' Tarifs', bestBody: 'Vous restez 3 mois ou plus ? Nous proposons des tarifs nettement meilleurs pour les longs sejours. Contactez-nous pour un devis personnalise.', getQuote: 'Obtenir un Devis', fromLabel: 'A partir de '
+        perMonth: 'Mois', minMonths: 'Duree min.', enquire: 'Nous contacter',
+        noListings: "Aucun vehicule n'est actuellement disponible a la location longue duree — contactez-nous et nous vous previendrons des qu'un vehicule se libere."
       } : {
-        pickupLabel: 'Pickup Truck', pickupBody: 'Toyota Hilux Revo, Isuzu D-Max. The most popular long-term choice for expats in Pattaya.', seePickups: 'See pickups',
-        suvLabel: 'SUV', suvBody: 'Toyota Fortuner, Ford Everest. Premium comfort for families and long-stay professionals.', seeSuvs: 'See SUVs',
-        bestPrice: 'Best Price', monthLabel: 'Month', ratesLabel: ' Rates', bestBody: 'Staying 3 months or longer? We offer significantly better rates for extended stays. Contact us for a custom quote.', getQuote: 'Get a Quote', fromLabel: 'From '
-      }; %>
+        perMonth: 'month', minMonths: 'min.', enquire: 'Enquire',
+        noListings: "Nothing is currently available for long-term rent — contact us and we'll let you know as soon as a vehicle opens up."
+      };
+    %>
+
+    <% if (listings && listings.length > 0) { %>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <% listings.forEach(function(listing) { %>
       <div class="glass-card rounded-[32px] p-8">
-        <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40 mb-3"><%= ltPricing.pickupLabel %></div>
-        <div class="text-3xl font-black tracking-tighter text-ink mb-1"><%= ltPricing.fromLabel %>฿20,000<span class="text-lg font-medium text-ink/40">/<%= lang === 'en' ? 'month' : (lang === 'zh' ? '月' : ltPricing.monthLabel) %></span></div>
-        <p class="card-body"><%= ltPricing.pickupBody %></p>
-        <a href="<%= langPrefix %>/cars/pickup-truck-rental/" class="link-arrow mt-4 inline-flex"><%= ltPricing.seePickups %></a>
+        <% if (listing.image) { %>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-5"><img src="<%= listing.image %>" alt="<%= listing.carName %>" class="w-full h-full object-cover" loading="lazy" /></div>
+        <% } %>
+        <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40 mb-3"><%= listing.carType %></div>
+        <div class="text-3xl font-black tracking-tighter text-ink mb-1">฿<%= listing.monthlyPrice.toLocaleString() %><span class="text-lg font-medium text-ink/40">/<%= ltUi.perMonth %></span></div>
+        <p class="card-body font-semibold text-ink/80"><%= listing.carName %><% if (listing.minMonths > 1) { %> &middot; <%= ltUi.minMonths %> <%= listing.minMonths %><% } %></p>
+        <% if (listing.notes) { %><p class="card-body mt-1"><%= listing.notes %></p><% } %>
+        <a href="#enquire" class="link-arrow mt-4 inline-flex"><%= ltUi.enquire %></a>
       </div>
-      <div class="glass-card rounded-[32px] p-8">
-        <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40 mb-3"><%= ltPricing.suvLabel %></div>
-        <div class="text-3xl font-black tracking-tighter text-ink mb-1"><%= ltPricing.fromLabel %>฿30,000<span class="text-lg font-medium text-ink/40">/<%= lang === 'en' ? 'month' : (lang === 'zh' ? '月' : ltPricing.monthLabel) %></span></div>
-        <p class="card-body"><%= ltPricing.suvBody %></p>
-        <a href="<%= langPrefix %>/cars/7-seater-suv-rental/" class="link-arrow mt-4 inline-flex"><%= ltPricing.seeSuvs %></a>
-      </div>
-      <div class="glass-card rounded-[32px] p-8 border border-primary/30">
-        <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-primary mb-3"><%= ltPricing.bestPrice %></div>
-        <div class="text-3xl font-black tracking-tighter text-ink mb-1">3+<span class="text-lg font-medium text-ink/40"><%= ltPricing.ratesLabel %></span></div>
-        <p class="card-body"><%= ltPricing.bestBody %></p>
-        <a href="#enquire" class="btn-primary inline-flex mt-4"><%= ltPricing.getQuote %></a>
-      </div>
+      <% }) %>
     </div>
+    <% } else { %>
+    <div class="glass-card rounded-[32px] p-10 mb-16 max-w-2xl">
+      <p class="card-body text-lg"><%= ltUi.noListings %></p>
+      <a href="#enquire" class="btn-primary inline-flex mt-6"><%= ltUi.enquire %></a>
+    </div>
+    <% } %>
   </div>
 </section>
 
@@ -226,9 +223,9 @@
         { q: "Quelqu'un d'autre peut-il conduire la voiture ?", a: "Oui. Des conducteurs supplementaires nommes peuvent etre ajoutes au contrat de location. Merci de nous en informer lors de votre demande afin que nous puissions faire le necessaire." },
         { q: "Ai-je besoin d'un permis de conduire thailandais ?", a: "Non. Un permis de conduire international (IDP) ou un permis valide de votre pays d'origine est accepte. Si vous prevoyez de rester longtemps, nous vous recommandons d'obtenir un permis thailandais a terme, mais ce n'est pas une condition pour louer chez nous." }
       ] : [
-        { q: 'How much does long-term car rental cost in Pattaya?', a: 'Long-term rental in Pattaya starts from THB 20,000/month for pickup trucks (Toyota Hilux Revo, Isuzu D-Max) and from THB 30,000/month for SUVs (Toyota Fortuner, Ford Everest). All rates include full insurance, free delivery, and scheduled servicing. Rentals of 3 months or more qualify for negotiated rates.' },
+        { q: 'How much does long-term car rental cost in Pattaya?', a: 'Rates depend on which vehicle is currently available for long-term hire — see current availability and pricing above, or contact us directly for today\'s rates. All rates include full insurance, free delivery, and scheduled servicing.' },
         { q: 'What is included in a monthly rental?', a: 'Every long-term rental includes full Viriyah insurance coverage, free delivery and collection anywhere in Pattaya, and all scheduled servicing (oil changes, tyre rotation, etc.). There are no hidden extras.' },
-        { q: 'Can I rent for 3 months or longer?', a: "Yes and we actively encourage it. Rentals of 3 months or more qualify for significantly better rates. Contact us with your dates and preferred vehicle and we'll put together a custom quote." },
+        { q: 'Can I rent for 3 months or longer?', a: "Yes, subject to availability. Long-term vehicles are limited, especially during high season, so contact us with your dates and preferred vehicle and we'll confirm what's currently available." },
         { q: 'Can someone else drive the car?', a: 'Yes. Additional named drivers can be added to the rental agreement. Please let us know when enquiring so we can make the appropriate arrangements.' },
         { q: 'Do I need a Thai driving licence?', a: "No. An international driving permit (IDP) or a valid driving licence from your home country is accepted. If you plan to stay long-term, we'd recommend obtaining a Thai licence eventually, but it is not a requirement to rent with us." }
       ]; %>

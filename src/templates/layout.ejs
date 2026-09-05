@@ -36,7 +36,8 @@
         <link rel="alternate" hreflang="<%= h.lang %>" href="<%= h.href %>">
         <% }) %>
     <% } else { %>
-    <% languages.forEach(l => { %>
+    <%# Only locales with real, indexable content (ru/zh/de/ko are noindexed; ja/fr redirect) %>
+    <% languages.filter(l => ['en', 'th'].includes(l.code)).forEach(l => { %>
         <link rel="alternate" hreflang="<%= l.code %>" href="https://<%= site.domain %><%= (l.code === 'en' ? '' : '/' + l.code) + url.replace(/^\/[a-z]{2}\//, '/') %>">
     <% }) %>
     <link rel="alternate" hreflang="x-default" href="https://<%= site.domain %><%= url.replace(/^\/[a-z]{2}\//,'/') %>">
